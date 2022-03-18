@@ -8,46 +8,46 @@
 ###############################################
 
 [Alegerea limbii]
-.editor_dil     = Limba dvs. este setată la Română.
+.editor_dil     = Limba dvs. este setata la Romana.
 
 [Comenzi rapide]
-.kisayollar     = Utilizare: [Taste săgeți], [Tasta spațiu], [Tasta N], [Tasta Enter]
+.kisayollar     = Utilizare: [Taste sageti], [Tasta spatiu], [Tasta N], [Tasta Enter]
 
 [Mediu de lucru]
-.co_baslik      = În ce mediu ți-ar plăcea să lucrezi?
+.co_baslik      = In ce mediu ti-ar placea sa lucrezi?
 .co_icerik_1    = Pe un ecran gol
-.co_icerik_2    = Spawn olarak
+.co_icerik_2    = Ca spawn
 .co_buton_1     = Alege
-.co_mesaj_1     = Vă veți edita proiectele pe un ecran gol. Dacă întâmpinați o problemă cu mouse-ul, utilizați comanda {45aaf2}/mouse{ffffff}.
-.co_mesaj_2     = Îți vei organiza proiectele în camera libera. Utilizați comanda {45aaf2}/mouse {ffffff} pentru a activa și dezactiva mouse-ul.
+.co_mesaj_1     = Va veti edita proiectele pe un ecran gol. Daca intampinati o problema cu mouse-ul, utilizati comanda {45aaf2}/mouse{ffffff}.
+.co_mesaj_2     = Iti vei organiza proiectele in camera libera. Utilizati comanda {45aaf2}/mouse {ffffff} pentru a activa si dezactiva mouse-ul.
 
 [Mergi la pagina]
 .sayfa_baslik   = Mergi la pagina
-.sayfa_icerik   = {FFFFFF}Numărul paginii la care doriți să mergeți poate fi de la {ff7979}1 {FFFFFF} la {ff7979}#d {FFFFFF}.
+.sayfa_icerik   = {FFFFFF}Numarul paginii la care doriti sa mergeti poate fi de la {ff7979}1 {FFFFFF} la {ff7979}#d {FFFFFF}.
 .sayfa_btn1     = Du-te
-.sayfa_btn2     = Înapoi
-.sayfa_hata     = Numărul paginii este incorect.
+.sayfa_btn2     = Inapoi
+.sayfa_hata     = Numarul paginii este incorect.
 
 [Proiect]
 .proje_baslik   = Meniul Proiectului
-.proje_icerik_1 = Creați un nou proiect
+.proje_icerik_1 = Creati un nou proiect
 .proje_icerik_2 = Proiecte
 .proje_icerik_3 = Import
 .proje_icerik_4 = Export
 .proje_icerik_5 = Proiect apropiat
-.proje_buton_1  = Selectați
-.proje_buton_2  = Închide
+.proje_buton_1  = Selectati
+.proje_buton_2  = Inchide
 
-[Creați proiect]
-.po_baslik      = Creați un nou proiect
-.po_metin       = {ffffff}Introduceți numele proiectului pe care doriți să îl creați.
+[Creati proiect]
+.po_baslik      = Creati un nou proiect
+.po_metin       = {ffffff}Introduceti numele proiectului pe care doriti sa il creati.
 .po_buton_1     = Crea
-.po_buton_2     = Înapoi
-.po_hata_1      = Nu ați specificat numele proiectului.
+.po_buton_2     = Inapoi
+.po_hata_1      = Nu ati specificat numele proiectului.
 .po_hata_2      = Numele proiectului este prea lung.
-.po_hata_3      = Numele proiectului conține caractere nevalide.
-.po_hata_4      = Un astfel de proiect există deja.
-.po_hata_5      = Închideți proiectul existent pentru a crea un proiect nou.
+.po_hata_3      = Numele proiectului contine caractere nevalide.
+.po_hata_4      = Un astfel de proiect exista deja.
+.po_hata_5      = Inchideti proiectul existent pentru a crea un proiect nou.
 .po_bilgi_1     = Proiectul „#s” {FFFFFF} a fost creat cu succes.
 
 [Proiecte]
@@ -55,129 +55,129 @@
 .pler_icerik_1  = Denumirea proiectului
 .pler_icerik_2  = Data crearii
 .pler_icerik_3  = Mergi la pagina
-.pler_buton_1   = Selectați
-.pler_buton_2   = Înapoi
-.pler_hata      = Un proiect nu a fost creat înainte.
+.pler_buton_1   = Selectati
+.pler_buton_2   = Inapoi
+.pler_hata      = Un proiect nu a fost creat Inainte.
 
 [Procesul proiectului]
-.pi_baslik      = Alegeți o Tranzacție
-.pi_icerik_1    = Încărcați proiectul
+.pi_baslik      = Alegeti o Tranzactie
+.pi_icerik_1    = Incarcati proiectul
 .pi_icerik_2    = Sterge proiectul
-.pi_buton_1     = Selectați
-.pi_buton_2     = Înapoi
-.pi_hata_1      = Ați încărcat deja acest proiect.
-.pi_hata_2      = Pentru a încărca acest proiect, închideți proiectul curent.
-.pi_hata_3      = Proiectul nu poate fi încărcat deoarece fișierul bazei de date nu poate fi găsit.
-.pi_bilgi       = Proiectul „#s” {FFFFFF} a fost încărcat cu succes. [Global: #d, Jucător: #d, Total: #d]
-.pi_uyari_bslk  = Șterge proiectul
-.pi_uyari_icrk  = {FFFFFF}Sunteți sigur că doriți să ștergeți proiectul?
+.pi_buton_1     = Selectati
+.pi_buton_2     = Inapoi
+.pi_hata_1      = Ati Incarcat deja acest proiect.
+.pi_hata_2      = Pentru a Incarca acest proiect, Inchideti proiectul curent.
+.pi_hata_3      = Proiectul nu poate fi Incarcat deoarece fisierul bazei de date nu poate fi gasit.
+.pi_bilgi       = Proiectul „#s” {FFFFFF} a fost Incarcat cu succes. [Global: #d, Jucator: #d, Total: #d]
+.pi_uyari_bslk  = sterge proiectul
+.pi_uyari_icrk  = {FFFFFF}Sunteti sigur ca doriti sa stergeti proiectul?
 .pi_uyari_btn1  = Da
 .pi_uyari_btn2  = Nu
-.pi_uyari_bilgi = S-a șters proiectul numit „#s”.
-.pi_uyari_hata  = Ați încărcat acest proiect, mai întâi închideți proiectul pentru a-l șterge.
+.pi_uyari_bilgi = S-a sters proiectul numit „#s”.
+.pi_uyari_hata  = Ati Incarcat acest proiect, mai Intai Inchideti proiectul pentru a-l sterge.
 
 [Import]
 .ia_baslik      = Import
-.ia_icerik_1    = {FFFFFF}Introduceți numele fișierului pe care doriți să îl importați.
+.ia_icerik_1    = {FFFFFF}Introduceti numele fisierului pe care doriti sa Il importati.
 .ia_icerik_2    = {badc58}Exemplu: {FFFFFF}telefon.txt
 .ia_btn1        = Transfer
-.ia_btn2        = Înapoi
-.ia_hata_1      = Trebuie să creați sau să încărcați un proiect pentru import.
-.ia_hata_2      = Nu ați introdus numele fișierului de importat.
-.ia_hata_3      = Un fișier numit „#s” nu a putut fi găsit.
-.ia_hata_4      = Importul a fost întrerupt deoarece a fost atinsă limita de textdrawuri.
-.ia_hata_5      = Nu am putut găsi un textdraw de adăugat.
-.ia_bilgi       = Fișierul numit „#s” a fost importat în proiect. [Global: #d, Jucător: #d, Total: #d]
+.ia_btn2        = Inapoi
+.ia_hata_1      = Trebuie sa creati sau sa Incarcati un proiect pentru import.
+.ia_hata_2      = Nu ati introdus numele fisierului de importat.
+.ia_hata_3      = Un fisier numit „#s” nu a putut fi gasit.
+.ia_hata_4      = Importul a fost Intrerupt deoarece a fost atinsa limita de textdrawuri.
+.ia_hata_5      = Nu am putut gasi un textdraw de adaugat.
+.ia_bilgi       = Fisierul numit „#s” a fost importat In proiect. [Global: #d, Jucator: #d, Total: #d]
 
 [Export]
 .da_baslik      = Export
-.da_icerik_1    = {FFFFFF}Introduceți numele fișierului pe care doriți să-l exportați.
-.da_icerik_2    = {FFFFFF}Dacă lăsați ecranul necompletat, veți afișa {6a89cc}#s.txt {FFFFFF}.
+.da_icerik_1    = {FFFFFF}Introduceti numele fisierului pe care doriti sa-l exportati.
+.da_icerik_2    = {FFFFFF}Daca lasati ecranul necompletat, veti afisa {6a89cc}#s.txt {FFFFFF}.
 .da_btn1        = Export
-.da_btn2        = Înapoi
-.da_hata        = Creați un textdraw pentru export.
-.da_hata2       = Pentru export, trebuie să creați sau să încărcați un proiect.
-.da_bilgi       = Exportul proiectului este salvat ca „#s.txt”. [Global: #d, Jucător: #d, Total: #d]
+.da_btn2        = Inapoi
+.da_hata        = Creati un textdraw pentru export.
+.da_hata2       = Pentru export, trebuie sa creati sau sa Incarcati un proiect.
+.da_bilgi       = Exportul proiectului este salvat ca „#s.txt”. [Global: #d, Jucator: #d, Total: #d]
 
-[Închide proiectul]
-.pk_hata        = Pentru a închide proiectul trebuie să creați sau să încărcați un proiect.
-.pk_bilgi       = Proiectul #s a fost închis cu succes.
+[Inchide proiectul]
+.pk_hata        = Pentru a Inchide proiectul trebuie sa creati sau sa Incarcati un proiect.
+.pk_bilgi       = Proiectul #s a fost Inchis cu succes.
 
-[Setări]
-.ayar_baslik    = Setări
+[Setari]
+.ayar_baslik    = Setari
 .ayar_header_1  = #
 .ayar_header_2  = Valoare
 .ayar_icerik_1  = Ora
-.ayar_icerik_2  = Poziția Hud
+.ayar_icerik_2  = Pozitia Hud
 .ayar_icerik_3  = Nume global implicit al variabilei
-.ayar_icerik_4  = Nume implicit al variabilei jucătorului
-.ayar_buton1    = Selectați
-.ayar_buton2    = Închide
+.ayar_icerik_4  = Nume implicit al variabilei jucatorului
+.ayar_buton1    = Selectati
+.ayar_buton2    = Inchide
 
 [Moment]
 .saat_baslik    = Moment
-.saat_buton1    = Selectați
-.saat_buton2    = Înapoi
+.saat_buton1    = Selectati
+.saat_buton2    = Inapoi
 .saat_bilgi     = Ceasul jocului este setat la #02d:00.
 
-[Poziția Hud]
-.hkonum_bilgi   = Locația HUDului a fost schimbată cu succes.
+[Pozitia Hud]
+.hkonum_bilgi   = Locatia HUDului a fost schimbata cu succes.
 
-[Variabilă - Global | Jucător]
+[Variabila - Global | Jucator]
 .dg_baslik      = Nume implicit al variabilei
-.dg_icerik_1    = {FFFFFF}Specifică numele variabilei rezultatului pe care îl veți obține la exportul proiectului.
-.dg_icerik_2    = {FFFFFF}Lăsați ecranul necompletat pentru a seta numele implicit al variabilei.
+.dg_icerik_1    = {FFFFFF}Specifica numele variabilei rezultatului pe care Il veti obtine la exportul proiectului.
+.dg_icerik_2    = {FFFFFF}Lasati ecranul necompletat pentru a seta numele implicit al variabilei.
 .dg_buton1      = Schimbare
-.dg_buton2      = Înapoi
+.dg_buton2      = Inapoi
 .dg_hata        = Numele variabilei este prea lung.
 .dg_bilgi       = Numele implicit al variabilei setat la #s.
 
 [Nou]
 .yeni_baslik    = Nou
 .yeni_icerik    = Previzualizare modele (obiect, vehicul, aspect)
-.yeni_btn1      = Creează
-.yeni_btn2      = Închide
+.yeni_btn1      = Creeaza
+.yeni_btn2      = Inchide
 .yeni_textdraw  = Textdraw nou
 
-[Listă]
+[Lista]
 .liste_baslik   = Lista textdrawuri [#d / #d]
 .liste_header1  = Index
-.liste_header2  = Nume variabilă
+.liste_header2  = Nume variabila
 .liste_header3  = Cuprins
 .liste_header4  = Tip
 .liste_icerik   = Mergi la pagina
-.liste_btn1     = Selectați
-.liste_btn2     = Închide
+.liste_btn1     = Selectati
+.liste_btn2     = Inchide
 
-[Lista de operațiuni]
-.lislem_baslik  = Alegeți o Tranzacție
-.lislem_icerik1 = Selectați textdraw
-.lislem_icerik2 = Șterge textdraw
+[Lista de operatiuni]
+.lislem_baslik  = Alegeti o Tranzactie
+.lislem_icerik1 = Selectati textdraw
+.lislem_icerik2 = sterge textdraw
 .lislem_icerik3 = Copie textdraw
-.lislem_icerik4 = Copiați și selectați textdraw
-.lislem_icerik5 = Schimbați ordinea indexului
-.lislem_icerik6 = Editați numele variabilei
-.lislem_btn1    = Selectați
-.lislem_btn2    = Înapoi
+.lislem_icerik4 = Copiati si selectati textdraw
+.lislem_icerik5 = Schimbati ordinea indexului
+.lislem_icerik6 = Editati numele variabilei
+.lislem_btn1    = Selectati
+.lislem_btn2    = Inapoi
 
-[Listați informații despre tranzacție]
+[Listati informatii despre tranzactie]
 .tdraw_sec      = Textdraw este selectat. Index: #d
-.tdraw_sil      = Textdraw a fost șters. Index: #d
+.tdraw_sil      = Textdraw a fost sters. Index: #d
 .tdraw_kopyala  = Textdraw a fost copiat. Index: #d
-.tdraw_kopyala2 = Textdraw copiat și selectat. Index: #d
+.tdraw_kopyala2 = Textdraw copiat si selectat. Index: #d
 
 [Schimbarea indexului]
-.idgstr_bslk    = Număr index [#d / #d]
+.idgstr_bslk    = Numar index [#d / #d]
 .idgstr_btn1    = Schimbare
-.idgstr_btn2    = Înapoi
-.idgstr_bilgi   = Numărul de index al textdraw a fost modificat. Noul număr de index: #d
+.idgstr_btn2    = Inapoi
+.idgstr_bilgi   = Numarul de index al textdraw a fost modificat. Noul numar de index: #d
 
-[Nume variabilă]
-.degadi_bslk    = Editați numele variabilei
-.degadi_icrk_1  = {ff7979}Notă: {FFFFFF}Lăsați caseta goală pentru a elimina numele variabilei.
-.degadi_icrk_2  = {ffffff}Introduceți numele variabilei pe care doriți să o utilizați pentru acest textdraw.
+[Nume variabila]
+.degadi_bslk    = Editati numele variabilei
+.degadi_icrk_1  = {ff7979}Nota: {FFFFFF}Lasati caseta goala pentru a elimina numele variabilei.
+.degadi_icrk_2  = {ffffff}Introduceti numele variabilei pe care doriti sa o utilizati pentru acest textdraw.
 .degadi_btn1    = Schimbare
-.degadi_btn2    = Înapoi
+.degadi_btn2    = Inapoi
 .degadi_hata    = Numele variabilei este prea lung.
 .degadi_bilgi   = Numele variabilei este setat la #s.
 .degadi_bilgi2  = Numele variabilei a fost eliminat.
@@ -185,19 +185,19 @@
 [Depozit]
 .depo_baslik    = Depozit
 .depo_icerik_1  = Depozit
-.depo_icerik_2  = Textdrawuri șterse
-.depo_btn_1     = Selectați
-.depo_btn_2     = Închide
+.depo_icerik_2  = Textdrawuri sterse
+.depo_btn_1     = Selectati
+.depo_btn_2     = Inchide
 
 [Copie]
-.kopyala_bilgi  = Textdraw copiat și selectat. Index: #d
+.kopyala_bilgi  = Textdraw copiat si selectat. Index: #d
 
-[Șterge]
-.sil_bilgi      = Textdraw a fost șters. Index: #d
+[sterge]
+.sil_bilgi      = Textdraw a fost sters. Index: #d
 
 [Dimensiune | dimensiunea textului | dimensiunea literelor]
-.btl_baslik     = Editare manuală
-.btl_icrk_1     = {FFFFFF}Introduceți noile valori pe care doriți să le utilizați.
+.btl_baslik     = Editare manuala
+.btl_icrk_1     = {FFFFFF}Introduceti noile valori pe care doriti sa le utilizati.
 .btl_icrk_2     = {70a1ff}Exemplu:
 .btl_icrk_3     = {ffffff}10 20 sau 10,0 20,0
 .btl_icrk_4     = {70a1ff}Valorile dvs. actuale:
@@ -208,171 +208,171 @@
 .btl_icrk_9     = {70a1ff}Numai pentru valoarea Y:
 .btl_icrk_10    = {ffffff}0 valoare
 .btl_icrk_11    = {FFFFFF}Introdu {ff7f50}0 0 {FFFFFF} pentru a elimina proprietatea textsize.
-.btl_buton_1    = Actualizați
-.btl_buton_2    = Închide
-.btl_hata_1     = Ați introdus o valoare incorectă.
+.btl_buton_1    = Actualizati
+.btl_buton_2    = Inchide
+.btl_hata_1     = Ati introdus o valoare incorecta.
 .btl_bilgi_1    = Valori actualizate.
 
 [Text]
 .metin_baslik   = Text
 .metin_icerik   = {f1c40f}Textul dvs. actual:
-.metin_icerik2  = {ffffff}Introduceți textul pe care doriți să îl utilizați.
+.metin_icerik2  = {ffffff}Introduceti textul pe care doriti sa Il utilizati.
 .metin_buton1   = Schimbare
-.metin_buton2   = Închide
-.metin_hata     = Ai lăsat caseta goală.
+.metin_buton2   = Inchide
+.metin_hata     = Ai lasat caseta goala.
 .metin_bilgi    = Textul a fost schimbat.
 
-[Contur | umbră]
+[Contur | umbra]
 .os_baslik      = Reglaj manual
-.os_icerik_1    = {f9ca24}Valoarea dvs. curentă: {FFFFFF}#d
-.os_icerik_2    = {FFFFFF}Introduceți valoarea pe care doriți să o utilizați. Tastați {f9ca24}0 {FFFFFF} pentru a elimina.
+.os_icerik_1    = {f9ca24}Valoarea dvs. curenta: {FFFFFF}#d
+.os_icerik_2    = {FFFFFF}Introduceti valoarea pe care doriti sa o utilizati. Tastati {f9ca24}0 {FFFFFF} pentru a elimina.
 .os_buton_1     = Ajustare
-.os_buton_2     = Închide
-.os_hata        = Ați introdus o valoare incorectă.
-.os_bilgi_1     = Valoare actualizată.
+.os_buton_2     = Inchide
+.os_hata        = Ati introdus o valoare incorecta.
+.os_bilgi_1     = Valoare actualizata.
 
 [Culoare | BG | cutie]
 .renk_baslik    = Renkler
-.renk_icerik    = RGBA (Cu tastele săgeți)
-.renk_buton1    = Selectați
-.renk_buton2    = Închide
+.renk_icerik    = RGBA (Cu tastele sageti)
+.renk_buton1    = Selectati
+.renk_buton2    = Inchide
 
 [Culoare - Hex]
 .rhex_baslik    = Culoare: Hex
-.rhex_icerik_1  = {FFFFFF}Introduceți codul hexadecimal al culorii pe care doriți să o utilizați.
-.rhex_icerik_2  = {badc58}Probă:
+.rhex_icerik_1  = {FFFFFF}Introduceti codul hexadecimal al culorii pe care doriti sa o utilizati.
+.rhex_icerik_2  = {badc58}Proba:
 .rhex_icerik_3  = {FFFFFF}FFBE76
 .rhex_icerik_4  = {FFFFFF}#FFBE76
 .rhex_icerik_5  = {FFFFFF}0xFFBE76
 .rhex_icerik_6  = {FFFFFF}0xFFBE76FF
 .rhex_buton_1   = Schimbare
-.rhex_buton_2   = Înapoi
-.rhex_hata      = Ați introdus un cod hexadecimal greșit.
+.rhex_buton_2   = Inapoi
+.rhex_hata      = Ati introdus un cod hexadecimal gresit.
 
 [Culoare - RGB]
 .rgb_baslik     = Culoare: RGB
-.rgb_icerik_1   = {FFFFFF}Introduceți codul rgb al culorii pe care doriți să o utilizați.
-.rgb_icerik_2   = {badc58}Probă:
+.rgb_icerik_1   = {FFFFFF}Introduceti codul rgb al culorii pe care doriti sa o utilizati.
+.rgb_icerik_2   = {badc58}Proba:
 .rgb_icerik_3   = {FFFFFF}66 135 245
 .rgb_icerik_4   = {FFFFFF}66, 135, 245
 .rgb_icerik_5   = {FFFFFF}rgb(66, 135, 245)
 .rgb_icerik_6   = {FFFFFF}rgb(66, 135, 245);
 .rgb_buton_1    = Schimbare
-.rgb_buton_2    = Înapoi
-.rgb_hata       = Ați introdus un cod rgb greșit.
+.rgb_buton_2    = Inapoi
+.rgb_hata       = Ati introdus un cod rgb gresit.
 
 [Culoare - RGBA]
 .rgba_baslik    = Culoare: RGBA
-.rgba_icerik_1  = {FFFFFF}Introduceți codul rgb al culorii pe care doriți să o utilizați.
-.rgba_icerik_2  = {badc58}Probă:
+.rgba_icerik_1  = {FFFFFF}Introduceti codul rgb al culorii pe care doriti sa o utilizati.
+.rgba_icerik_2  = {badc58}Proba:
 .rgba_icerik_3  = {FFFFFF}66 135 245 255
 .rgba_icerik_4  = {FFFFFF}66, 135, 245, 255
 .rgba_icerik_5  = {FFFFFF}rgba(66, 135, 245, 255)
 .rgba_icerik_6  = {FFFFFF}rgba(66, 135, 245, 255);
 .rgba_buton_1   = Schimbare
-.rgba_buton_2   = Înapoi
-.rgba_hata      = Ați introdus un cod rgba greșit.
+.rgba_buton_2   = Inapoi
+.rgba_hata      = Ati introdus un cod rgba gresit.
 
 [Previzualizare modele]
-.pmdls_buton_1  = Selectați
-.pmdls_buton_2  = Închide
-.pmdls_hata     = Ați introdus o valoare incorectă.
+.pmdls_buton_1  = Selectati
+.pmdls_buton_2  = Inchide
+.pmdls_hata     = Ati introdus o valoare incorecta.
 .pmdls_bilgi_1  = Valori actualizate.
 
 [Previzualizarea manualului de modele]
 .pmdls_mbaslik  = Reglaj manual
-.pmdls_icerik_1 = {FFFFFF}Introduceți valoarea pe care doriți să o utilizați.
-.pmdls_icerik_2 = {badc58}Valoarea dvs. actuală: {FFFFFF}#d
-.pmdls_icerik_3 = {badc58}Valoarea dvs. actuală: {FFFFFF}#.2f
-.pmdls_buton_3  = Actualizați
-.pmdls_buton_4  = Închide
+.pmdls_icerik_1 = {FFFFFF}Introduceti valoarea pe care doriti sa o utilizati.
+.pmdls_icerik_2 = {badc58}Valoarea dvs. actuala: {FFFFFF}#d
+.pmdls_icerik_3 = {badc58}Valoarea dvs. actuala: {FFFFFF}#.2f
+.pmdls_buton_3  = Actualizati
+.pmdls_buton_4  = Inchide
 
 [Inapoi inainte]
-.gi_baslik      = Anulați și Redirecționați
-.gi_icerik_1    = {FFFFFF}Modificarea textdraw pe care doriți să o vedeți poate fi de la {ff7979}1 {FFFFFF} la {ff7979}#d {FFFFFF}.
+.gi_baslik      = Anulati si Redirectionati
+.gi_icerik_1    = {FFFFFF}Modificarea textdraw pe care doriti sa o vedeti poate fi de la {ff7979}1 {FFFFFF} la {ff7979}#d {FFFFFF}.
 .gi_buton_1     = Arata
-.gi_buton_2     = Închide
-.gi_hata        = Ați introdus o valoare incorectă.
+.gi_buton_2     = Inchide
+.gi_hata        = Ati introdus o valoare incorecta.
 
-[Înapoi, înainte | Aprobare]
-.gio_baslik     = Confirmați modificările
-.gio_icerik_1   = {FFFFFF}Aprobați schimbarea pe care ați făcut-o?
+[Inapoi, Inainte | Aprobare]
+.gio_baslik     = Confirmati modificarile
+.gio_icerik_1   = {FFFFFF}Aprobati schimbarea pe care ati facut-o?
 .gio_buton_1    = Da
 .gio_buton_2    = Nu
 .gio_bilgi_1    = Schimbarile au fost salvate.
-.gio_bilgi_2    = Nu au fost făcute modificări.
+.gio_bilgi_2    = Nu au fost facute modificari.
 
 [Sters]
-.s_baslik       = Textdrawuri șterse [#d / #d]
+.s_baslik       = Textdrawuri sterse [#d / #d]
 .s_header1      = Cuprins
 .s_header2      = Tip
 .s_header3      = Global / Player
-.s_header4      = Data ștergerii
+.s_header4      = Data stergerii
 .s_icerik1      = Mergi la pagina
-.s_icerik2      = Ștergeți toate datele
-.s_icerik3      = Restaurați toate datele
-.s_buton1       = Reîncărcați
-.s_buton2       = Înapoi
-.s_hata         = Un textdraw șters nu a fost găsit.
-.s_bilgi        = Textdraw a fost restaurat. Noul număr de index: #d
+.s_icerik2      = stergeti toate datele
+.s_icerik3      = Restaurati toate datele
+.s_buton1       = ReIncarcati
+.s_buton2       = Inapoi
+.s_hata         = Un textdraw sters nu a fost gasit.
+.s_bilgi        = Textdraw a fost restaurat. Noul numar de index: #d
 
-[Șters - Șterge]
-.st_baslik      = Ștergeți toate datele
-.st_icerik1     = {ff7f50}Avertisment: {FFFFFF}Această acțiune va șterge datele tuturor textdraws pe care le-ați șters.
-.st_icerik2     = {FFFFFF}Aprobați această acțiune?
+[sters - sterge]
+.st_baslik      = stergeti toate datele
+.st_icerik1     = {ff7f50}Avertisment: {FFFFFF}Aceasta actiune va sterge datele tuturor textdraws pe care le-ati sters.
+.st_icerik2     = {FFFFFF}Aprobati aceasta actiune?
 .st_buton1      = Da
 .st_buton2      = Nu
-.st_bilgi       = Toate datele au fost șterse.
+.st_bilgi       = Toate datele au fost sterse.
 
-[Șters - Restaurați toate datele]
-.stgy_baslik    = Restaurați toate datele
-.stgy_icerik1   = {FFFFFF}Sigur doriți să restaurați toate datele?
+[sters - Restaurati toate datele]
+.stgy_baslik    = Restaurati toate datele
+.stgy_icerik1   = {FFFFFF}Sigur doriti sa restaurati toate datele?
 .stgy_buton1    = Da
 .stgy_buton2    = Nu
 .stgy_bilgi     = Toate datele au fost restaurate. Date totale: #d
 
 [Grupuri]
-.grp_hata       = Creați un textdraw pentru a utiliza această funcție.
+.grp_hata       = Creati un textdraw pentru a utiliza aceasta functie.
 .grp_baslik     = Gruparea
 .grp_icerik1    = {badc58}Gruparea:
-.grp_icerik2    = Selectați articolele de grupat
-.grp_icerik3    = Grupați toate articolele
-.grp_icerik4    = Resetați toate elementele grupate
-.grp_icerik5    = {badc58}Grupare rapidă:
+.grp_icerik2    = Selectati articolele de grupat
+.grp_icerik3    = Grupati toate articolele
+.grp_icerik4    = Resetati toate elementele grupate
+.grp_icerik5    = {badc58}Grupare rapida:
 .grp_icerik6    = Textdraw normal
 .grp_icerik7    = Sprite
 .grp_icerik8    = Previzualizare modele
 .grp_icerik9    = {badc58}Copiere:
-.grp_icerik10   = Copiați elementele grupate
-.grp_icerik11   = Copiați și selectați elementele grupate
+.grp_icerik10   = Copiati elementele grupate
+.grp_icerik11   = Copiati si selectati elementele grupate
 .grp_icerik12   = {badc58}Sterge:
-.grp_icerik13   = Ștergeți elementele grupate
-.grp_icerik14   = {badc58}Locație:
-.grp_icerik15   = Schimbați poziția articolelor grupate
+.grp_icerik13   = stergeti elementele grupate
+.grp_icerik14   = {badc58}Locatie:
+.grp_icerik15   = Schimbati pozitia articolelor grupate
 .grp_icerik16   = {badc58}Dimensiunea:
 .grp_icerik17   = Dimensiune text (Textdraw normal)
-.grp_icerik18   = Mărimea textului (Sprite)
-.grp_icerik19   = Mărimea textului (Preview Models)
-.grp_icerik20   = Mărimea textului (Sprite, Previzualizare modele)
-.grp_icerik21   = Mărimea textului (Normal, Sprite, Previzualizare modele)
+.grp_icerik18   = Marimea textului (Sprite)
+.grp_icerik19   = Marimea textului (Preview Models)
+.grp_icerik20   = Marimea textului (Sprite, Previzualizare modele)
+.grp_icerik21   = Marimea textului (Normal, Sprite, Previzualizare modele)
 .grp_icerik22   = Dimensiunea literelor (Textdraw normal)
-.grp_icerik23   = {badc58}Înlocuire text:
-.grp_icerik24   = Modificați textul articolelor grupate
+.grp_icerik23   = {badc58}Inlocuire text:
+.grp_icerik24   = Modificati textul articolelor grupate
 .grp_icerik25   = {badc58}Fonturi de text:
 .grp_icerik26   = Font 0
 .grp_icerik27   = Font 1
 .grp_icerik28   = Font 2
 .grp_icerik29   = Font 3
 .grp_icerik30   = {badc58}Alinierea textului:
-.grp_icerik31   = Stânga
+.grp_icerik31   = Stanga
 .grp_icerik32   = Mijloc
 .grp_icerik33   = Dreapta
-.grp_icerik34   = {badc58}Proporția textului:
+.grp_icerik34   = {badc58}Proportia textului:
 .grp_icerik35   = Deschis
-.grp_icerik36   = Închide
-.grp_icerik37   = {badc58}Contur și umbră:
+.grp_icerik36   = Inchide
+.grp_icerik37   = {badc58}Contur si umbra:
 .grp_icerik38   = Contur
-.grp_icerik39   = Umbră
+.grp_icerik39   = Umbra
 .grp_icerik40   = {badc58}Culori:
 .grp_icerik41   = Hex
 .grp_icerik42   = RGB
@@ -380,76 +380,76 @@
 .grp_icerik44   = Culori gata
 .grp_icerik45   = {badc58}cutie:
 .grp_icerik46   = Deschis
-.grp_icerik47   = Închide
+.grp_icerik47   = Inchide
 .grp_icerik48   = {badc58}Selectabil:
 .grp_icerik49   = Deschis
-.grp_icerik50   = Închide
+.grp_icerik50   = Inchide
 .grp_icerik51   = {badc58}Global / Player:
-.grp_icerik52   = Setați elementele grupate la nivel global
-.grp_icerik53   = Setați elementele grupate ca Player
-.grp_buton1     = Selectați
-.grp_buton2     = Înapoi
+.grp_icerik52   = Setati elementele grupate la nivel global
+.grp_icerik53   = Setati elementele grupate ca Player
+.grp_buton1     = Selectati
+.grp_buton2     = Inapoi
 
 [Modul color]
-.renk_modu_1    = Culoare normală
+.renk_modu_1    = Culoare normala
 .renk_modu_2    = Culoarea fundalului
 .renk_modu_3    = Culoarea cutiei
 
-[Eroare de grupuri | informație]
-.grp_hata1      = Nu există niciun articol grupat.
-.grp_hata2      = Nu s-a găsit niciun articol text între grupuri.
+[Eroare de grupuri | informatie]
+.grp_hata1      = Nu exista niciun articol grupat.
+.grp_hata2      = Nu s-a gasit niciun articol text Intre grupuri.
 .grp_bilgi1     = Toate articolele sunt grupate.
 .grp_bilgi2     = Toate elementele resetate.
 .grp_bilgi3     = Desenele text normale grupate.
 .grp_bilgi4     = Sprite Textdraws grupate.
 .grp_bilgi5     = Previzualizare Model Textdraws grupate.
 .grp_bilgi6     = Elementele grupate au fost copiate. Totalul articolului copiat: #d
-.grp_bilgi7     = Elementele grupate au fost copiate și selectate. Totalul articolului copiat: #d
-.grp_bilgi8     = Elementele grupate au fost șterse. Numărul total de articole șterse: #d
-.grp_bilgi9     = Locația actualizată a articolelor grupate.
-.grp_bilgi10    = Dimensiunea textului actualizată a articolelor grupate.
+.grp_bilgi7     = Elementele grupate au fost copiate si selectate. Totalul articolului copiat: #d
+.grp_bilgi8     = Elementele grupate au fost sterse. Numarul total de articole sterse: #d
+.grp_bilgi9     = Locatia actualizata a articolelor grupate.
+.grp_bilgi10    = Dimensiunea textului actualizata a articolelor grupate.
 .grp_bilgi11    = Textul modificat al articolelor grupate.
-.grp_bilgi12    = S-a schimbat fontul elementelor grupate în #d.
+.grp_bilgi12    = S-a schimbat fontul elementelor grupate In #d.
 .grp_bilgi13    = Elemente grupate aliniate.
-.grp_bilgi14    = S-a schimbat proporția articolelor grupate.
+.grp_bilgi14    = S-a schimbat proportia articolelor grupate.
 .grp_bilgi15    = S-au schimbat culorile articolelor grupate.
 .grp_bilgi16    = S-a actualizat valoarea casetei articolelor grupate.
-.grp_bilgi17    = Valoarea selectabilă actualizată a articolelor grupate.
-.grp_bilgi18    = Valoarea globală/player actualizată a articolelor grupate.
+.grp_bilgi17    = Valoarea selectabila actualizata a articolelor grupate.
+.grp_bilgi18    = Valoarea globala/player actualizata a articolelor grupate.
 
 [Articole de grupat]
 .go_baslik      = Lista de grupare [#d / #d]
 .go_header1     = ID
-.go_header2     = Nume variabilă
+.go_header2     = Nume variabila
 .go_header3     = Cuprins
 .go_header4     = Este grupat?
 .go_header4_n   = Nu
 .go_header4_y   = Da
 .go_icerik1     = Mergi la pagina
 .go_icerik2     = Pagina de grup
-.go_icerik3     = Eliminați pagina din grup
-.go_buton1      = Selectați
-.go_buton2      = Înapoi
+.go_icerik3     = Eliminati pagina din grup
+.go_buton1      = Selectati
+.go_buton2      = Inapoi
 
-[Grupare: Înlocuiește text]
-.gmd_baslik     = Înlocuiește textul
-.gmd_icerik     = {FFFFFF}Introduceți un text nou al articolelor grupate.
+[Grupare: Inlocuieste text]
+.gmd_baslik     = Inlocuieste textul
+.gmd_icerik     = {FFFFFF}Introduceti un text nou al articolelor grupate.
 .gmd_buton1     = Schimbare
-.gmd_buton2     = Înapoi
-.gmd_hata       = Ai lăsat caseta goală.
+.gmd_buton2     = Inapoi
+.gmd_hata       = Ai lasat caseta goala.
 
 [Contur de grupare]
 .goline_baslik  = Contur
-.goline_icerik  = {FFFFFF}Introduceți valoarea de contur pe care doriți să o utilizați.
+.goline_icerik  = {FFFFFF}Introduceti valoarea de contur pe care doriti sa o utilizati.
 .goline_buton1  = Schimbare
-.goline_buton2  = Înapoi
-.goline_bilgi   = Structura elementelor grupate setată la #d.
-.goline_hata    = Ați introdus o valoare incorectă.
+.goline_buton2  = Inapoi
+.goline_bilgi   = Structura elementelor grupate setata la #d.
+.goline_hata    = Ati introdus o valoare incorecta.
 
 [Umbra de grupare]
 .gshdow_baslik  = Umbra
-.gshdow_icerik  = {FFFFFF}Introduceți valoarea Shadow pe care doriți să o utilizați.
+.gshdow_icerik  = {FFFFFF}Introduceti valoarea Shadow pe care doriti sa o utilizati.
 .gshdow_buton1  = Schimbare
-.gshdow_buton2  = Înapoi
-.gshdow_bilgi   = Umbra elementelor grupate setată la #d.
-.gshdow_hata    = Ați introdus o valoare incorectă.
+.gshdow_buton2  = Inapoi
+.gshdow_bilgi   = Umbra elementelor grupate setata la #d.
+.gshdow_hata    = Ati introdus o valoare incorecta.
