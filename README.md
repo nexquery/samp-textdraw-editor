@@ -1,5 +1,3 @@
-![](https://img.shields.io/tokei/lines/github/nexquery/samp-textdraw-editor)
-
 # Nexor's Textdraw Editor
 My purpose in making this textdraw editor was to add features that other editors do not have. This editor offers you many features such as grouping, undeleting texts, undoing changes, importing text drawings from a file.
 
