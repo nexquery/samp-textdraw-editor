@@ -1,0 +1,455 @@
+###############################################
+#       Textdraw Editor - Language File
+#
+# Language: Turkish
+# Author:   root
+# Version:  1.1
+# Encoding: UTF-8
+###############################################
+
+[Dil Secimi]
+.editor_dil     = Your language is set to English.
+
+[Kisayollar]
+.kisayollar     = Usage:   [Arrow keys],   [SPACE key],   [N key],   [ENTER key]
+
+[Calisma Ortami]
+.co_baslik      = What do you preffer?
+.co_icerik_1    = Color background
+.co_icerik_2    = Spawn player
+.co_buton_1     = Choose
+.co_mesaj_1     = You chose color background. If your mouse disappears use the command {45aaf2}/mouse
+.co_mesaj_2     = You chose spawning. If your mouse disappears use the command {45aaf2}/mouse
+
+[Sayfaya Git]
+.sayfa_baslik   = Go to page
+.sayfa_icerik   = {FFFFFF}The page number should be between {ff7979}1 {FFFFFF}and {ff7979}#d
+.sayfa_btn1     = Next
+.sayfa_btn2     = Back
+.sayfa_hata     = Page number incorrect.
+
+[Proje]
+.proje_baslik   = Project menu
+.proje_icerik_1 = New project
+.proje_icerik_2 = Load project
+.proje_icerik_3 = Import textdraw
+.proje_icerik_4 = Export textdraw
+.proje_icerik_5 = Close project
+.proje_buton_1  = Choose
+.proje_buton_2  = Close
+
+[Proje Olustur]
+.po_baslik      = New project
+.po_metin       = {ffffff}Enter the name of the project you want to create:
+.po_buton_1     = Create
+.po_buton_2     = Back
+.po_hata_1      = You did not specify the project name.
+.po_hata_2      = The project name is too long.
+.po_hata_3      = There are invalid characters in the project name.
+.po_hata_4      = There is already a project with that name.
+.po_hata_5      = To create a new project, close the existing project.
+.po_bilgi_1     = Project "#s" {FFFFFF}created.
+
+[Projeler]
+.pler_baslik    = Projects [#d / #d]
+.pler_icerik_1  = Project name
+.pler_icerik_2  = Creation date
+.pler_icerik_3  = Go to page
+.pler_buton_1   = Choose
+.pler_buton_2   = Back
+.pler_hata      = No projects found.
+
+[Proje Islemi]
+.pi_baslik      = Options
+.pi_icerik_1    = Load project
+.pi_icerik_2    = Delete project
+.pi_buton_1     = Choose
+.pi_buton_2     = Back
+.pi_hata_1      = This project is already loaded.
+.pi_hata_2      = To load a new project close the existing project.
+.pi_hata_3      = The project cannot be loaded because the database file has not been found.
+.pi_bilgi       = Project "#s" {FFFFFF}loaded. [Global TDs: #d, Player TDs: #d, Total: #d]
+.pi_uyari_bslk  = Delete project
+.pi_uyari_icrk  = {FFFFFF}Are you sure you want to delete the project?
+.pi_uyari_btn1  = Yes
+.pi_uyari_btn2  = No
+.pi_uyari_bilgi = Project "#s" deleted.
+.pi_uyari_hata  = You need to close the project first.
+
+[Ice Aktar]
+.ia_baslik      = Import
+.ia_icerik_1    = {FFFFFF}Enter the name of the file you want to import.
+.ia_icerik_2    = {badc58}Example: {FFFFFF}phone.txt
+.ia_btn1        = Import
+.ia_btn2        = Back
+.ia_hata_1      = You need to create a project before importing a textdraw.
+.ia_hata_2      = You have not entered the name of the file to be imported.
+.ia_hata_3      = No file found with the name "#s".
+.ia_hata_4      = The import was interrupted because the textdraw limit was reached.
+.ia_hata_5      = No textdraws found to add.
+.ia_bilgi       = File "#s" imported. [Global TDs: #d, Player TDs: #d, Total: #d]
+
+[Disa Aktar]
+.da_baslik      = Export
+.da_icerik_1    = {FFFFFF}Enter the name of the file you want to export.
+.da_icerik_2    = If you dont specify a file name, you will get the output as "#s.txt".
+.da_btn1        = Export
+.da_btn2        = Back
+.da_hata        = You didn't create any textdraw.
+.da_hata2       = You must create or load a project for the export process.
+.da_bilgi       = Project "#s.txt" exported. [Global TDs: #d, Player TDs: #d, Total: #d]
+
+[Projeyi Close]
+.pk_hata        = To close a project you must have one loaded.
+.pk_bilgi       = Project #s has been succesfully closed.
+
+[Ayarlar]
+.ayar_baslik    = Settings
+.ayar_header_1  = #
+.ayar_header_2  = Value
+.ayar_icerik_1  = Hour
+.ayar_icerik_2  = HUD position
+.ayar_icerik_3  = Global TD default name
+.ayar_icerik_4  = Player TD default name
+.ayar_buton1    = Choose
+.ayar_buton2    = Close
+
+[Saat]
+.saat_baslik    = Hour
+.saat_buton1    = Choose
+.saat_buton2    = Back
+.saat_bilgi     = Ingame time set to #02d:00.
+
+[Hud Konumu]
+.hkonum_bilgi   = HUD position changed succesfully.
+
+[Degisken - Global | Player]
+.dg_baslik      = Default variable name
+.dg_icerik_1    = {FFFFFF}Specifies the variable name of the output you will receive when exporting your project.
+.dg_icerik_2    = {FFFFFF}Leave the screen blank to set the default variable name.
+.dg_buton1      = Change
+.dg_buton2      = Back
+.dg_hata        = The variable name is too long.
+.dg_bilgi       = The default variable name is set to #s.
+
+[Yeni]
+.yeni_baslik    = New
+.yeni_icerik    = Preview Models (object, vehicle, skin)
+.yeni_btn1      = Create
+.yeni_btn2      = Close
+.yeni_textdraw  = New textdraw
+
+[Liste]
+.liste_baslik   = Textdraw list [#d / #d]
+.liste_header1  = Index
+.liste_header2  = Variable name
+.liste_header3  = Name
+.liste_header4  = Type
+.liste_icerik   = Go to page
+.liste_btn1     = Choose
+.liste_btn2     = Close
+
+[Liste Islem]
+.lislem_baslik  = Options
+.lislem_icerik1 = Choose textdraw
+.lislem_icerik2 = Delete textdraw
+.lislem_icerik3 = Clone textdraw
+.lislem_icerik4 = Clone textdraw and select
+.lislem_icerik5 = Change textdraw index
+.lislem_icerik6 = Change variable name
+.lislem_btn1    = Choose
+.lislem_btn2    = Back
+
+[Liste Islem Bilgi]
+.tdraw_sec      = Textdraw selected. Index: #d
+.tdraw_sil      = Textdraw deleted. Index: #d
+.tdraw_kopyala  = Textdraw copied. Index: #d
+.tdraw_kopyala2 = Textdraw copied and chosen. Index: #d
+
+[Index Degistir]
+.idgstr_bslk    = Index number [#d / #d]
+.idgstr_btn1    = Change
+.idgstr_btn2    = Back
+.idgstr_bilgi   = The index number of the textdraw has been changed. New index number: #d
+
+[Degisken Adi]
+.degadi_bslk    = Edit variable name
+.degadi_icrk_1  = {ff7979}Note: {FFFFFF}Leave the box blank to remove the variable name.
+.degadi_icrk_2  = {ffffff}Enter the variable name you want to use for this textdraw.
+.degadi_btn1    = Change
+.degadi_btn2    = Back
+.degadi_hata    = The variable name is too long.
+.degadi_bilgi   = The variable name is set to #s.
+.degadi_bilgi2  = The variable name has been removed.
+
+[Depo]
+.depo_baslik    = Depo
+.depo_icerik_1  = Grouping
+.depo_icerik_2  = Restore deleted textdraws
+.depo_btn_1     = Choose
+.depo_btn_2     = Close
+
+[Kopyala]
+.kopyala_bilgi  = Textdraw copied and selected. Index: #d
+
+[Sil]
+.sil_bilgi      = Textdraw deleted. Index: #d
+
+[Boyut | Textsize | Lettersize]
+.btl_baslik     = Manual editing
+.btl_icrk_1     = {FFFFFF}Enter the new values you want to use.
+.btl_icrk_2     = {70a1ff}Example:
+.btl_icrk_3     = {ffffff}10 20  or  10.0 20.0
+.btl_icrk_4     = {70a1ff}Current values:
+.btl_icrk_5     = {eccc68}X: {FFFFFF}#.2f
+.btl_icrk_6     = {eccc68}Y: {FFFFFF}#.2f
+.btl_icrk_7     = {70a1ff}For X value only:
+.btl_icrk_8     = {ffffff}value 0
+.btl_icrk_9     = {70a1ff}For y value only:
+.btl_icrk_10    = {ffffff}0 value
+.btl_icrk_11    = {FFFFFF}Enter {ff7f50}0 0 {FFFFFF} to remove the textsize feature.
+.btl_buton_1    = Update
+.btl_buton_2    = Close
+.btl_hata_1     = You entered an incorrect value.
+.btl_bilgi_1    = Values have been updated.
+
+[Metin]
+.metin_baslik   = Text
+.metin_icerik   = {f1c40f}Current text:
+.metin_icerik2  = {ffffff}Enter the text you want to use.
+.metin_buton1   = Change
+.metin_buton2   = Close
+.metin_hata     = You must specify a text.
+.metin_bilgi    = The text has been changed.
+
+[Outline | Shadow]
+.os_baslik      = Manual edit
+.os_icerik_1    = {f9ca24}Current value: {FFFFFF}#d
+.os_icerik_2    = {FFFFFF}Enter the value you want to use. Type {f9ca24}0 {FFFFFF} to remove.
+.os_buton_1     = Set
+.os_buton_2     = Close
+.os_hata        = You entered an incorrect value.
+.os_bilgi_1     = Value updated.
+
+[Renk | BG | Box]
+.renk_baslik    = Colors
+.renk_icerik    = RGBA (using direction keys)
+.renk_buton1    = Choose
+.renk_buton2    = Close
+
+[Renk - Hex]
+.rhex_baslik    = Color: Hex
+.rhex_icerik_1  = {FFFFFF}Enter the hex code of the color you want to use.
+.rhex_icerik_2  = {badc58}Example:
+.rhex_icerik_3  = {FFFFFF}FFBE76
+.rhex_icerik_4  = {FFFFFF}#FFBE76
+.rhex_icerik_5  = {FFFFFF}0xFFBE76
+.rhex_icerik_6  = {FFFFFF}0xFFBE76FF
+.rhex_buton_1   = Change
+.rhex_buton_2   = Back
+.rhex_hata      = The hex code you entered is incorrect.
+
+[Renk - RGB]
+.rgb_baslik     = Color: RGB
+.rgb_icerik_1   = {FFFFFF}Enter the RGB code of the color you want to use.
+.rgb_icerik_2   = {badc58}Example:
+.rgb_icerik_3   = {FFFFFF}66 135 245
+.rgb_icerik_4   = {FFFFFF}66, 135, 245
+.rgb_icerik_5   = {FFFFFF}rgb(66, 135, 245)
+.rgb_icerik_6   = {FFFFFF}rgb(66, 135, 245);
+.rgb_buton_1    = Change
+.rgb_buton_2    = Back
+.rgb_hata       = The RGB code you entered is incorrect.
+
+[Renk - RGBA]
+.rgba_baslik    = Renk: RGBA
+.rgba_icerik_1  = {FFFFFF}Enter the RGBA code of the color you want to use.
+.rgba_icerik_2  = {badc58}Example:
+.rgba_icerik_3  = {FFFFFF}66 135 245 255
+.rgba_icerik_4  = {FFFFFF}66, 135, 245, 255
+.rgba_icerik_5  = {FFFFFF}rgba(66, 135, 245, 255)
+.rgba_icerik_6  = {FFFFFF}rgba(66, 135, 245, 255);
+.rgba_buton_1   = Change
+.rgba_buton_2   = Back
+.rgba_hata      = The RGBA code you entered is incorrect.
+
+[Preview Models]
+.pmdls_buton_1  = Choose
+.pmdls_buton_2  = Close
+.pmdls_hata     = You entered an incorrect value.
+.pmdls_bilgi_1  = Values have been updated.
+
+[Preview Models Manuel]
+.pmdls_mbaslik  = Manual edit
+.pmdls_icerik_1 = {FFFFFF}Enter the value you want to use.
+.pmdls_icerik_2 = {badc58}Your current value is: {FFFFFF}#d
+.pmdls_icerik_3 = {badc58}Your current value is: {FFFFFF}#.2f
+.pmdls_buton_3  = Update
+.pmdls_buton_4  = Close
+
+[Back, Ileri Al]
+.gi_baslik      = Undo and Redo
+.gi_icerik_1    = Choose the index you want to show. The index can be from {ff7979}1 {ffffff}to {ff7979}#%d
+.gi_buton_1     = Show
+.gi_buton_2     = Close
+.gi_hata        = You entered an incorrect value.
+
+[Back, Ileri Al | Onay]
+.gio_baslik     = Confirm Changes
+.gio_icerik_1   = {FFFFFF}Are you sure you want the confirm the changes?
+.gio_buton_1    = Yes
+.gio_buton_2    = No
+.gio_bilgi_1    = The changes have been saved.
+.gio_bilgi_2    = No changes were made.
+
+[Silinenler]
+.s_baslik       = Deleted textdraws [#d / #d]
+.s_header1      = Name
+.s_header2      = Type
+.s_header3      = Global / Player
+.s_header4      = Delete date
+.s_icerik1      = Go to page
+.s_icerik2      = Erase all data
+.s_icerik3      = Restore all data
+.s_buton1       = Restore
+.s_buton2       = Back
+.s_hata         = No deleted textdraws found.
+.s_bilgi        = Textdraw has been restored. New index number: #d
+
+[Silinenler - Temizle]
+.st_baslik      = Erase all data
+.st_icerik1     = {ff7f50}Warning: {FFFFFF}This operation will delete the data of all textdraws you have deleted.
+.st_icerik2     = {FFFFFF}Confirm this action?
+.st_buton1      = Yes
+.st_buton2      = No
+.st_bilgi       = Erased all data.
+
+[Silinenler - Tum Verileri Back Yukle]
+.stgy_baslik    = Restore all data
+.stgy_icerik1   = {FFFFFF}Are you sure you want to restore all data?
+.stgy_buton1    = Yes
+.stgy_buton2    = No
+.stgy_bilgi     = All data has been restored. Total data: #d
+
+[Gruplar]
+.grp_hata       = Create a textdraw to use this feature.
+.grp_baslik     = Grouping
+.grp_icerik1    = {badc58}Grouping:
+.grp_icerik2    = Choose textdraws to group
+.grp_icerik3    = Group all textdraws
+.grp_icerik4    = Reset all grouped textdraws
+.grp_icerik5    = {badc58}Quick grouping:
+.grp_icerik6    = Normal Textdraw
+.grp_icerik7    = Sprite
+.grp_icerik8    = Preview Models
+.grp_icerik9    = {badc58}Copying:
+.grp_icerik10   = Copy grouped textdraws
+.grp_icerik11   = Copy grouped textdraws and choose
+.grp_icerik12   = {badc58}Delete:
+.grp_icerik13   = Delete grouped textdraws
+.grp_icerik14   = {badc58}Position:
+.grp_icerik15   = Change position of grouped textdraws
+.grp_icerik16   = {badc58}Sizing:
+.grp_icerik17   = Textsize (Normal Textdraw)
+.grp_icerik18   = Textsize (Sprite)
+.grp_icerik19   = Textsize (Preview Models)
+.grp_icerik20   = Textsize (Sprite, Preview Models)
+.grp_icerik21   = Textsize (Normal, Sprite, Preview Models)
+.grp_icerik22   = Lettersize (Normal Textdraw)
+.grp_icerik23   = {badc58}Text:
+.grp_icerik24   = Change text of grouped textdraws
+.grp_icerik25   = {badc58}Text font:
+.grp_icerik26   = Font 0
+.grp_icerik27   = Font 1
+.grp_icerik28   = Font 2
+.grp_icerik29   = Font 3
+.grp_icerik30   = {badc58}Text alignment:
+.grp_icerik31   = Left
+.grp_icerik32   = Center
+.grp_icerik33   = Right
+.grp_icerik34   = {badc58}Text proportion:
+.grp_icerik35   = On / Off
+.grp_icerik36   = Close
+.grp_icerik37   = {badc58}Outline & Shadow:
+.grp_icerik38   = Outline
+.grp_icerik39   = Shadow
+.grp_icerik40   = {badc58}Color:
+.grp_icerik41   = Hex
+.grp_icerik42   = RGB
+.grp_icerik43   = RGBA
+.grp_icerik44   = Premade colors
+.grp_icerik45   = {badc58}Box:
+.grp_icerik46   = On / Off
+.grp_icerik47   = Close
+.grp_icerik48   = {badc58}Selectable:
+.grp_icerik49   = On / Off
+.grp_icerik50   = Close
+.grp_icerik51   = {badc58}Global / Player:
+.grp_icerik52   = Set grouped textdraws to global
+.grp_icerik53   = Set grouped textdraws to player
+.grp_buton1     = Choose
+.grp_buton2     = Back
+
+[Renk Modu]
+.renk_modu_1    = Text color
+.renk_modu_2    = Background / border color
+.renk_modu_3    = Box color
+
+[Gruplar Hata | Bilgi]
+.grp_hata1      = There is no grouped textdraws.
+.grp_hata2      = No text item found between groups.
+.grp_bilgi1     = All textdraws have been grouped.
+.grp_bilgi2     = All textdraws have been removed from group.
+.grp_bilgi3     = Normal textdraws have been grouped.
+.grp_bilgi4     = Sprite textdraws have been grouped.
+.grp_bilgi5     = Preview Model Textdraws have been grouped.
+.grp_bilgi6     = Grouped textdraws were copied. Total copied textdraws: #d
+.grp_bilgi7     = The grouped textdraws have been copied and selected. Total copied textdraws: #d
+.grp_bilgi8     = All grouped textdraws have been deleted. Total deleted textdraws: #d
+.grp_bilgi9     = Updated position of all grouped textdraws.
+.grp_bilgi10    = Updated text size of all grouped textdraws.
+.grp_bilgi11    = Changed text of all grouped textdraws.
+.grp_bilgi12    = Changed font of all grouped textdraws to #d.
+.grp_bilgi13    = Changed alignment of all grouped textdraws.
+.grp_bilgi14    = Changed proportion of all grouped textdraws.
+.grp_bilgi15    = Changed color of all grouped textdraws.
+.grp_bilgi16    = Changed box value of all grouped textdraws.
+.grp_bilgi17    = Changed selectable value of all grouped textdraws.
+.grp_bilgi18    = Changed Global / Player value of all grouped textdraws.
+
+[Gruplanacak Ogeler]
+.go_baslik      = Grouping [#d / #d]
+.go_header1     = ID
+.go_header2     = Variable name
+.go_header3     = Content
+.go_header4     = Grouped?
+.go_header4_n   = No
+.go_header4_y   = Yes
+.go_icerik1     = Go to page
+.go_icerik2     = Group page
+.go_icerik3     = Ungroup page
+.go_buton1      = Choose
+.go_buton2      = Back
+
+[Gruplama: Metin Degistir]
+.gmd_baslik     = Text change
+.gmd_icerik     = {FFFFFF}Enter the new text of the grouped items.
+.gmd_buton1     = Change
+.gmd_buton2     = Back
+.gmd_hata       = The text can't be empty.
+
+[Gruplama Outline]
+.goline_baslik  = Outline
+.goline_icerik  = {FFFFFF}Enter the outline value you want to use.
+.goline_buton1  = Change
+.goline_buton2  = Back
+.goline_bilgi   = The outline value of grouped textdraws is set to #d.
+.goline_hata    = You entered an incorrect value.
+
+[Gruplama Shadow]
+.gshdow_baslik  = Shadow
+.gshdow_icerik  = {FFFFFF}Enter the shadow value you want to use.
+.gshdow_buton1  = Change
+.gshdow_buton2  = Back
+.gshdow_bilgi   = The shadow value of grouped textdraws is set to #d.
+.gshdow_hata    = You entered an incorrect value.

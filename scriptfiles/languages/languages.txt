@@ -1,2 +1,3 @@
 tr.txt = Turkish
+en.txt = English
 ro.txt = Romanian
