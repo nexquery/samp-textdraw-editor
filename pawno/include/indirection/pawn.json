@@ -1,0 +1,66 @@
+{
+	"user": "Y-Less",
+	"repo": "indirection",
+	"entry": "main.pwn",
+	"output": "indirection.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib",
+		"Zeex/amx_assembly"
+	],
+	"dev_dependencies": [
+		"Misiur/YSI-Includes",
+		"Zeex/samp-plugin-crashdetect"
+	],
+	"builds": [
+		{
+			"name": "default",
+			"version": "",
+			"workingDir": "",
+			"args": null,
+			"input": "",
+			"output": "",
+			"includes": null,
+			"constants": null
+		},
+		{
+			"name": "y_testing",
+			"version": "",
+			"workingDir": "",
+			"args": [
+				"-;+",
+				"-(+",
+				"-Z+",
+				"-\\+",
+				"RUN_TESTS=1",
+				"LIGHT_TEST_REPORT=1",
+				"TEST_AUTO_EXIT=1",
+				"_YSI_NO_VERSION_CHECK=1"
+			],
+			"input": "",
+			"output": "",
+			"includes": null,
+			"constants": null
+		},
+		{
+			"name": "full_testing",
+			"version": "",
+			"workingDir": "",
+			"args": [
+				"-;+",
+				"-d3",
+				"-O0",
+				"-(+",
+				"-Z+",
+				"-\\+",
+				"YSI_TESTS=1",
+				"TEST_AUTO_EXIT=1",
+				"_YSI_NO_VERSION_CHECK=1",
+				"_DEBUG=1"
+			],
+			"input": "",
+			"output": "",
+			"includes": null,
+			"constants": null
+		}
+	]
+}

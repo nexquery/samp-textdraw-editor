@@ -1,0 +1,455 @@
+###############################################
+#       Textdraw Editor - Language File
+#
+# Language: Turkish
+# Author:   Nexor
+# Version:  1.1
+# Encoding: Turkish (Windows 1254)
+###############################################
+
+[Dil Secimi]
+.editor_dil     = Diliniz Türkçe olarak ayarlandý.
+
+[Kisayollar]
+.kisayollar     = Kullaným:   [Yön Tuþlarý],   [Boþluk Tuþu],   [N Tuþu],   [Enter Tuþu]
+
+[Calisma Ortami]
+.co_baslik      = Hangi ortamda çalýþmak istersiniz?
+.co_icerik_1    = Boþ bir ekranda
+.co_icerik_2    = Spawn olarak
+.co_buton_1     = Seç
+.co_mesaj_1     = Projelerinizi boþ bir ekran üzerinde düzenleyeceksiniz. Mouse sorunu yaþarsanýz {45aaf2}/mouse {ffffff}komutunu kullanýn.
+.co_mesaj_2     = Projelerinizi dünya üzerinde düzenleyeceksiniz. Mouse aktif etmek ve kapatmak için {45aaf2}/mouse {ffffff}komutunu kullanýn.
+
+[Sayfaya Git]
+.sayfa_baslik   = Sayfaya Git
+.sayfa_icerik   = {FFFFFF}Gitmek istediðiniz sayfa numarasý {ff7979}1 {FFFFFF}ile {ff7979}#d {FFFFFF}arasýnda olabilir.
+.sayfa_btn1     = Git
+.sayfa_btn2     = Geri
+.sayfa_hata     = Sayfa numarasý hatalý.
+
+[Proje]
+.proje_baslik   = Proje Menüsü
+.proje_icerik_1 = Yeni proje oluþtur
+.proje_icerik_2 = Projeler
+.proje_icerik_3 = Ýçe aktar
+.proje_icerik_4 = Dýþa aktar
+.proje_icerik_5 = Projeyi kapat
+.proje_buton_1  = Seç
+.proje_buton_2  = Kapat
+
+[Proje Olustur]
+.po_baslik      = Yeni Proje Oluþtur
+.po_metin       = {ffffff}Oluþturmak istediðiniz projenin adýný girin.
+.po_buton_1     = Oluþtur
+.po_buton_2     = Geri
+.po_hata_1      = Proje adýný belirtmediniz.
+.po_hata_2      = Proje adý çok uzun.
+.po_hata_3      = Proje adýnda geçersiz karakterler var.
+.po_hata_4      = Böyle bir proje zaten bulunuyor.
+.po_hata_5      = Yeni bir proje oluþturmak için mevcut projeyi kapatýn.
+.po_bilgi_1     = "#s" {FFFFFF}isimli proje baþarýyla oluþturuldu.
+
+[Projeler]
+.pler_baslik    = Proje Listesi [#d / #d]
+.pler_icerik_1  = Proje Adý
+.pler_icerik_2  = Oluþturulma Tarihi
+.pler_icerik_3  = Sayfaya git
+.pler_buton_1   = Seç
+.pler_buton_2   = Geri
+.pler_hata      = Daha önceden bir proje oluþturulmamýþ.
+
+[Proje Islemi]
+.pi_baslik      = Bir Ýþlem Seçin
+.pi_icerik_1    = Projeyi yükle
+.pi_icerik_2    = Projeyi sil
+.pi_buton_1     = Seç
+.pi_buton_2     = Geri
+.pi_hata_1      = Bu projeyi zaten yüklediniz.
+.pi_hata_2      = Bu projeyi yüklemek için mevcut projeyi kapatýn.
+.pi_hata_3      = Veritabaný dosyasý bulunamadýðý için proje yüklenemiyor.
+.pi_bilgi       = "#s" {FFFFFF}isimli proje baþarýyla yüklendi. [Global: #d, Player: #d, Toplam: #d]
+.pi_uyari_bslk  = Projeyi Sil
+.pi_uyari_icrk  = {FFFFFF}Projeyi silmek istediðinize emin misiniz?
+.pi_uyari_btn1  = Evet
+.pi_uyari_btn2  = Hayýr
+.pi_uyari_bilgi = "#s" isimli projeyi silindi.
+.pi_uyari_hata  = Bu projeyi yüklediniz, silmek için önce projeyi kapatýn.
+
+[Ice Aktar]
+.ia_baslik      = Ýçe Aktar
+.ia_icerik_1    = {FFFFFF}Ýçe aktarmak istediðiniz dosyasýnýn adýný girin.
+.ia_icerik_2    = {badc58}Örnek: {FFFFFF}telefon.txt
+.ia_btn1        = Aktar
+.ia_btn2        = Geri
+.ia_hata_1      = Ýçe aktarma iþlemi için bir proje oluþturmalý veya yüklemelisiniz.
+.ia_hata_2      = Ýçe aktarýlacak dosyanýn adýný girmediniz.
+.ia_hata_3      = "#s" adýnda bir dosya bulunamadý.
+.ia_hata_4      = Textdraw sýnýrýna ulaþýldýðý için içe aktarma yarýda kesildi.
+.ia_hata_5      = Eklenecek bir textdraw bulunamadý.
+.ia_bilgi       = "#s" isimli dosya proje içine aktarýldý. [Global: #d, Player: #d, Toplam: #d]
+
+[Disa Aktar]
+.da_baslik      = Dýþa Aktar
+.da_icerik_1    = {FFFFFF}Dýþa aktarmak istediðiniz dosyanýn adýný girin.
+.da_icerik_2    = {FFFFFF}Ekraný boþ býrakýrsanýz {6a89cc}#s.txt {FFFFFF}olarak çýktý alacaksýnýz.
+.da_btn1        = Dýþa Aktar
+.da_btn2        = Geri
+.da_hata        = Dýþa aktarma iþlemi için bir adet textdraw oluþturun.
+.da_hata2       = Dýþa aktarma iþlemi için bir proje oluþturmalý veya yüklemelisiniz.
+.da_bilgi       = Projenin çýktýsý "#s.txt" olarak kaydedildi. [Global: #d, Player: #d, Toplam: #d]
+
+[Projeyi Kapat]
+.pk_hata        = Projeyi kapatmak için bir proje oluþturmalý veya yüklemelisiniz.
+.pk_bilgi       = #s isimli proje baþarýyla kapatýldý.
+
+[Ayarlar]
+.ayar_baslik    = Ayarlar
+.ayar_header_1  = #
+.ayar_header_2  = Deðer
+.ayar_icerik_1  = Saat
+.ayar_icerik_2  = Hud Konumu
+.ayar_icerik_3  = Varsayýlan Global Deðiþken Adý
+.ayar_icerik_4  = Varsayýlan Player Deðiþken Adý
+.ayar_buton1    = Seç
+.ayar_buton2    = Kapat
+
+[Saat]
+.saat_baslik    = Saat
+.saat_buton1    = Seç
+.saat_buton2    = Geri
+.saat_bilgi     = Oyun saati #02d:00 olarak ayarlandý.
+
+[Hud Konumu]
+.hkonum_bilgi   = Hud konumu baþarýyla deðiþtirildi.
+
+[Degisken - Global | Player]
+.dg_baslik      = Varsayýlan Deðiþken Adý
+.dg_icerik_1    = {FFFFFF}Projenizi dýþa aktarýrken alacaðýnýz çýktýnýn deðiþken adýný belirler.
+.dg_icerik_2    = {FFFFFF}Varsayýlan deðiþken adýný ayarlamak için ekraný boþ býrakýn.
+.dg_buton1      = Deðiþtir
+.dg_buton2      = Geri
+.dg_hata        = Deðiþken adý çok uzun.
+.dg_bilgi       = Varsayýlan deðiþken adý #s olarak ayarlandý.
+
+[Yeni]
+.yeni_baslik    = Yeni
+.yeni_icerik    = Preview Models (Obje, Araç, Skin)
+.yeni_btn1      = Oluþtur
+.yeni_btn2      = Kapat
+.yeni_textdraw  = Yeni Textdraw
+
+[Liste]
+.liste_baslik   = Textdraw Listesi [#d / #d]
+.liste_header1  = Index
+.liste_header2  = Deðiþken Adý
+.liste_header3  = Ýçerik
+.liste_header4  = Tür
+.liste_icerik   = Sayfaya git
+.liste_btn1     = Seç
+.liste_btn2     = Kapat
+
+[Liste Islem]
+.lislem_baslik  = Bir Ýþlem Seçin
+.lislem_icerik1 = Textdrawý seç
+.lislem_icerik2 = Textdrawý sil
+.lislem_icerik3 = Textdrawý kopyala
+.lislem_icerik4 = Textdrawý kopyala ve seç
+.lislem_icerik5 = Index sýrasýný deðiþtir
+.lislem_icerik6 = Deðiþken adýný düzenle
+.lislem_btn1    = Seç
+.lislem_btn2    = Geri
+
+[Liste Islem Bilgi]
+.tdraw_sec      = Textdraw seçildi. Index: #d
+.tdraw_sil      = Textdraw silindi. Index: #d
+.tdraw_kopyala  = Textdraw kopyalandý. Index: #d
+.tdraw_kopyala2 = Textdraw kopyalandý ve seçildi. Index: #d
+
+[Index Degistir]
+.idgstr_bslk    = Index Numarasý [#d / #d]
+.idgstr_btn1    = Deðiþtir
+.idgstr_btn2    = Geri
+.idgstr_bilgi   = Textdrawýn index numarasý deðiþtirildi. Yeni Index Numarasý: #d
+
+[Degisken Adi]
+.degadi_bslk    = Deðiþken Adýný Düzenle
+.degadi_icrk_1  = {ff7979}Not: {FFFFFF}Deðiþken adýný kaldýrmak için kutucuðu boþ býrakýn.
+.degadi_icrk_2  = {ffffff}Bu textdraw için kullanmak istediðiniz deðiþken adýný girin.
+.degadi_btn1    = Deðiþtir
+.degadi_btn2    = Geri
+.degadi_hata    = Deðiþken adý çok uzun.
+.degadi_bilgi   = Deðiþken adý #s olarak ayarlandý.
+.degadi_bilgi2  = Deðiþken adý kaldýrýldý.
+
+[Depo]
+.depo_baslik    = Depo
+.depo_icerik_1  = Gruplama
+.depo_icerik_2  = Silinmiþ Textdrawlar
+.depo_btn_1     = Seç
+.depo_btn_2     = Kapat
+
+[Kopyala]
+.kopyala_bilgi  = Textdraw kopyalandý ve seçildi. Index: #d
+
+[Sil]
+.sil_bilgi      = Textdraw silindi. Index: #d
+
+[Boyut | Textsize | Lettersize]
+.btl_baslik     = Manuel Düzenleme
+.btl_icrk_1     = {FFFFFF}Kullanmak istediðiniz yeni deðerleri girin.
+.btl_icrk_2     = {70a1ff}Örnek:
+.btl_icrk_3     = {ffffff}10 20  veya  10.0 20.0
+.btl_icrk_4     = {70a1ff}Güncel Deðerleriniz:
+.btl_icrk_5     = {eccc68}X: {FFFFFF}#.2f
+.btl_icrk_6     = {eccc68}Y: {FFFFFF}#.2f
+.btl_icrk_7     = {70a1ff}Sadece X Deðeri Ýçin:
+.btl_icrk_8     = {ffffff}deðer 0
+.btl_icrk_9     = {70a1ff}Sadece Y Deðeri Ýçin:
+.btl_icrk_10    = {ffffff}0 deðer
+.btl_icrk_11    = {FFFFFF}Textsize özelliðini kaldýrmak için {ff7f50}0 0 {FFFFFF}girin.
+.btl_buton_1    = Güncelle
+.btl_buton_2    = Kapat
+.btl_hata_1     = Hatalý deðer girdiniz.
+.btl_bilgi_1    = Deðerler güncellendi.
+
+[Metin]
+.metin_baslik   = Metin
+.metin_icerik   = {f1c40f}Þu anki metniniz:
+.metin_icerik2  = {ffffff}Kullanmak istediðiniz metni girin.
+.metin_buton1   = Deðiþtir
+.metin_buton2   = Kapat
+.metin_hata     = Kutucuðu boþ býraktýnýz.
+.metin_bilgi    = Metin deðiþtirildi.
+
+[Outline | Shadow]
+.os_baslik      = Manuel Ayarlama
+.os_icerik_1    = {f9ca24}Güncel Deðeriniz: {FFFFFF}#d
+.os_icerik_2    = {FFFFFF}Kullanmak istediðiniz deðeri girin. Kaldýrmak için {f9ca24}0 {FFFFFF}yazýn.
+.os_buton_1     = Ayarla
+.os_buton_2     = Kapat
+.os_hata        = Hatalý deðer girdiniz.
+.os_bilgi_1     = Deðer güncellendi.
+
+[Renk | BG | Box]
+.renk_baslik    = Renkler
+.renk_icerik    = RGBA (Yön Tuþlarýyla)
+.renk_buton1    = Seç
+.renk_buton2    = Kapat
+
+[Renk - Hex]
+.rhex_baslik    = Renk: Hex
+.rhex_icerik_1  = {FFFFFF}Kullanmak istediðiniz rengin hex kodunu girin.
+.rhex_icerik_2  = {badc58}Örnek:
+.rhex_icerik_3  = {FFFFFF}FFBE76
+.rhex_icerik_4  = {FFFFFF}#FFBE76
+.rhex_icerik_5  = {FFFFFF}0xFFBE76
+.rhex_icerik_6  = {FFFFFF}0xFFBE76FF
+.rhex_buton_1   = Deðiþtir
+.rhex_buton_2   = Geri
+.rhex_hata      = Hatalý hex kodu girdiniz.
+
+[Renk - RGB]
+.rgb_baslik     = Renk: RGB
+.rgb_icerik_1   = {FFFFFF}Kullanmak istediðiniz rengin rgb kodunu girin.
+.rgb_icerik_2   = {badc58}Örnek:
+.rgb_icerik_3   = {FFFFFF}66 135 245
+.rgb_icerik_4   = {FFFFFF}66, 135, 245
+.rgb_icerik_5   = {FFFFFF}rgb(66, 135, 245)
+.rgb_icerik_6   = {FFFFFF}rgb(66, 135, 245);
+.rgb_buton_1    = Deðiþtir
+.rgb_buton_2    = Geri
+.rgb_hata       = Hatalý rgb kodu girdiniz.
+
+[Renk - RGBA]
+.rgba_baslik    = Renk: RGBA
+.rgba_icerik_1  = {FFFFFF}Kullanmak istediðiniz rengin rgb kodunu girin.
+.rgba_icerik_2  = {badc58}Örnek:
+.rgba_icerik_3  = {FFFFFF}66 135 245 255
+.rgba_icerik_4  = {FFFFFF}66, 135, 245, 255
+.rgba_icerik_5  = {FFFFFF}rgba(66, 135, 245, 255)
+.rgba_icerik_6  = {FFFFFF}rgba(66, 135, 245, 255);
+.rgba_buton_1   = Deðiþtir
+.rgba_buton_2   = Geri
+.rgba_hata      = Hatalý rgba kodu girdiniz.
+
+[Preview Models]
+.pmdls_buton_1  = Seç
+.pmdls_buton_2  = Kapat
+.pmdls_hata     = Hatalý deðer girdiniz.
+.pmdls_bilgi_1  = Deðerler güncellendi.
+
+[Preview Models Manuel]
+.pmdls_mbaslik  = Manuel Ayarlama
+.pmdls_icerik_1 = {FFFFFF}Kullanmak istediðiniz deðeri girin.
+.pmdls_icerik_2 = {badc58}Þu anki deðeriniz: {FFFFFF}#d
+.pmdls_icerik_3 = {badc58}Þu anki deðeriniz: {FFFFFF}#.2f
+.pmdls_buton_3  = Güncelle
+.pmdls_buton_4  = Kapat
+
+[Geri, Ileri Al]
+.gi_baslik      = Geri ve Ýleri Al
+.gi_icerik_1    = {FFFFFF}Görmek istediðiniz textdraw deðiþikliði {ff7979}1 {FFFFFF}ile {ff7979}#d {FFFFFF}arasýnda olabilir.
+.gi_buton_1     = Göster
+.gi_buton_2     = Kapat
+.gi_hata        = Hatalý deðer girdiniz.
+
+[Geri, Ileri Al | Onay]
+.gio_baslik     = Deðiþiklikleri Onayla
+.gio_icerik_1   = {FFFFFF}Yaptýðýnýz deðiþikliði onaylýyor musunuz?
+.gio_buton_1    = Evet
+.gio_buton_2    = Hayýr
+.gio_bilgi_1    = Deðiþiklikler kaydedildi.
+.gio_bilgi_2    = Herhangi bir deðiþiklik yapýlmadý.
+
+[Silinenler]
+.s_baslik       = Silinen Textdrawlar [#d / #d]
+.s_header1      = Ýçerik
+.s_header2      = Tür
+.s_header3      = Global / Player
+.s_header4      = Silinme Tarihi
+.s_icerik1      = Sayfaya Git
+.s_icerik2      = Tüm Verileri Sil
+.s_icerik3      = Tüm Verileri Geri Yükle
+.s_buton1       = Geri Yükle
+.s_buton2       = Geri
+.s_hata         = Silinmiþ bir textdraw bulunamadý.
+.s_bilgi        = Textdraw geri yüklendi. Yeni Index Numarasý: #d
+
+[Silinenler - Temizle]
+.st_baslik      = Tüm Verileri Sil
+.st_icerik1     = {ff7f50}Uyarý: {FFFFFF}Bu iþlem silmiþ olduðunuz tüm textdrawlarýn verilerini siler.
+.st_icerik2     = {FFFFFF}Bu iþlemi onaylýyor musunuz?
+.st_buton1      = Evet
+.st_buton2      = Hayýr
+.st_bilgi       = Tüm veriler silindi.
+
+[Silinenler - Tum Verileri Geri Yukle]
+.stgy_baslik    = Tüm Verileri Geri Yükle
+.stgy_icerik1   = {FFFFFF}Tüm verileri geri yüklemek istediðinize emin misiniz?
+.stgy_buton1    = Evet
+.stgy_buton2    = Hayýr
+.stgy_bilgi     = Tüm veriler geri yüklendi. Toplam Veri: #d
+
+[Gruplar]
+.grp_hata       = Bu özelliði kullanabilmek için bir adet textdraw oluþturun.
+.grp_baslik     = Gruplama
+.grp_icerik1    = {badc58}Gruplama:
+.grp_icerik2    = Gruplanacak öðeleri seç
+.grp_icerik3    = Tüm öðeleri grupla
+.grp_icerik4    = Gruplanmýþ tüm öðeleri sýfýrla
+.grp_icerik5    = {badc58}Hýzlý Gruplama:
+.grp_icerik6    = Normal Textdraw
+.grp_icerik7    = Sprite
+.grp_icerik8    = Preview Models
+.grp_icerik9    = {badc58}Kopyalama:
+.grp_icerik10   = Gruplanan öðeleri kopyala
+.grp_icerik11   = Gruplanan öðeleri kopyala ve seç
+.grp_icerik12   = {badc58}Sil:
+.grp_icerik13   = Gruplanan öðeleri sil
+.grp_icerik14   = {badc58}Konum:
+.grp_icerik15   = Gruplanan öðelerin konumunu deðiþtir
+.grp_icerik16   = {badc58}Boyutlandýrma:
+.grp_icerik17   = Textsize (Normal Textdraw)
+.grp_icerik18   = Textsize (Sprite)
+.grp_icerik19   = Textsize (Preview Models)
+.grp_icerik20   = Textsize (Sprite, Preview Models)
+.grp_icerik21   = Textsize (Normal, Sprite, Preview Models)
+.grp_icerik22   = Lettersize (Normal Textdraw)
+.grp_icerik23   = {badc58}Metin Deðiþtirme:
+.grp_icerik24   = Gruplanan öðelerin metinlerini deðiþtir
+.grp_icerik25   = {badc58}Metin Fontlarý:
+.grp_icerik26   = Font 0
+.grp_icerik27   = Font 1
+.grp_icerik28   = Font 2
+.grp_icerik29   = Font 3
+.grp_icerik30   = {badc58}Metin Hizalama:
+.grp_icerik31   = Sol
+.grp_icerik32   = Orta
+.grp_icerik33   = Sað
+.grp_icerik34   = {badc58}Metin Orantýsý:
+.grp_icerik35   = Aç
+.grp_icerik36   = Kapat
+.grp_icerik37   = {badc58}Outline & Shadow:
+.grp_icerik38   = Outline
+.grp_icerik39   = Shadow
+.grp_icerik40   = {badc58}Renkler:
+.grp_icerik41   = Hex
+.grp_icerik42   = RGB
+.grp_icerik43   = RGBA
+.grp_icerik44   = Hazýr Renkler
+.grp_icerik45   = {badc58}Box:
+.grp_icerik46   = Aç
+.grp_icerik47   = Kapat
+.grp_icerik48   = {badc58}Selectable:
+.grp_icerik49   = Aç
+.grp_icerik50   = Kapat
+.grp_icerik51   = {badc58}Global / Player:
+.grp_icerik52   = Gruplanan öðeleri Global olarak ayarla
+.grp_icerik53   = Gruplanan öðeleri Player olarak ayarla
+.grp_buton1     = Seç
+.grp_buton2     = Geri
+
+[Renk Modu]
+.renk_modu_1    = Normal Renk
+.renk_modu_2    = BG Rengi
+.renk_modu_3    = Box Rengi
+
+[Gruplar Hata | Bilgi]
+.grp_hata1      = Gruplanmýþ bir öðe yok.
+.grp_hata2      = Gruplar arasýnda metin öðesi bulunamadý.
+.grp_bilgi1     = Tüm öðeler gruplandý.
+.grp_bilgi2     = Tüm öðeler sýfýrlandý.
+.grp_bilgi3     = Normal Textdrawlar gruplandý.
+.grp_bilgi4     = Sprite Textdrawlar gruplandý.
+.grp_bilgi5     = Preview Model Textdrawlar gruplandý.
+.grp_bilgi6     = Gruplanmýþ öðeler kopyalandý. Toplam kopyalanan öðe: #d
+.grp_bilgi7     = Gruplanmýþ öðeler kopyalandý ve seçildi. Toplam kopyalanan öðe: #d
+.grp_bilgi8     = Gruplanmýþ öðeler silindi. Toplam silinen öðe: #d
+.grp_bilgi9     = Gruplanmýþ öðelerin konumu güncellendi.
+.grp_bilgi10    = Gruplanmýþ öðelerin textsize boyutu güncellendi.
+.grp_bilgi11    = Gruplanmýþ öðelerin metinleri deðiþtirildi.
+.grp_bilgi12    = Gruplanmýþ öðelerin fontu #d olarak deðiþtirildi.
+.grp_bilgi13    = Gruplanmýþ öðeler hizalandý.
+.grp_bilgi14    = Gruplanmýþ öðelerin orantýsý deðiþtirildi.
+.grp_bilgi15    = Gruplanmýþ öðelerin renkleri deðiþtirildi.
+.grp_bilgi16    = Gruplanmýþ öðelerin box deðeri güncellendi.
+.grp_bilgi17    = Gruplanmýþ öðelerin selectable deðeri güncellendi.
+.grp_bilgi18    = Gruplanmýþ öðelerin Global / Player deðeri güncellendi.
+
+[Gruplanacak Ogeler]
+.go_baslik      = Gruplama Listesi [#d / #d]
+.go_header1     = ID
+.go_header2     = Deðiþken Adý
+.go_header3     = Ýçerik
+.go_header4     = Gruplandý Mý?
+.go_header4_n   = Hayýr
+.go_header4_y   = Evet
+.go_icerik1     = Sayfaya Git
+.go_icerik2     = Sayfayý Grupla
+.go_icerik3     = Sayfayý Gruptan Çýkar
+.go_buton1      = Seç
+.go_buton2      = Geri
+
+[Gruplama: Metin Degistir]
+.gmd_baslik     = Metin Deðiþtir
+.gmd_icerik     = {FFFFFF}Gruplanmýþ öðelerin yeni metnini girin.
+.gmd_buton1     = Deðiþtir
+.gmd_buton2     = Geri
+.gmd_hata       = Kutucuðu boþ býraktýnýz.
+
+[Gruplama Outline]
+.goline_baslik  = Outline
+.goline_icerik  = {FFFFFF}Kullanmak istediðiniz outline deðerini girin.
+.goline_buton1  = Deðiþtir
+.goline_buton2  = Geri
+.goline_bilgi   = Gruplanmýþ öðelerin outline deðeri #d olarak ayarlandý.
+.goline_hata    = Hatalý deðer girdiniz.
+
+[Gruplama Shadow]
+.gshdow_baslik  = Shadow
+.gshdow_icerik  = {FFFFFF}Kullanmak istediðiniz Shadow deðerini girin.
+.gshdow_buton1  = Deðiþtir
+.gshdow_buton2  = Geri
+.gshdow_bilgi   = Gruplanmýþ öðelerin shadow deðeri #d olarak ayarlandý.
+.gshdow_hata    = Hatalý deðer girdiniz.

@@ -1,0 +1,12 @@
+{
+  "user": "Zeex",
+  "repo": "amx_assembly",
+  "entry": "test\\all-tests.pwn",
+  "output": "test\\all-tests.amx",
+  "contributors": [
+    "Slice",
+    "Y_Less",
+    "Zeex"
+  ]
+}
+

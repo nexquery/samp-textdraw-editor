@@ -1,0 +1,2 @@
+#undef MAX_PLAYERS
+#define MAX_PLAYERS 2
