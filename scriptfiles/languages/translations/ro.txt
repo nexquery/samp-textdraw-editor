@@ -2,7 +2,7 @@
 #       Textdraw Editor - Language File
 #
 # Language: Romanian
-# Author:   Nexor
+# Author:   shaw
 # Version:  1.1
 # Encoding: Romanian (Windows 1254)
 ###############################################
