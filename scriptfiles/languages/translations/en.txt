@@ -2,9 +2,9 @@
 #       Textdraw Editor - Language File
 #
 # Language: Turkish
-# Author:   Nexor
+# Author:   root
 # Version:  1.1
-# Encoding: Turkish (Windows 1254)
+# Encoding: UTF-8
 ###############################################
 
 [Dil Secimi]
@@ -289,7 +289,7 @@
 
 [Back, Ileri Al]
 .gi_baslik      = Undo and Redo
-.gi_icerik_1    = {FFFFFF}Görmek istediðiniz textdraw deðiþikliði {ff7979}1 {FFFFFF}ile {ff7979}#d {FFFFFF}arasýnda olabilir.
+.gi_icerik_1    = Choose the index you want to show. The index can be from {ff7979}1 {ffffff}to {ff7979}#%d
 .gi_buton_1     = Show
 .gi_buton_2     = Close
 .gi_hata        = You entered an incorrect value.
