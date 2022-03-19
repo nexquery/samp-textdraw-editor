@@ -10,37 +10,41 @@
  *        888   "Y8888  888  888  "Y888 "Y88888 888    "Y888888  "Y8888888P"       8888888888 "Y88888 888  "Y888 "Y88P"  888          8888888 Y8P 8888888
  *                                                                                                                                    
  *
- *		Kodlama:
- *			Burak (Nexor)
+ *      Kodlama:
+ *          Burak (Nexor)
  *
- *		Güncelleme Notları:
+ *      Güncelleme Notları:
  *
- *          (16.12.2021) v1.0:
- *              İlk Sürüm.
+ *      (16.12.2021) v1.0:
+ *          İlk Sürüm.
  *
- *          (18.03.2022) v1.1:
- *              Textdraw Editor yeniden yazıldı.
- *              YSI kütüphanesi eklendi.
- *              Genel performans arttırıldı.
- *              Çoklu dil desteği eklendi.
- *              Textdrawları boş bir ekran da veya oyun içi dünyada düzenleyebileceğiniz seçenek eklendi.
- *              Sprite browser eklendi.
- *              0.3.7 sürümünde kullanmak için (NexTDE.txd) dosyası hazırlandı.
- *              Silinen textdrawları geri alma özelliği eklendi.
- *              Yapılan değişiklikleri geri ve ileri alma özelliği eklendi.
- *              Gruplama özelliği geliştirildi.
- *              Bilgi text eskiden sürekli kalıyordu artık otomatik gizleniyor.
+ *      (18.03.2022) v1.1:
+ *          Textdraw Editor yeniden yazıldı.
+ *          YSI kütüphanesi eklendi.
+ *          Genel performans arttırıldı.
+ *          Çoklu dil desteği eklendi.
+ *          Textdrawları boş bir ekran da veya oyun içi dünyada düzenleyebileceğiniz seçenek eklendi.
+ *          Sprite browser eklendi.
+ *          0.3.7 sürümünde kullanmak için (NexTDE.txd) dosyası hazırlandı.
+ *          Silinen textdrawları geri alma özelliği eklendi.
+ *          Yapılan değişiklikleri geri ve ileri alma özelliği eklendi.
+ *          Gruplama özelliği geliştirildi.
+ *          Bilgi text eskiden sürekli kalıyordu artık otomatik gizleniyor.
+ *
+ *      (19.03.2022) v1.1 - Düzenleme 1:
+ *          0.3.7 sürümünde Sprite Browser'ın geri, ileri ve kapat simgelerinin gözükmeme sorunu düzeltildi.
+ *          Varsayılan NexTDE.txd dosyası artık ingilizce olarak ayarlandı.
  */
 
 // Kütüphaneler
-#include	<a_samp>
-#include	<player-limit>
-#include	<zcmd>
-#include	<YSI_Coding\y_va>
-#include	<YSI_Data\y_iterate>
-#include	<fi-timestamp>
-#include	<easy-dialog>
-#include	<sscanf2>
+#include    <a_samp>
+#include    <player-limit>
+#include    <zcmd>
+#include    <YSI_Coding\y_va>
+#include    <YSI_Data\y_iterate>
+#include    <fi-timestamp>
+#include    <easy-dialog>
+#include    <sscanf2>
 #include    <strlib>
 #include    <RGB>
 
