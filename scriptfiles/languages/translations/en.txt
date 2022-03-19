@@ -262,7 +262,7 @@
 .rgb_hata       = The RGB code you entered is incorrect.
 
 [Renk - RGBA]
-.rgba_baslik    = Renk: RGBA
+.rgba_baslik    = Color: RGBA
 .rgba_icerik_1  = {FFFFFF}Enter the RGBA code of the color you want to use.
 .rgba_icerik_2  = {badc58}Example:
 .rgba_icerik_3  = {FFFFFF}66 135 245 255
@@ -368,8 +368,8 @@
 .grp_icerik32   = Center
 .grp_icerik33   = Right
 .grp_icerik34   = {badc58}Text proportion:
-.grp_icerik35   = On / Off
-.grp_icerik36   = Close
+.grp_icerik35   = On
+.grp_icerik36   = Off
 .grp_icerik37   = {badc58}Outline & Shadow:
 .grp_icerik38   = Outline
 .grp_icerik39   = Shadow
@@ -379,11 +379,11 @@
 .grp_icerik43   = RGBA
 .grp_icerik44   = Premade colors
 .grp_icerik45   = {badc58}Box:
-.grp_icerik46   = On / Off
-.grp_icerik47   = Close
+.grp_icerik46   = On
+.grp_icerik47   = Off
 .grp_icerik48   = {badc58}Selectable:
-.grp_icerik49   = On / Off
-.grp_icerik50   = Close
+.grp_icerik49   = On
+.grp_icerik50   = Off
 .grp_icerik51   = {badc58}Global / Player:
 .grp_icerik52   = Set grouped textdraws to global
 .grp_icerik53   = Set grouped textdraws to player
