@@ -240,7 +240,7 @@ new sprite_Icerik[][] =
     {"LOADSUK:loadsc8"},            {"LOADSUK:loadsc9"},                {"LOADSUK:loadscuk"},
 
     // Index 47
-    {"OUTRO:outro"},
+    //{"OUTRO:outro"},
 
     // Index 48, 49
     {"SPLASH1:splash1"},            {"SPLASH2:splash2"}
@@ -387,7 +387,8 @@ hook OnPlayerClickTextDraw(playerid, Text: clickedid)
 
 Sprite_Menu()
 {
-    //Hud_Oncelik_Textdraw();
+    // Version
+    new version = Server_Version();
     
     // Hudu ve textdrawları kaldır
     Hud_Kaldir();
@@ -438,7 +439,7 @@ Sprite_Menu()
     TextDrawSetProportional(sprite_GUI[2], 1);
     TextDrawSetSelectable(sprite_GUI[2], 0);
 
-    sprite_GUI[3] = TextDrawCreate(466.000000, 101.000000, "mdl-2000:kapat");
+    sprite_GUI[3] = TextDrawCreate(466.000000, 101.000000, (version == VER_03DL) ? ("mdl-2000:kapat") : ("NexTDE:kapat"));
     TextDrawBackgroundColor(sprite_GUI[3], 255);
     TextDrawFont(sprite_GUI[3], 4);
     TextDrawLetterSize(sprite_GUI[3], 0.500000, 1.000000);
@@ -584,7 +585,7 @@ Sprite_Menu()
     TextDrawTextSize(sprite_GUI[14], 195.000000, 10.000000);
     TextDrawSetSelectable(sprite_GUI[14], 1);
 
-    sprite_GUI[15] = TextDrawCreate(135.000000, 332.000000, "mdl-2000:sol");
+    sprite_GUI[15] = TextDrawCreate(135.000000, 332.000000, (version == VER_03DL) ? ("mdl-2000:sol") : ("NexTDE:sol"));
     TextDrawBackgroundColor(sprite_GUI[15], 255);
     TextDrawFont(sprite_GUI[15], 4);
     TextDrawLetterSize(sprite_GUI[15], 0.500000, 1.000000);
@@ -597,7 +598,7 @@ Sprite_Menu()
     TextDrawTextSize(sprite_GUI[15], 9.000000, 15.000000);
     TextDrawSetSelectable(sprite_GUI[15], 1);
 
-    sprite_GUI[16] = TextDrawCreate(188.000000, 332.000000, "mdl-2000:sag");
+    sprite_GUI[16] = TextDrawCreate(188.000000, 332.000000, (version == VER_03DL) ? ("mdl-2000:sag") : ("NexTDE:sag"));
     TextDrawBackgroundColor(sprite_GUI[16], 255);
     TextDrawFont(sprite_GUI[16], 4);
     TextDrawLetterSize(sprite_GUI[16], 0.500000, 1.000000);
@@ -777,7 +778,7 @@ Sprite_Menu()
     TextDrawTextSize(sprite_GUI[29], 32.000000, 32.000000);
     TextDrawSetSelectable(sprite_GUI[29], 1);
 
-    sprite_GUI[30] = TextDrawCreate(295.000000, 332.000000, "mdl-2000:sol");
+    sprite_GUI[30] = TextDrawCreate(295.000000, 332.000000, (version == VER_03DL) ? ("mdl-2000:sol") : ("NexTDE:sol"));
     TextDrawBackgroundColor(sprite_GUI[30], 255);
     TextDrawFont(sprite_GUI[30], 4);
     TextDrawLetterSize(sprite_GUI[30], 0.500000, 1.000000);
@@ -790,7 +791,7 @@ Sprite_Menu()
     TextDrawTextSize(sprite_GUI[30], 9.000000, 15.000000);
     TextDrawSetSelectable(sprite_GUI[30], 1);
 
-    sprite_GUI[31] = TextDrawCreate(368.000000, 332.000000, "mdl-2000:sag");
+    sprite_GUI[31] = TextDrawCreate(368.000000, 332.000000, (version == VER_03DL) ? ("mdl-2000:sag") : ("NexTDE:sag"));
     TextDrawBackgroundColor(sprite_GUI[31], 255);
     TextDrawFont(sprite_GUI[31], 4);
     TextDrawLetterSize(sprite_GUI[31], 0.500000, 1.000000);
