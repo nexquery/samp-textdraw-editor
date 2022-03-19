@@ -1,7 +1,7 @@
 ###############################################
 #       Textdraw Editor - Language File
 #
-# Language: Turkish
+# Language: English
 # Author:   root
 # Version:  1.1
 # Encoding: UTF-8
