@@ -908,55 +908,81 @@ Disa_Aktar(playerid, const dosya_adi[])
         g   = Total_gPlayer(0),
         p   = Total_gPlayer(1),
         dg  = Total_Degisken_gPlayer(0),
-        dp  = Total_Degisken_gPlayer(1)
+        dp  = Total_Degisken_gPlayer(1),
+        sz[512]
     ;
 
     // Global
     if(g)
     {
         index = 0;
-        fwrite(dosya, fex("new Text: %s[%d];\r\n\r\n", Text_Global, Total_gPlayer2(0)));
+        format(sz, sizeof(sz), "new Text: %s[%d];\r\n\r\n", Text_Global, Total_gPlayer2(0));
+        fwrite(dosya, sz);
         foreach(new id : Text_List)
         {
             if(Textler[id][text.globaplayer] == 0 && !strlen(Textler[id][text.degiskenAdi]))
             {
-                fwrite(dosya, fex("%s[%d] = TextDrawCreate(%.3f, %.3f, \"%q\");\r\n", Text_Global, index, Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]));
+                format(sz, sizeof(sz), "%s[%d] = TextDrawCreate(%.3f, %.3f, \"%s\");\r\n", Text_Global, index, Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]);
+                fwrite(dosya, sz);
                 
                 if(Textler[id][text.lettersize][0] != 0.0 || Textler[id][text.lettersize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("TextDrawLetterSize(%s[%d], %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]));
+                    format(sz, sizeof(sz), "TextDrawLetterSize(%s[%d], %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.textsize][0] != 0.0 || Textler[id][text.textsize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("TextDrawTextSize(%s[%d], %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.textsize][0], Textler[id][text.textsize][1]));
+                    format(sz, sizeof(sz), "TextDrawTextSize(%s[%d], %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.textsize][0], Textler[id][text.textsize][1]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("TextDrawAlignment(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.alignment]));
-                fwrite(dosya, fex("TextDrawColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.color]));
+                format(sz, sizeof(sz), "TextDrawAlignment(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.alignment]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.color]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    fwrite(dosya, fex("TextDrawUseBox(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.usebox]));
-                    fwrite(dosya, fex("TextDrawBoxColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.boxcolor]));
+                    format(sz, sizeof(sz), "TextDrawUseBox(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.usebox]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "TextDrawBoxColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.boxcolor]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("TextDrawSetShadow(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.shadow]));
-                fwrite(dosya, fex("TextDrawSetOutline(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.outline]));
-                fwrite(dosya, fex("TextDrawBackgroundColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.bgcolor]));
-                fwrite(dosya, fex("TextDrawFont(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.font]));
-                fwrite(dosya, fex("TextDrawSetProportional(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.proportional]));
+                format(sz, sizeof(sz), "TextDrawSetShadow(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.shadow]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawSetOutline(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.outline]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawBackgroundColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.bgcolor]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawFont(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.font]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawSetProportional(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.proportional]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
                 {
-                    fwrite(dosya, fex("TextDrawSetPreviewModel(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.preview_model]));
-                    fwrite(dosya, fex("TextDrawSetPreviewRot(%s[%d], %.3f, %.3f, %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]));
-                    fwrite(dosya, fex("TextDrawSetPreviewVehCol(%s[%d], %d, %d);\r\n", Text_Global, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]));
+                    format(sz, sizeof(sz), "TextDrawSetPreviewModel(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.preview_model]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "TextDrawSetPreviewRot(%s[%d], %.3f, %.3f, %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "TextDrawSetPreviewVehCol(%s[%d], %d, %d);\r\n", Text_Global, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    fwrite(dosya, fex("TextDrawSetSelectable(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.selectable]));
+                    format(sz, sizeof(sz), "TextDrawSetSelectable(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.selectable]);
+                    fwrite(dosya, sz);
                 }
 
                 fwrite(dosya, "\r\n");
@@ -970,49 +996,74 @@ Disa_Aktar(playerid, const dosya_adi[])
     if(p)
     {
         index = 0;
-        if(g) fwrite(dosya, "####################################################################################################\r\n\r\n");
-        fwrite(dosya, fex("new PlayerText: %s[MAX_PLAYERS][%d];\r\n\r\n", Text_Player, Total_gPlayer2(1)));
+        if(p) fwrite(dosya, "####################################################################################################\r\n\r\n");
+        format(sz, sizeof(sz), "new PlayerText: %s[MAX_PLAYERS][%d];\r\n\r\n", Text_Player, Total_gPlayer2(1));
+        fwrite(dosya, sz);
         foreach(new id : Text_List)
         {
             if(Textler[id][text.globaplayer] == 1 && !strlen(Textler[id][text.degiskenAdi]))
             {
-                fwrite(dosya, fex("%s[playerid][%d] = CreatePlayerTextDraw(playerid, %.3f, %.3f, \"%q\");\r\n", Text_Player, index, Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]));
+                format(sz, sizeof(sz), "%s[playerid][%d] = CreatePlayerTextDraw(playerid, %.3f, %.3f, \"%s\");\r\n", Text_Player, index, Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]);
+                fwrite(dosya, sz);
                 
                 if(Textler[id][text.lettersize][0] != 0.0 || Textler[id][text.lettersize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawLetterSize(playerid, %s[playerid][%d], %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]));
+                    format(sz, sizeof(sz), "PlayerTextDrawLetterSize(playerid, %s[playerid][%d], %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.textsize][0] != 0.0 || Textler[id][text.textsize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawTextSize(playerid, %s[playerid][%d], %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.textsize][0], Textler[id][text.textsize][1]));
+                    format(sz, sizeof(sz), "PlayerTextDrawTextSize(playerid, %s[playerid][%d], %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.textsize][0], Textler[id][text.textsize][1]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("PlayerTextDrawAlignment(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.alignment]));
-                fwrite(dosya, fex("PlayerTextDrawColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.color]));
+                format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.alignment]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.color]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawUseBox(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.usebox]));
-                    fwrite(dosya, fex("PlayerTextDrawBoxColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.boxcolor]));
+                    format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.usebox]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.boxcolor]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("PlayerTextDrawSetShadow(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.shadow]));
-                fwrite(dosya, fex("PlayerTextDrawSetOutline(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.outline]));
-                fwrite(dosya, fex("PlayerTextDrawBackgroundColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.bgcolor]));
-                fwrite(dosya, fex("PlayerTextDrawFont(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.font]));
-                fwrite(dosya, fex("PlayerTextDrawSetProportional(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.proportional]));
+                format(sz, sizeof(sz), "PlayerTextDrawSetShadow(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.shadow]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawSetOutline(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.outline]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawBackgroundColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.bgcolor]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.font]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.proportional]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawSetPreviewModel(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.preview_model]));
-                    fwrite(dosya, fex("PlayerTextDrawSetPreviewRot(playerid, %s[playerid][%d], %.3f, %.3f, %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]));
-                    fwrite(dosya, fex("PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid][%d], %d, %d);\r\n", Text_Player, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]));
+                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewModel(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.preview_model]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewRot(playerid, %s[playerid][%d], %.3f, %.3f, %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid][%d], %d, %d);\r\n", Text_Player, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawSetSelectable(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.selectable]));
+                    format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.selectable]);
+                    fwrite(dosya, sz);
                 }
 
                 fwrite(dosya, "\r\n");
@@ -1030,7 +1081,8 @@ Disa_Aktar(playerid, const dosya_adi[])
         {
             if(Textler[id][text.globaplayer] == 0 && strlen(Textler[id][text.degiskenAdi]))
             {
-                fwrite(dosya, fex("new Text: %s;\r\n", Textler[id][text.degiskenAdi]));
+                format(sz, sizeof(sz), "new Text: %s;\r\n", Textler[id][text.degiskenAdi]);
+                fwrite(dosya, sz);
             }
         }
         fwrite(dosya, "\r\n");
@@ -1038,43 +1090,67 @@ Disa_Aktar(playerid, const dosya_adi[])
         {
             if(Textler[id][text.globaplayer] == 0 && strlen(Textler[id][text.degiskenAdi]))
             {
-                fwrite(dosya, fex("%s = TextDrawCreate(%.3f, %.3f, \"%q\");\r\n", Textler[id][text.degiskenAdi], Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]));
+                format(sz, sizeof(sz), "%s = TextDrawCreate(%.3f, %.3f, \"%s\");\r\n", Textler[id][text.degiskenAdi], Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]);
+                fwrite(dosya, sz);
                 
                 if(Textler[id][text.lettersize][0] != 0.0 || Textler[id][text.lettersize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("TextDrawLetterSize(%s, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]));
+                    format(sz, sizeof(sz), "TextDrawLetterSize(%s, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.textsize][0] != 0.0 || Textler[id][text.textsize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("TextDrawTextSize(%s, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.textsize][0], Textler[id][text.textsize][1]));
+                    format(sz, sizeof(sz), "TextDrawTextSize(%s, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.textsize][0], Textler[id][text.textsize][1]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("TextDrawAlignment(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]));
-                fwrite(dosya, fex("TextDrawColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]));
+                format(sz, sizeof(sz), "TextDrawAlignment(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    fwrite(dosya, fex("TextDrawUseBox(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]));
-                    fwrite(dosya, fex("TextDrawBoxColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]));
+                    format(sz, sizeof(sz), "TextDrawUseBox(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "TextDrawBoxColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("TextDrawSetShadow(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.shadow]));
-                fwrite(dosya, fex("TextDrawSetOutline(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.outline]));
-                fwrite(dosya, fex("TextDrawBackgroundColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]));
-                fwrite(dosya, fex("TextDrawFont(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]));
-                fwrite(dosya, fex("TextDrawSetProportional(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]));
+                format(sz, sizeof(sz), "TextDrawSetShadow(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.shadow]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawSetOutline(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.outline]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawBackgroundColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawFont(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "TextDrawSetProportional(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
                 {
-                    fwrite(dosya, fex("TextDrawSetPreviewModel(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_model]));
-                    fwrite(dosya, fex("TextDrawSetPreviewRot(%s, %.3f, %.3f, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]));
-                    fwrite(dosya, fex("TextDrawSetPreviewVehCol(%s, %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]));
+                    format(sz, sizeof(sz), "TextDrawSetPreviewModel(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_model]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "TextDrawSetPreviewRot(%s, %.3f, %.3f, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "TextDrawSetPreviewVehCol(%s, %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    fwrite(dosya, fex("TextDrawSetSelectable(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]));
+                    format(sz, sizeof(sz), "TextDrawSetSelectable(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]);
+                    fwrite(dosya, sz);
                 }
 
                 fwrite(dosya, "\r\n");
@@ -1090,7 +1166,8 @@ Disa_Aktar(playerid, const dosya_adi[])
         {
             if(Textler[id][text.globaplayer] == 1 && strlen(Textler[id][text.degiskenAdi]))
             {
-                fwrite(dosya, fex("new PlayerText: %s[MAX_PLAYERS];\r\n", Textler[id][text.degiskenAdi]));
+                format(sz, sizeof(sz), "new PlayerText: %s[MAX_PLAYERS];\r\n", Textler[id][text.degiskenAdi]);
+                fwrite(dosya, sz);
             }
         }
         fwrite(dosya, "\r\n");
@@ -1098,43 +1175,67 @@ Disa_Aktar(playerid, const dosya_adi[])
         {
             if(Textler[id][text.globaplayer] == 1 && strlen(Textler[id][text.degiskenAdi]))
             {
-                fwrite(dosya, fex("%s[playerid] = CreatePlayerTextDraw(playerid, %.3f, %.3f, \"%q\");\r\n", Textler[id][text.degiskenAdi], Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]));
+                format(sz, sizeof(sz), "%s[playerid] = CreatePlayerTextDraw(playerid, %.3f, %.3f, \"%s\");\r\n", Textler[id][text.degiskenAdi], Textler[id][text.pos][0], Textler[id][text.pos][1], Textler[id][text.string]);
+                fwrite(dosya, sz);
                 
                 if(Textler[id][text.lettersize][0] != 0.0 || Textler[id][text.lettersize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawLetterSize(playerid, %s[playerid], %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]));
+                    format(sz, sizeof(sz), "PlayerTextDrawLetterSize(playerid, %s[playerid], %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.textsize][0] != 0.0 || Textler[id][text.textsize][1] != 0.0)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawTextSize(playerid, %s[playerid], %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.textsize][0], Textler[id][text.textsize][1]));
+                    format(sz, sizeof(sz), "PlayerTextDrawTextSize(playerid, %s[playerid], %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.textsize][0], Textler[id][text.textsize][1]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("PlayerTextDrawAlignment(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]));
-                fwrite(dosya, fex("PlayerTextDrawColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]));
+                format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawUseBox(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]));
-                    fwrite(dosya, fex("PlayerTextDrawBoxColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]));
+                    format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
+                    fwrite(dosya, sz);
                 }
 
-                fwrite(dosya, fex("PlayerTextDrawSetShadow(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.shadow]));
-                fwrite(dosya, fex("PlayerTextDrawSetOutline(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.outline]));
-                fwrite(dosya, fex("PlayerTextDrawBackgroundColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]));
-                fwrite(dosya, fex("PlayerTextDrawFont(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]));
-                fwrite(dosya, fex("PlayerTextDrawSetProportional(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]));
+                format(sz, sizeof(sz), "PlayerTextDrawSetShadow(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.shadow]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawSetOutline(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.outline]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawBackgroundColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
+                fwrite(dosya, sz);
+
+                format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]);
+                fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawSetPreviewModel(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_model]));
-                    fwrite(dosya, fex("PlayerTextDrawSetPreviewRot(playerid, %s[playerid], %.3f, %.3f, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]));
-                    fwrite(dosya, fex("PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid], %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]));
+                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewModel(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_model]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewRot(playerid, %s[playerid], %.3f, %.3f, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
+                    fwrite(dosya, sz);
+
+                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid], %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    fwrite(dosya, sz);
                 }
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    fwrite(dosya, fex("PlayerTextDrawSetSelectable(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]));
+                    format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]);
+                    fwrite(dosya, sz);
                 }
 
                 fwrite(dosya, "\r\n");
