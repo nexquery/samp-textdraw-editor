@@ -34,6 +34,10 @@
  *      (19.03.2022) v1.1 - Düzenleme 1:
  *          0.3.7 sürümünde Sprite Browser'ın geri, ileri ve kapat simgelerinin gözükmeme sorunu düzeltildi.
  *          Varsayılan NexTDE.txd dosyası artık ingilizce olarak ayarlandı.
+ *
+ *      (22.03.2022) v1.1 - Düzenleme 2:
+ *          Araç oluşturma komutu eklendi.
+ *          Dışa aktarma ile ilgili bir sorun düzeltildi.
  */
 
 // Kütüphaneler
