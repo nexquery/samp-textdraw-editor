@@ -87,7 +87,7 @@ Sil_Textdraw_Geri_Yukle(playerid, id)
     }
     db_free_result(cache);
 
-    Iter_Add(Text_List, index);
+    Iter_Add(Text_List, index), DB_Ekle(index);
 
     Sil_Kaldir(id);
     
@@ -144,7 +144,7 @@ Sil_Textdraw_Hepsini_Geri_Yukle(playerid)
             db_get_field_assoc(cache, "degiskenadi", Textler[index][text.degiskenAdi], MAX_GPLAYER_ISIM);
             Textler[index][text.grup]                 = 0;
 
-            Iter_Add(Text_List, index);
+            Iter_Add(Text_List, index), DB_Ekle(index);
             Textdraw_Render(index, true);
         }
         while(db_next_row(cache));
