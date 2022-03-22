@@ -11,6 +11,8 @@
  *
  */
 
+new vid = -1;
+
 CMD:mouse(playerid, params[])
 {
     if(pMouse == false)
@@ -21,5 +23,17 @@ CMD:mouse(playerid, params[])
     {
         Mouse(playerid, false, TEXTMOD_YOK);
     }
+    return 1;
+}
+
+
+CMD:veh(playerid, params[])
+{
+    new modelid, Float: Pos[4]; GetPlayerPos(playerid, Pos[0], Pos[1], Pos[2]), GetPlayerFacingAngle(playerid, Pos[3]);
+    if(sscanf(params, "d", modelid)) return Mesaj_Bilgi(playerid, "/veh <model id>");
+    if(modelid < 411 || modelid > 611) return Mesaj_Hata(playerid, "Incorrect model id.");
+    if(vid != -1) DestroyVehicle(vid);
+    vid = CreateVehicle(modelid, Pos[0], Pos[1], Pos[2], Pos[3], -1, -1, -1);
+    PutPlayerInVehicle(playerid, vid, 0);
     return 1;
 }
