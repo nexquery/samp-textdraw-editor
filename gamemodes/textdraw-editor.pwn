@@ -38,6 +38,7 @@
  *      (22.03.2022) v1.1 - Düzenleme 2:
  *          Araç oluşturma komutu eklendi.
  *          Dışa aktarma ile ilgili bir sorun düzeltildi.
+ *          Silme ve geri getirmeyle ilgili bir sorun düzeltildi.
  */
 
 // Kütüphaneler
