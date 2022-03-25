@@ -71,8 +71,16 @@ Textdraw_Render(id, bool: goster)
             TextDrawLetterSize(Textler[id][text.id], Textler[id][text.lettersize][0], Textler[id][text.lettersize][1]);
         }
 
-        if(Textler[id][text.textsize][0] != 0.0 || Textler[id][text.textsize][1] != 0.0) {
+        if(Textler[id][text.selectable] == 1)
+        {
             TextDrawTextSize(Textler[id][text.id], Textler[id][text.textsize][0], Textler[id][text.textsize][1]);
+        }
+        else
+        {
+            if(Textler[id][text.textsize][0] != 0.0 || Textler[id][text.textsize][1] != 0.0)
+            {
+                TextDrawTextSize(Textler[id][text.id], Textler[id][text.textsize][0], Textler[id][text.textsize][1]);
+            }
         }
 
         TextDrawAlignment(Textler[id][text.id], Textler[id][text.alignment]);
@@ -91,6 +99,8 @@ Textdraw_Render(id, bool: goster)
             TextDrawSetPreviewRot(Textler[id][text.id], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
             TextDrawSetPreviewVehCol(Textler[id][text.id], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
         }
+
+        TextDrawSetSelectable(Textler[id][text.id], Textler[id][text.selectable]);
 
         if(goster)
         {

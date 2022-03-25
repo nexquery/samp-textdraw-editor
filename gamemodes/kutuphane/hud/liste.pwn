@@ -129,14 +129,15 @@ Dialog:LISTE_MENU(playerid, response, listitem, inputtext[])
 Liste_Islem(playerid)
 {
     Dialog_Show(playerid, LISTE_ISLEM, DIALOG_STYLE_LIST, Dil_Mesaji[lislem_baslik], "\
-    %s\n%s\n%s\n%s\n%s\n%s", Dil_Mesaji[lislem_btn1], Dil_Mesaji[lislem_btn2]
+    %s\n%s\n%s\n%s\n%s\n%s\n%s", Dil_Mesaji[lislem_btn1], Dil_Mesaji[lislem_btn2]
     ,
         Dil_Mesaji[lislem_icerik1],
         Dil_Mesaji[lislem_icerik2],
         Dil_Mesaji[lislem_icerik3],
         Dil_Mesaji[lislem_icerik4],
         Dil_Mesaji[lislem_icerik5],
-        Dil_Mesaji[lislem_icerik6]
+        Dil_Mesaji[lislem_icerik6],
+        Dil_Mesaji[lislem_icerik7]
     );
     return 1;
 }
@@ -160,10 +161,25 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
 
                 // Hudu güncelle
                 Hud_Render(true), Hud_Goster(true), Mouse(playerid, true, TEXTMOD_NORMAL);
+
+                if(gIndex != -1)
+                {
+                    TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+                    TextDrawShowForAll(Textler[gIndex][text.id]);
+                    SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", gIndex);
+                }
+            }
+
+            // Textdrawı seç (Yön Tuşlarıyla)
+            case 1:
+            {
+                // Textdrawı seç
+                gIndex = liste_Sayfa_Arr[liste_Listitem];
+                Textdraw_Sec_Yon_Tusu(playerid);
             }
 
             // Textdrawı sil
-            case 1:
+            case 2:
             {
                 Textler[liste_Sayfa_Arr[liste_Listitem]][text.grup]      = 0;
                 Textler[liste_Sayfa_Arr[liste_Listitem]][text.grup_temp] = 0;
@@ -199,7 +215,7 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
             }
 
             // Textdrawı kopyala
-            case 2:
+            case 3:
             {
                 // Textdrawı kopyala
                 new id = Textdraw_List_Kopyala(liste_Sayfa_Arr[liste_Listitem]);
@@ -219,7 +235,7 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
             }
 
             // Textdrawı kopyala ve seç
-            case 3:
+            case 4:
             {
                 // Textdrawı kopyala
                 new id = Textdraw_List_Kopyala(liste_Sayfa_Arr[liste_Listitem]);
@@ -243,7 +259,7 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
             }
 
             // Index Değiştir
-            case 4:
+            case 5:
             {
                 // Geçerli sayfaların verilerini al
                 index_degistir_Sayfa = liste_Sayfa;
@@ -256,7 +272,7 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
             }
 
             // Değişken adını düzenle
-            case 5:
+            case 6:
             {
                 Liste_Degisken_Adi(playerid);
             }
@@ -513,4 +529,134 @@ Dialog:LISTE_DEGISKEN_ADI(playerid, response, listitem, inputtext[])
         Liste_Islem(playerid);
     }
     return 1;
+}
+
+/***
+ *    88888888888                888        888                                     .d8888b.                    
+ *        888                    888        888                                    d88P  Y88b                   
+ *        888                    888        888                                    Y88b.                        
+ *        888   .d88b.  888  888 888888 .d88888 888d888 8888b.  888  888  888       "Y888b.    .d88b.   .d8888b 
+ *        888  d8P  Y8b `Y8bd8P' 888   d88" 888 888P"      "88b 888  888  888          "Y88b. d8P  Y8b d88P"    
+ *        888  88888888   X88K   888   888  888 888    .d888888 888  888  888            "888 88888888 888      
+ *        888  Y8b.     .d8""8b. Y88b. Y88b 888 888    888  888 Y88b 888 d88P      Y88b  d88P Y8b.     Y88b.    
+ *        888   "Y8888  888  888  "Y888 "Y88888 888    "Y888888  "Y8888888P"        "Y8888P"   "Y8888   "Y8888P 
+ *
+ */
+
+#include    <YSI_Coding\y_hooks>
+
+Textdraw_Sec_Yon_Tusu(playerid)
+{
+    // Ön veriler
+    if(timer_textdraw_sec != -1) KillTimer(timer_textdraw_sec), timer_textdraw_sec = -1;
+    Hud_Oncelik_Textdraw();
+    Hud_Goster(false);
+
+    // İlk işlemleri uygula
+    TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT), TextDrawShowForAll(Textler[gIndex][text.id]);
+    //SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", gIndex);
+
+    // Index bilgisi
+    BilgiText_Update();
+    TextDrawSetString(Bilgi_Text, fex("~g~~h~Index: ~w~~h~%d / %d", gIndex, Iter_Count(Text_List) - 1));
+
+    // Bilgi
+    Mesaj_Bilgi(playerid, Dil_Mesaji[kisayollar]);
+
+    // Timeri çalıştır
+    timer_textdraw_sec = SetTimerEx("Textdraw_Index_Yon", 85, true, "d", playerid);
+    return 1;
+}
+
+
+forward Textdraw_Index_Yon(playerid);
+public Textdraw_Index_Yon(playerid)
+{
+    new keys, ud, lr, bool: tus = false;
+    GetPlayerKeys(playerid, keys, ud, lr);
+    if(timer_textdraw_sec != -1)
+    {
+        tus = false;
+        BilgiText_Gizle();
+
+        // Sol
+        if(lr < -1)
+        {
+            tus = true;
+            TextDrawColor(Textler[gIndex][text.id], Textler[gIndex][text.color]);
+            TextDrawShowForAll(Textler[gIndex][text.id]);
+            if(Iter_Count(Text_List) > 1)
+            {
+                if(Iter_Contains(Text_List, gIndex))
+                {
+                    gIndex = Iter_Prev(Text_List, gIndex);
+                    if (gIndex == Iter_Begin(Text_List))
+                    {
+                        gIndex = Iter_Last(Text_List);
+                    }
+                }
+            }
+            TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+            TextDrawShowForAll(Textler[gIndex][text.id]);
+        }
+
+        // Sağ
+        if(lr > 1) 
+        {
+            tus = true;
+            TextDrawColor(Textler[gIndex][text.id], Textler[gIndex][text.color]);
+            TextDrawShowForAll(Textler[gIndex][text.id]);
+            if(Iter_Count(Text_List) > 1)
+            {
+                if(Iter_Contains(Text_List, gIndex))
+                {
+                    gIndex = Iter_Next(Text_List, gIndex);
+                    if(gIndex == Iter_End(Text_List))
+                    {
+                        gIndex = Iter_First(Text_List);
+                    }
+                }
+            }
+            TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+            TextDrawShowForAll(Textler[gIndex][text.id]);
+        }
+
+        // Güncelle
+        if(tus == true)
+        {
+            BilgiText_Update();
+            //TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT), TextDrawShowForAll(Textler[gIndex][text.id]);
+            //SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", gIndex);
+            TextDrawSetString(Bilgi_Text, fex("~g~~h~Index: ~w~~h~%d / %d", gIndex, Iter_Count(Text_List) - 1));
+        }
+    }
+}
+
+hook OnPlayerDisconnect(playerid, reason)
+{
+    if(timer_textdraw_sec != -1)
+    {
+        KillTimer(timer_textdraw_sec), timer_textdraw_sec = -1;
+    }
+    return 1;
+}
+
+hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
+{
+    if(PRESSED(KEY_SECONDARY_ATTACK) && timer_textdraw_sec != -1)
+    {
+        Bilgi_Text_Kaldir(), KillTimer(timer_textdraw_sec), timer_textdraw_sec = -1;
+        TextDrawColor(Textler[gIndex][text.id], Textler[gIndex][text.color]);
+        TextDrawShowForAll(Textler[gIndex][text.id]);
+        Mesaj_Bilgi(playerid, fmt(Dil_Mesaji[tdraw_sec]), gIndex);
+        Hud_Render(true), Hud_Goster(true), Mouse(playerid, true, TEXTMOD_NORMAL);
+    }
+    return 1;
+}
+
+forward Textdraw_Normal_Select(index);
+public Textdraw_Normal_Select(index)
+{
+    TextDrawColor(Textler[index][text.id], Textler[index][text.color]);
+    TextDrawShowForAll(Textler[index][text.id]);
 }

@@ -68,6 +68,9 @@ new
     // Geri İleri
     timer_undo = -1,
 
+    // Textdrawı seç
+    timer_textdraw_sec = -1,
+
     // Mouse
     bool: pMouse = false
 ;

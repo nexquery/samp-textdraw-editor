@@ -165,6 +165,7 @@ enum DIL_YAPILANDIRMASI
     lislem_icerik4[DIL_MAX_BUFFER],
     lislem_icerik5[DIL_MAX_BUFFER],
     lislem_icerik6[DIL_MAX_BUFFER],
+    lislem_icerik7[DIL_MAX_BUFFER],
     lislem_btn1[DIL_MAX_BUFFER],
     lislem_btn2[DIL_MAX_BUFFER],
 

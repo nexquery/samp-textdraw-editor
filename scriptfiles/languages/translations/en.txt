@@ -3,7 +3,7 @@
 #
 # Language: English
 # Author:   root
-# Version:  1.1
+# Version:  1.2
 # Encoding: UTF-8
 ###############################################
 
@@ -152,11 +152,12 @@
 [Liste Islem]
 .lislem_baslik  = Options
 .lislem_icerik1 = Choose textdraw
-.lislem_icerik2 = Delete textdraw
-.lislem_icerik3 = Clone textdraw
-.lislem_icerik4 = Clone textdraw and select
-.lislem_icerik5 = Change textdraw index
-.lislem_icerik6 = Change variable name
+.lislem_icerik2 = Choose textdraw (Arrow Keys)
+.lislem_icerik3 = Delete textdraw
+.lislem_icerik4 = Clone textdraw
+.lislem_icerik5 = Clone textdraw and select
+.lislem_icerik6 = Change textdraw index
+.lislem_icerik7 = Change variable name
 .lislem_btn1    = Choose
 .lislem_btn2    = Back
 

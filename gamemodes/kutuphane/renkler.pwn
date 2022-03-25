@@ -16,8 +16,11 @@
 #define     RENK_MESAJ_BILGI    0x70A1FFFF
 
 // Mouse Renkleri
-#define     RENK_MOUSE_DEFAULT  0xFFFFFF90
+#define     RENK_MOUSE_DEFAULT  0x9980FAFF // 0xFFFFFF90
 
 // Hud
 #define     RENK_HUD_ALTBAR     724249599
 #define     RENK_HUD_DISABLE    0x3D3D3DFF
+
+// Seçilen Textdraw Rengi
+#define     RENK_SECILEN_TEXT   0xFFFA65FF

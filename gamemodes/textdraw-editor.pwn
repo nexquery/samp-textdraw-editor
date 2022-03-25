@@ -39,6 +39,12 @@
  *          Araç oluşturma komutu eklendi.
  *          Dışa aktarma ile ilgili bir sorun düzeltildi.
  *          Silme ve geri getirmeyle ilgili bir sorun düzeltildi.
+ *
+ *      (25.03.2022) v1.2:
+ *          Hangi textdrawı seçtiğinizi daha iyi anlamak için renk değiştirip orijinal hale dönen bir özellik eklendi.
+ *          Selectable aktif olan textdrawlarda tıklayabileceğiniz alanı görme özelliği eklendi.
+ *          Textdrawları hızlıca seçmek için yön tuşlarıyla seçim aracı eklendi.
+ *          Editör sürümü 1.2 olarak ayarlandı.
  */
 
 // Kütüphaneler

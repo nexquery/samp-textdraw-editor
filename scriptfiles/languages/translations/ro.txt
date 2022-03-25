@@ -3,7 +3,7 @@
 #
 # Language: Romanian
 # Author:   shaw
-# Version:  1.1
+# Version:  1.2
 # Encoding: Romanian (Windows 1254)
 ###############################################
 
@@ -152,11 +152,12 @@
 [Lista de operatiuni]
 .lislem_baslik  = Alegeti o Tranzactie
 .lislem_icerik1 = Selectati textdraw
-.lislem_icerik2 = sterge textdraw
-.lislem_icerik3 = Copie textdraw
-.lislem_icerik4 = Copiati si selectati textdraw
-.lislem_icerik5 = Schimbati ordinea indexului
-.lislem_icerik6 = Editati numele variabilei
+.lislem_icerik2 = Selectati textdraw (Taste sageti)
+.lislem_icerik3 = sterge textdraw
+.lislem_icerik4 = Copie textdraw
+.lislem_icerik5 = Copiati si selectati textdraw
+.lislem_icerik6 = Schimbati ordinea indexului
+.lislem_icerik7 = Editati numele variabilei
 .lislem_btn1    = Selectati
 .lislem_btn2    = Inapoi
 

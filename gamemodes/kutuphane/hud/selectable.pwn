@@ -15,6 +15,7 @@ Selectable()
     gIleri_Ekle(gIndex);
     Textler[gIndex][text.selectable] = (Textler[gIndex][text.selectable] == 0) ? (1) : (0);
     DB_Guncelle(gIndex);
+    Textdraw_Render(gIndex, true);
     Hud_Render(true), Hud_Goster(true);
     return 1;
 }

@@ -3,7 +3,7 @@
 #
 # Language: Turkish
 # Author:   Nexor
-# Version:  1.1
+# Version:  1.2
 # Encoding: Turkish (Windows 1254)
 ###############################################
 
@@ -152,11 +152,12 @@
 [Liste Islem]
 .lislem_baslik  = Bir Ýþlem Seçin
 .lislem_icerik1 = Textdrawý seç
-.lislem_icerik2 = Textdrawý sil
-.lislem_icerik3 = Textdrawý kopyala
-.lislem_icerik4 = Textdrawý kopyala ve seç
-.lislem_icerik5 = Index sýrasýný deðiþtir
-.lislem_icerik6 = Deðiþken adýný düzenle
+.lislem_icerik2 = Textdrawý seç (Yön Tuþlarýyla)
+.lislem_icerik3 = Textdrawý sil
+.lislem_icerik4 = Textdrawý kopyala
+.lislem_icerik5 = Textdrawý kopyala ve seç
+.lislem_icerik6 = Index sýrasýný deðiþtir
+.lislem_icerik7 = Deðiþken adýný düzenle
 .lislem_btn1    = Seç
 .lislem_btn2    = Geri
 
