@@ -1,14 +1,14 @@
-
 /***
- *    88888888888                888        888                                    8888888888     888 d8b 888                          d888        d888   
- *        888                    888        888                                    888            888 Y8P 888                         d8888       d8888   
- *        888                    888        888                                    888            888     888                           888         888   
- *        888   .d88b.  888  888 888888 .d88888 888d888 8888b.  888  888  888      8888888    .d88888 888 888888 .d88b.  888d888        888         888   
- *        888  d8P  Y8b `Y8bd8P' 888   d88" 888 888P"      "88b 888  888  888      888       d88" 888 888 888   d88""88b 888P"          888         888   
- *        888  88888888   X88K   888   888  888 888    .d888888 888  888  888      888       888  888 888 888   888  888 888            888         888   
- *        888  Y8b.     .d8""8b. Y88b. Y88b 888 888    888  888 Y88b 888 d88P      888       Y88b 888 888 Y88b. Y88..88P 888            888   d8b   888   
- *        888   "Y8888  888  888  "Y888 "Y88888 888    "Y888888  "Y8888888P"       8888888888 "Y88888 888  "Y888 "Y88P"  888          8888888 Y8P 8888888
- *                                                                                                                                    
+ *                                                                                                                                                                        
+ *    888888888888                                       88                                                 88888888888          88  88                                   
+ *         88                             ,d             88                                                 88                   88  ""    ,d                             
+ *         88                             88             88                                                 88                   88        88                             
+ *         88   ,adPPYba,  8b,     ,d8  MM88MMM  ,adPPYb,88  8b,dPPYba,  ,adPPYYba,  8b      db      d8     88aaaaa      ,adPPYb,88  88  MM88MMM  ,adPPYba,   8b,dPPYba,  
+ *         88  a8P_____88   `Y8, ,8P'     88    a8"    `Y88  88P'   "Y8  ""     `Y8  `8b    d88b    d8'     88"""""     a8"    `Y88  88    88    a8"     "8a  88P'   "Y8  
+ *         88  8PP"""""""     )888(       88    8b       88  88          ,adPPPPP88   `8b  d8'`8b  d8'      88          8b       88  88    88    8b       d8  88          
+ *         88  "8b,   ,aa   ,d8" "8b,     88,   "8a,   ,d88  88          88,    ,88    `8bd8'  `8bd8'       88          "8a,   ,d88  88    88,   "8a,   ,a8"  88          
+ *         88   `"Ybbd8"'  8P'     `Y8    "Y888  `"8bbdP"Y8  88          `"8bbdP"Y8      YP      YP         88888888888  `"8bbdP"Y8  88    "Y888  `"YbbdP"'   88
+ *                                                                                                       
  *
  *      Kodlama:
  *          Burak (Nexor)
@@ -45,6 +45,15 @@
  *          Selectable aktif olan textdrawlarda tıklayabileceğiniz alanı görme özelliği eklendi.
  *          Textdrawları hızlıca seçmek için yön tuşlarıyla seçim aracı eklendi.
  *          Editör sürümü 1.2 olarak ayarlandı.
+ *
+ *      (11.05.2022) v1.3:
+ *          sscanf eklentisi güncellendi ve github deposuna eklendi.
+ *          CrashDetect eklentisi github deposuna eklendi.
+ *          Seçilen textdrawın rengi daha belirgin olması için değiştirildi.
+ *          Gruplamada selectable özelliğini aktif edince veritaban güncellemesi ve textdraw tıklaması işlevi çalışmıyordu, düzeltildi.
+ *          Eğer oyuncu spawn olur ve yön tuşlarıyla textdraw seçerse karakterin hareket etme sorunu düzeltildi.
+ *          Seçilen bazı textdrawlardaki renk gözükmeme sorunu düzeltildi.
+ *          Gruplamadaki konumlandırma özelliğine manuel offset arttırma eklendi (0.5 gibi değerler verilerek arttırılabilir) (N Tuşu ile menüyü açabilirsiniz)
  */
 
 // Kütüphaneler
