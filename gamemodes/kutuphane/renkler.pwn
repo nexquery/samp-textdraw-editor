@@ -23,4 +23,4 @@
 #define     RENK_HUD_DISABLE    0x3D3D3DFF
 
 // Seçilen Textdraw Rengi
-#define     RENK_SECILEN_TEXT   0xFFFA65FF
+#define     RENK_SECILEN_TEXT   0x5F27CDFF

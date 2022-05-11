@@ -164,6 +164,8 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
 
                 if(gIndex != -1)
                 {
+                    TextDrawBoxColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+                    TextDrawBackgroundColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
                     TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
                     TextDrawShowForAll(Textler[gIndex][text.id]);
                     SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", gIndex);
@@ -553,8 +555,10 @@ Textdraw_Sec_Yon_Tusu(playerid)
     Hud_Goster(false);
 
     // İlk işlemleri uygula
-    TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT), TextDrawShowForAll(Textler[gIndex][text.id]);
-    //SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", gIndex);
+    TextDrawBoxColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+    TextDrawBackgroundColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+    TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+    TextDrawShowForAll(Textler[gIndex][text.id]);
 
     // Index bilgisi
     BilgiText_Update();
@@ -562,6 +566,11 @@ Textdraw_Sec_Yon_Tusu(playerid)
 
     // Bilgi
     Mesaj_Bilgi(playerid, Dil_Mesaji[kisayollar]);
+
+    if(spawn_modu == 1)
+    {
+        TogglePlayerControllable(playerid, 0);
+    }
 
     // Timeri çalıştır
     timer_textdraw_sec = SetTimerEx("Textdraw_Index_Yon", 85, true, "d", playerid);
@@ -583,6 +592,8 @@ public Textdraw_Index_Yon(playerid)
         if(lr < -1)
         {
             tus = true;
+            TextDrawBoxColor(Textler[gIndex][text.id], Textler[gIndex][text.boxcolor]);
+            TextDrawBackgroundColor(Textler[gIndex][text.id], Textler[gIndex][text.bgcolor]);
             TextDrawColor(Textler[gIndex][text.id], Textler[gIndex][text.color]);
             TextDrawShowForAll(Textler[gIndex][text.id]);
             if(Iter_Count(Text_List) > 1)
@@ -596,6 +607,8 @@ public Textdraw_Index_Yon(playerid)
                     }
                 }
             }
+            TextDrawBoxColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+            TextDrawBackgroundColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
             TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
             TextDrawShowForAll(Textler[gIndex][text.id]);
         }
@@ -604,6 +617,8 @@ public Textdraw_Index_Yon(playerid)
         if(lr > 1) 
         {
             tus = true;
+            TextDrawBoxColor(Textler[gIndex][text.id], Textler[gIndex][text.boxcolor]);
+            TextDrawBackgroundColor(Textler[gIndex][text.id], Textler[gIndex][text.bgcolor]);
             TextDrawColor(Textler[gIndex][text.id], Textler[gIndex][text.color]);
             TextDrawShowForAll(Textler[gIndex][text.id]);
             if(Iter_Count(Text_List) > 1)
@@ -617,6 +632,8 @@ public Textdraw_Index_Yon(playerid)
                     }
                 }
             }
+            TextDrawBoxColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
+            TextDrawBackgroundColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
             TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT);
             TextDrawShowForAll(Textler[gIndex][text.id]);
         }
@@ -625,8 +642,6 @@ public Textdraw_Index_Yon(playerid)
         if(tus == true)
         {
             BilgiText_Update();
-            //TextDrawColor(Textler[gIndex][text.id], RENK_SECILEN_TEXT), TextDrawShowForAll(Textler[gIndex][text.id]);
-            //SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", gIndex);
             TextDrawSetString(Bilgi_Text, fex("~g~~h~Index: ~w~~h~%d / %d", gIndex, Iter_Count(Text_List) - 1));
         }
     }
@@ -646,10 +661,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
     if(PRESSED(KEY_SECONDARY_ATTACK) && timer_textdraw_sec != -1)
     {
         Bilgi_Text_Kaldir(), KillTimer(timer_textdraw_sec), timer_textdraw_sec = -1;
+        TextDrawBoxColor(Textler[gIndex][text.id], Textler[gIndex][text.boxcolor]);
+        TextDrawBackgroundColor(Textler[gIndex][text.id], Textler[gIndex][text.bgcolor]);
         TextDrawColor(Textler[gIndex][text.id], Textler[gIndex][text.color]);
         TextDrawShowForAll(Textler[gIndex][text.id]);
         Mesaj_Bilgi(playerid, fmt(Dil_Mesaji[tdraw_sec]), gIndex);
         Hud_Render(true), Hud_Goster(true), Mouse(playerid, true, TEXTMOD_NORMAL);
+        if(spawn_modu == 1) TogglePlayerControllable(playerid, 1);
     }
     return 1;
 }
@@ -657,6 +675,8 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 forward Textdraw_Normal_Select(index);
 public Textdraw_Normal_Select(index)
 {
+    TextDrawBoxColor(Textler[gIndex][text.id], Textler[gIndex][text.boxcolor]);
+    TextDrawBackgroundColor(Textler[index][text.id], Textler[index][text.bgcolor]);
     TextDrawColor(Textler[index][text.id], Textler[index][text.color]);
     TextDrawShowForAll(Textler[index][text.id]);
 }
