@@ -737,9 +737,9 @@ Dialog:GRUPLAMA(playerid, response, listitem, inputtext[])
                     if(Textler[id][text.grup] == 1)
                     {
                         Textler[id][text.globaplayer] = 0;
+                        DB_Guncelle(id);
                     }
                 }
-                ChatTemizle();
                 Mesaj_Bilgi(playerid, Dil_Mesaji[grp_bilgi18]);
                 Gruplama_Menu(playerid);
                 Hud_Render(true), Hud_Goster(true);
@@ -754,9 +754,9 @@ Dialog:GRUPLAMA(playerid, response, listitem, inputtext[])
                     if(Textler[id][text.grup] == 1)
                     {
                         Textler[id][text.globaplayer] = 1;
+                        DB_Guncelle(id);
                     }
                 }
-                ChatTemizle();
                 Mesaj_Bilgi(playerid, Dil_Mesaji[grp_bilgi18]);
                 Gruplama_Menu(playerid);
                 Hud_Render(true), Hud_Goster(true);

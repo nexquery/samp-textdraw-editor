@@ -54,6 +54,7 @@
  *          Eğer oyuncu spawn olur ve yön tuşlarıyla textdraw seçerse karakterin hareket etme sorunu düzeltildi.
  *          Seçilen bazı textdrawlardaki renk gözükmeme sorunu düzeltildi.
  *          Gruplamadaki konumlandırma özelliğine manuel offset arttırma eklendi (0.5 gibi değerler verilerek arttırılabilir) (N Tuşu ile menüyü açabilirsiniz)
+ *          Gruplamadaki Global ve Player değerleri veritabanına güncelleme yapmıyordu, düzeltildi.
  */
 
 // Kütüphaneler
