@@ -700,9 +700,9 @@ Dialog:GRUPLAMA(playerid, response, listitem, inputtext[])
                     if(Textler[id][text.grup] == 1)
                     {
                         Textler[id][text.selectable] = 1;
+                        Textdraw_Render(id, true), DB_Guncelle(id);
                     }
                 }
-                ChatTemizle();
                 Mesaj_Bilgi(playerid, Dil_Mesaji[grp_bilgi17]);
                 Gruplama_Menu(playerid);
                 Hud_Render(true), Hud_Goster(true);
@@ -717,9 +717,9 @@ Dialog:GRUPLAMA(playerid, response, listitem, inputtext[])
                     if(Textler[id][text.grup] == 1)
                     {
                         Textler[id][text.selectable] = 0;
+                        Textdraw_Render(id, true), DB_Guncelle(id);
                     }
                 }
-                ChatTemizle();
                 Mesaj_Bilgi(playerid, Dil_Mesaji[grp_bilgi17]);
                 Gruplama_Menu(playerid);
                 Hud_Render(true), Hud_Goster(true);
@@ -945,6 +945,35 @@ Gruplama_Konum(playerid)
     return 1;
 }
 
+GruplamaKonum_Manuel(playerid)
+{
+    Dialog_Show(playerid, GRUP_MANUEL_KONUM, DIALOG_STYLE_INPUT, Dil_Mesaji[btl_baslik], "\
+    %s\n\n\
+    %s\n\
+    %s\n\n\
+    %s\n\
+    %s\n\
+    %s\n\n\
+    %s\n\
+    %s\n\n\
+    %s\n\
+    %s",
+    Dil_Mesaji[btl_buton_1], Dil_Mesaji[btl_buton_2]
+    ,
+        Dil_Mesaji[btl_icrk_1],
+        Dil_Mesaji[btl_icrk_2],
+        Dil_Mesaji[btl_icrk_3],
+        Dil_Mesaji[btl_icrk_4],
+        fex(fmt(Dil_Mesaji[btl_icrk_5]), Textler[gIndex][text.pos][0]),
+        fex(fmt(Dil_Mesaji[btl_icrk_6]), Textler[gIndex][text.pos][1]),
+        Dil_Mesaji[btl_icrk_7],
+        Dil_Mesaji[btl_icrk_8],
+        Dil_Mesaji[btl_icrk_9],
+        Dil_Mesaji[btl_icrk_10]
+    );
+    return 1;
+}
+
 forward Timer_Gruplama_Konum(playerid);
 public Timer_Gruplama_Konum(playerid)
 {
@@ -1055,9 +1084,89 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             TogglePlayerControllable(playerid, 1);
         }
     }
+
+    if(PRESSED(KEY_NO) && Timer_gKonum != -1)
+    {
+        GruplamaKonum_Manuel(playerid);
+    }
     return 1;
 }
 
+Dialog:GRUP_MANUEL_KONUM(playerid, response, listitem, inputtext[])
+{
+    if(response)
+    {
+        new Float: x, Float: y;
+
+        if(isnull(inputtext)) {
+            return Mesaj_Hata(playerid, Dil_Mesaji[btl_hata_1]), GruplamaKonum_Manuel(playerid);
+        }
+
+        if(sscanf(inputtext, "ff", x, y)) {
+            return Mesaj_Hata(playerid, Dil_Mesaji[btl_hata_1]), GruplamaKonum_Manuel(playerid);
+        }
+
+        if(x != 0.0 && y != 0.0)
+        {
+            pozisyon_Offset[0] += x;
+            pozisyon_Offset[1] += y;
+            foreach(new id : Text_List)
+            {
+                if(Textler[id][text.grup] == 1)
+                {
+                    Textler[id][text.pos][0] += x;
+                    Textler[id][text.pos][1] += y;
+                    Textdraw_Render(id, true);
+                }
+            }
+        }
+
+        if(x != 0.0 && y == 0.0)
+        {
+            pozisyon_Offset[0] += x;
+            foreach(new id : Text_List)
+            {
+                if(Textler[id][text.grup] == 1)
+                {
+                    Textler[id][text.pos][0] += x;
+                    Textdraw_Render(id, true);
+                }
+            }
+        }
+
+        if(x == 0.0 && y != 0.0)
+        {
+            pozisyon_Offset[1] += y;
+            foreach(new id : Text_List)
+            {
+                if(Textler[id][text.grup] == 1)
+                {
+                    Textler[id][text.pos][1] += y;
+                    Textdraw_Render(id, true);
+                }
+            }
+        }
+
+        if(x == 0.0 && y == 0.0)
+        {
+            pozisyon_Offset[0] += x;
+            pozisyon_Offset[1] += y;
+            foreach(new id : Text_List)
+            {
+                if(Textler[id][text.grup] == 1)
+                {
+                    Textler[id][text.pos][0] += x;
+                    Textler[id][text.pos][1] += y;
+                    Textdraw_Render(id, true);
+                }
+            }
+        }
+
+        BilgiText_Update();
+        TextDrawSetString(Bilgi_Text, fex("~g~~h~Offset X: ~w~~h~%.1f     ~g~~h~Offset Y: ~w~~h~%.1f", pozisyon_Offset[0], pozisyon_Offset[1]));
+    }
+    return 1;
+}
 
 /***
  *    88888888888                888             d8b                                     888              888    888                             d8b                   
