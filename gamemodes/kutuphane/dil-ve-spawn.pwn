@@ -462,6 +462,16 @@ enum DIL_YAPILANDIRMASI
     gshdow_buton2[DIL_MAX_BUFFER],
     gshdow_bilgi[DIL_MAX_BUFFER],
     gshdow_hata[DIL_MAX_BUFFER],
+
+    // Gruplama Offset Konum
+    gko_baslik[DIL_MAX_BUFFER],
+    gko_icrk_1[DIL_MAX_BUFFER],
+    gko_icrk_2[DIL_MAX_BUFFER],
+    gko_icrk_3[DIL_MAX_BUFFER],
+    gko_buton_1[DIL_MAX_BUFFER],
+    gko_buton_2[DIL_MAX_BUFFER],
+    gko_hata_1[DIL_MAX_BUFFER],
+    gko_bilgi_1[DIL_MAX_BUFFER],
 };
 
 new

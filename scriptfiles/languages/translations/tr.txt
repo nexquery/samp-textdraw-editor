@@ -3,7 +3,7 @@
 #
 # Language: Turkish
 # Author:   Nexor
-# Version:  1.2
+# Version:  1.3
 # Encoding: Turkish (Windows 1254)
 ###############################################
 
@@ -454,3 +454,12 @@
 .gshdow_buton2  = Geri
 .gshdow_bilgi   = Gruplanmýþ öðelerin shadow deðeri #d olarak ayarlandý.
 .gshdow_hata    = Hatalý deðer girdiniz.
+
+[Gruplama Offset Konum]
+.gko_baslik     = Offset Deðeri
+.gko_icrk_1     = {eccc68}offsetX: {FFFFFF}#.1f    {eccc68}offsetY: {FFFFFF}#.1f
+.gko_icrk_2     = {70a1ff}Sadece offsetX Ýçin: {ffffff}deðer 0
+.gko_icrk_3     = {70a1ff}Sadece offsetY Ýçin: {ffffff}0 deðer
+.gko_buton_1    = Güncelle
+.gko_buton_2    = Kapat
+.gko_hata_1     = Hatalý deðer girdiniz.

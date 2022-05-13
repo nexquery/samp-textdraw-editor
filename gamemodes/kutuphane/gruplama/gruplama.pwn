@@ -947,29 +947,14 @@ Gruplama_Konum(playerid)
 
 GruplamaKonum_Manuel(playerid)
 {
-    Dialog_Show(playerid, GRUP_MANUEL_KONUM, DIALOG_STYLE_INPUT, Dil_Mesaji[btl_baslik], "\
+    Dialog_Show(playerid, GRUP_MANUEL_KONUM, DIALOG_STYLE_INPUT, Dil_Mesaji[gko_baslik], "\
     %s\n\n\
-    %s\n\
-    %s\n\n\
-    %s\n\
-    %s\n\
-    %s\n\n\
-    %s\n\
-    %s\n\n\
-    %s\n\
-    %s",
-    Dil_Mesaji[btl_buton_1], Dil_Mesaji[btl_buton_2]
+    %s\n%s",
+    Dil_Mesaji[gko_buton_1], Dil_Mesaji[gko_buton_2]
     ,
-        Dil_Mesaji[btl_icrk_1],
-        Dil_Mesaji[btl_icrk_2],
-        Dil_Mesaji[btl_icrk_3],
-        Dil_Mesaji[btl_icrk_4],
-        fex(fmt(Dil_Mesaji[btl_icrk_5]), Textler[gIndex][text.pos][0]),
-        fex(fmt(Dil_Mesaji[btl_icrk_6]), Textler[gIndex][text.pos][1]),
-        Dil_Mesaji[btl_icrk_7],
-        Dil_Mesaji[btl_icrk_8],
-        Dil_Mesaji[btl_icrk_9],
-        Dil_Mesaji[btl_icrk_10]
+        fex(fmt(Dil_Mesaji[gko_icrk_1]), pozisyon_Offset[0], pozisyon_Offset[1]),
+        Dil_Mesaji[gko_icrk_2],
+        Dil_Mesaji[gko_icrk_3]
     );
     return 1;
 }
@@ -1099,11 +1084,11 @@ Dialog:GRUP_MANUEL_KONUM(playerid, response, listitem, inputtext[])
         new Float: x, Float: y;
 
         if(isnull(inputtext)) {
-            return Mesaj_Hata(playerid, Dil_Mesaji[btl_hata_1]), GruplamaKonum_Manuel(playerid);
+            return Mesaj_Hata(playerid, Dil_Mesaji[gko_hata_1]), GruplamaKonum_Manuel(playerid);
         }
 
         if(sscanf(inputtext, "ff", x, y)) {
-            return Mesaj_Hata(playerid, Dil_Mesaji[btl_hata_1]), GruplamaKonum_Manuel(playerid);
+            return Mesaj_Hata(playerid, Dil_Mesaji[gko_hata_1]), GruplamaKonum_Manuel(playerid);
         }
 
         if(x != 0.0 && y != 0.0)
