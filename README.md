@@ -15,7 +15,6 @@ If you would like to contribute to the project, please translate the project int
 # Quick Start
 - Download the project.
 - Choose which version you want to work with. (*server-037.zip* or *server-03DL.zip*)
-- Download and install the *sscanf* plugin.
 - If you are going to use it in version 037, put the *"NexTDE.txd"* file in the *"Gta San Andreas/models/txd/"* folder.
 - If you are going to use it in the 03DL version, you do not need to do anything. Just run *samp-server.exe*
 
