@@ -38,11 +38,6 @@ new
     liste_Sayfa_Arr[HUD_LISTE_ICERIK],
     liste_Listitem,
 
-    // Hud Liste Index Değiştir
-    index_degistir_Sayfa,
-    index_degistir_Arr[HUD_LISTE_ICERIK],
-    index_degistir_fake_Index,
-
     // Hud taşıma
     hud_tasima_timer = -1,
     bool: hud_tasima_modu = false,
@@ -72,5 +67,10 @@ new
     timer_textdraw_sec = -1,
 
     // Mouse
-    bool: pMouse = false
+    bool: pMouse = false,
+
+    // Index Değiştirme
+    timer_IndexDegistir = -1,
+    textdraw_swap_index = -1,
+    textdraw_swap_index_tmp = -1
 ;

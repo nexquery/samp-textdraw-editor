@@ -13,6 +13,9 @@
 
 #include    <YSI_Coding\y_hooks>
 
+#define     KORDINAT_BOS_1  1782.9531, -2593.1602, 13.5469
+#define     KORDINAT_BOS_2  1782.9531, -2593.1602, 13.5469, 90.2411
+
 enum DIL_YAPILANDIRMASI
 {
     // Editor
@@ -175,10 +178,12 @@ enum DIL_YAPILANDIRMASI
     tdraw_kopyala[DIL_MAX_BUFFER],
     tdraw_kopyala2[DIL_MAX_BUFFER],
 
-    // Liste Islem Bilgi
+    // Liste - Index Değiştir
     idgstr_bslk[DIL_MAX_BUFFER],
+    idgstr_icerik[DIL_MAX_BUFFER],
     idgstr_btn1[DIL_MAX_BUFFER],
     idgstr_btn2[DIL_MAX_BUFFER],
+    idgstr_hata[DIL_MAX_BUFFER],
     idgstr_bilgi[DIL_MAX_BUFFER],
 
     // Degisken Adi
@@ -518,7 +523,7 @@ hook OnPlayerConnect(playerid)
         if(spawn_modu == 0)
         {
             TogglePlayerSpectating(playerid, false);
-            SetSpawnInfo(playerid, NO_TEAM, 299, 3152.7117, 410.9289, 659.6792, 267.2523, 0, 0, 0, 0, 0, 0);
+            SetSpawnInfo(playerid, NO_TEAM, 299, KORDINAT_BOS_2, 0, 0, 0, 0, 0, 0);
             SpawnPlayer(playerid);
         }
 
@@ -558,7 +563,7 @@ hook OnPlayerFinishedDwn(playerid, virtualworld)
     if(spawn_modu == 0)
     {
         TogglePlayerSpectating(playerid, false);
-        SetSpawnInfo(playerid, NO_TEAM, 299, 3152.7117, 410.9289, 659.6792, 267.2523, 0, 0, 0, 0, 0, 0);
+        SetSpawnInfo(playerid, NO_TEAM, 299, KORDINAT_BOS_2, 0, 0, 0, 0, 0, 0);
         SpawnPlayer(playerid);
     }
 
@@ -682,7 +687,7 @@ Dialog:CALISMA_ORTAMI(playerid, response, listitem, inputtext[])
         ChatTemizle();
         spawn_modu = listitem; // 0->boşEkran, 1->SpawnModu
         TogglePlayerSpectating(playerid, false);
-        if(listitem == 0) SetSpawnInfo(playerid, NO_TEAM, 299, 3152.7117, 410.9289, 659.6792, 267.2523, 0, 0, 0, 0, 0, 0), Mesaj_Bilgi(playerid, Dil_Mesaji[co_mesaj_1]);
+        if(listitem == 0) SetSpawnInfo(playerid, NO_TEAM, 299, KORDINAT_BOS_2, 0, 0, 0, 0, 0, 0), Mesaj_Bilgi(playerid, Dil_Mesaji[co_mesaj_1]);
         if(listitem == 1) SetSpawnInfo(playerid, NO_TEAM, 299, 1923.5066, -2547.8245, 13.5469, 89.9278, 0, 0, 0, 0, 0, 0), Mesaj_Bilgi(playerid, Dil_Mesaji[co_mesaj_2]);
         SpawnPlayer(playerid);
         Hud_Tumunu_Yukle(playerid);
@@ -696,7 +701,7 @@ hook OnPlayerSpawn(playerid)
     if(spawn_modu == 0)
     {
         TogglePlayerControllable(playerid, 0);
-        SetPlayerCameraPos(playerid, 3152.7117, 410.9289, 659.6792 + 45.0), SetPlayerCameraLookAt(playerid, 3152.7117, 410.9289, 659.6792 + 50.0);
+        SetPlayerCameraPos(playerid, KORDINAT_BOS_1 - 20.0), SetPlayerCameraLookAt(playerid, KORDINAT_BOS_1 - 25.0);
     }
     return 1;
 }

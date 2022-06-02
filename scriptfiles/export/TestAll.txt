@@ -180,7 +180,7 @@ TextDrawFont(Text_Global[16], 1);
 TextDrawSetProportional(Text_Global[16], 1);
 TextDrawSetSelectable(Text_Global[16], 1);
 
-Text_Global[17] = TextDrawCreate(310.000, 80.000, "Textdraw Editor 1.1");
+Text_Global[17] = TextDrawCreate(310.000, 80.000, "Textdraw Editor 1.4");
 TextDrawLetterSize(Text_Global[17], 0.400, 2.500);
 TextDrawAlignment(Text_Global[17], 2);
 TextDrawColor(Text_Global[17], -1);
@@ -189,5 +189,4 @@ TextDrawSetOutline(Text_Global[17], 2);
 TextDrawBackgroundColor(Text_Global[17], 1088475181);
 TextDrawFont(Text_Global[17], 1);
 TextDrawSetProportional(Text_Global[17], 1);
-TextDrawSetSelectable(Text_Global[17], 1);
 

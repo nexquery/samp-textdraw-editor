@@ -3,7 +3,7 @@
 #
 # Language: English
 # Author:   root
-# Version:  1.3
+# Version:  1.4
 # Encoding: UTF-8
 ###############################################
 
@@ -168,9 +168,11 @@
 .tdraw_kopyala2 = Textdraw copied and chosen. Index: #d
 
 [Index Degistir]
-.idgstr_bslk    = Index number [#d / #d]
+.idgstr_bslk    = Change Index
+.idgstr_icerik  = {ffffff}Enter the index number you want to change. {3498db}(0, #d)
 .idgstr_btn1    = Change
-.idgstr_btn2    = Back
+.idgstr_btn2    = Close
+.idgstr_hata    = Index number is incorrect.
 .idgstr_bilgi   = The index number of the textdraw has been changed. New index number: #d
 
 [Degisken Adi]

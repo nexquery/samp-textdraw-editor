@@ -3,7 +3,7 @@
 #
 # Language: Turkish
 # Author:   Nexor
-# Version:  1.3
+# Version:  1.4
 # Encoding: Turkish (Windows 1254)
 ###############################################
 
@@ -168,9 +168,11 @@
 .tdraw_kopyala2 = Textdraw kopyalandý ve seçildi. Index: #d
 
 [Index Degistir]
-.idgstr_bslk    = Index Numarasý [#d / #d]
+.idgstr_bslk    = Index Deðiþtir
+.idgstr_icerik  = {ffffff}Deðiþtirmek istediðiniz index numarasýný girin. {3498db}(0, #d)
 .idgstr_btn1    = Deðiþtir
-.idgstr_btn2    = Geri
+.idgstr_btn2    = Kapat
+.idgstr_hata    = Index numarasý hatalý.
 .idgstr_bilgi   = Textdrawýn index numarasý deðiþtirildi. Yeni Index Numarasý: #d
 
 [Degisken Adi]

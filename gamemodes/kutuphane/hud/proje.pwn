@@ -539,8 +539,16 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
-
+                
+                if(buffer[0] == '0' && (buffer[1] == 'x' || buffer[1] == 'X'))
+                {
+                    sscanf(buffer, "p<,>h", deger);
+                }
+                else
+                {
+                    sscanf(buffer, "p<,>d", deger);
+                }
+                
                 Textler[id][text.color] = deger;
             }
 
@@ -559,7 +567,15 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                
+                if(buffer[0] == '0' && (buffer[1] == 'x' || buffer[1] == 'X'))
+                {
+                    sscanf(buffer, "p<,>h", deger);
+                }
+                else
+                {
+                    sscanf(buffer, "p<,>d", deger);
+                }
 
                 Textler[id][text.boxcolor] = deger;
             }
@@ -589,7 +605,15 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+
+                if(buffer[0] == '0' && (buffer[1] == 'x' || buffer[1] == 'X'))
+                {
+                    sscanf(buffer, "p<,>h", deger);
+                }
+                else
+                {
+                    sscanf(buffer, "p<,>d", deger);
+                }
 
                 Textler[id][text.bgcolor] = deger;
             }
@@ -703,7 +727,15 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+
+                if(buffer[0] == '0' && (buffer[1] == 'x' || buffer[1] == 'X'))
+                {
+                    sscanf(buffer, "p<,>h", deger);
+                }
+                else
+                {
+                    sscanf(buffer, "p<,>d", deger);
+                }
 
                 Textler[id][text.color] = deger;
             }
@@ -723,7 +755,15 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+
+                if(buffer[0] == '0' && (buffer[1] == 'x' || buffer[1] == 'X'))
+                {
+                    sscanf(buffer, "p<,>h", deger);
+                }
+                else
+                {
+                    sscanf(buffer, "p<,>d", deger);
+                }
 
                 Textler[id][text.boxcolor] = deger;
             }
@@ -753,7 +793,15 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+
+                if(buffer[0] == '0' && (buffer[1] == 'x' || buffer[1] == 'X'))
+                {
+                    sscanf(buffer, "p<,>h", deger);
+                }
+                else
+                {
+                    sscanf(buffer, "p<,>d", deger);
+                }
 
                 Textler[id][text.bgcolor] = deger;
             }

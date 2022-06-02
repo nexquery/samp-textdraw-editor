@@ -27,7 +27,6 @@ Sayfa_Total(mod)
 {
     if(mod == SAYFA_PROJE_LISTESI) return Max_Page(projeler_total, PROJE_MAX_ICERIK);
     if(mod == SAYFA_HUD_LISTE) return Max_Page(Iter_Count(Text_List), HUD_LISTE_ICERIK);
-    if(mod == SAYFA_HUD_LISTE_INDEX) return Max_Page(Iter_Count(Text_List), HUD_LISTE_ICERIK);
     if(mod == SAYFA_SILINENLER)
     {
         new total, rMax; Sil_Get(total, rMax);
@@ -65,11 +64,6 @@ Dialog:SAYFA_DIALOG(playerid, response, listitem, inputtext[])
             liste_Sayfa = sayfa, Liste_Menu(playerid);
         }
 
-        if(mod == SAYFA_HUD_LISTE_INDEX)
-        {
-            index_degistir_Sayfa = sayfa, Liste_Index_Menu(playerid);
-        }
-
         if(mod == SAYFA_SILINENLER)
         {
             Sil_Set(sayfa - 1), Sil_Menu(playerid);
@@ -85,7 +79,6 @@ Dialog:SAYFA_DIALOG(playerid, response, listitem, inputtext[])
         new mod = GetPVarInt(playerid, "sayfa_modu");
         if(mod == SAYFA_PROJE_LISTESI) return Projeler_Menu(playerid);
         if(mod == SAYFA_HUD_LISTE) return Liste_Menu(playerid);
-        if(mod == SAYFA_HUD_LISTE_INDEX) return Liste_Index_Menu(playerid);
         if(mod == SAYFA_SILINENLER) return Sil_Menu(playerid);
         if(mod == SAYFA_GRUPLAMA) return Gruplama_Oge_Sec(playerid);
     }

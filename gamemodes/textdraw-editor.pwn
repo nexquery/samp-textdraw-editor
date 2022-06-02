@@ -55,6 +55,11 @@
  *          Seçilen bazı textdrawlardaki renk gözükmeme sorunu düzeltildi.
  *          Gruplamadaki konumlandırma özelliğine manuel offset arttırma eklendi (0.5 gibi değerler verilerek arttırılabilir) (N Tuşu ile menüyü açabilirsiniz)
  *          Gruplamadaki Global ve Player değerleri veritabanına güncelleme yapmıyordu, düzeltildi.
+ *
+ *      (02.06.2022) v1.4:
+ *          Textdrawları içe aktarmak için renklere hex desteği eklendi.
+ *          Textdrawların index sıralamasını değiştirmek için yeni bir işlev yazıldı.
+ *          Preview models de yüksek kimlikli bir nesne varsa ve renk değiştirilirse ortaya çıkan bir hata düzeltildi.
  */
 
 // Kütüphaneler
