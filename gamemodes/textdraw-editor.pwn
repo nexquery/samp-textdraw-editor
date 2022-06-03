@@ -61,7 +61,7 @@
  *          Textdrawların index sıralamasını değiştirmek için yeni bir işlev yazıldı.
  *          Preview models de yüksek kimlikli bir nesne varsa ve renk değiştirilirse ortaya çıkan bir hata düzeltildi.
  *
- *      (03.06.2022) v1.5:
+ *      (04.06.2022) v1.5:
  *          Textdrawı seçince belirgin olmasını engelleyen bir hata düzeltildi.
  *          Textdraw indexlerini eşzamanlı değiştirebilir ve görebilirsiniz.
  *          Index kaydırma özelliği eklendi, artık 0, 1, 2, 4 gibi indexleriniz 0, 1, 2, 3 olarak sıralanabilir.
