@@ -47,6 +47,10 @@ enum textdraw_yapilandirmasi
 new Textler[MAX_TEXT_LIMIT][textdraw_yapilandirmasi], Iterator: Text_List<MAX_TEXT_LIMIT>;
 new Textler_TMP[textdraw_yapilandirmasi];
 
+// Yeniden Sıralama
+new TextRowShift[MAX_TEXT_LIMIT][textdraw_yapilandirmasi];
+
+//
 new
     // Export alınırken değişken isimleri
     Text_Global[MAX_GPLAYER_ISIM] = "Text_Global",

@@ -39,6 +39,14 @@ enum DIL_YAPILANDIRMASI
     sayfa_btn2[DIL_MAX_BUFFER],
     sayfa_hata[DIL_MAX_BUFFER],
 
+    // [Indexleri Yeniden Sırala]
+    iys_baslik[DIL_MAX_BUFFER],
+    iys_icerik_1[DIL_MAX_BUFFER],
+    iys_icerik_2[DIL_MAX_BUFFER],
+    iys_buton_1[DIL_MAX_BUFFER],
+    iys_buton_2[DIL_MAX_BUFFER],
+    iys_bilgi[DIL_MAX_BUFFER],
+
     // Proje
     proje_baslik[DIL_MAX_BUFFER],
     proje_icerik_1[DIL_MAX_BUFFER],
@@ -157,6 +165,7 @@ enum DIL_YAPILANDIRMASI
     liste_header3[DIL_MAX_BUFFER],
     liste_header4[DIL_MAX_BUFFER],
     liste_icerik[DIL_MAX_BUFFER],
+    liste_icerik2[DIL_MAX_BUFFER],
     liste_btn1[DIL_MAX_BUFFER],
     liste_btn2[DIL_MAX_BUFFER],
 

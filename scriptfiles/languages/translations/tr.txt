@@ -3,7 +3,7 @@
 #
 # Language: Turkish
 # Author:   Nexor
-# Version:  1.4
+# Version:  1.5
 # Encoding: Turkish (Windows 1254)
 ###############################################
 
@@ -27,6 +27,14 @@
 .sayfa_btn1     = Git
 .sayfa_btn2     = Geri
 .sayfa_hata     = Sayfa numarasý hatalý.
+
+[Indexleri Yeniden Sýrala]
+.iys_baslik     = Indexleri Yeniden Sýrala
+.iys_icerik_1   = {ffffff}Bu iþlem index sýranýz {f1c40f}"0, 1, 2, 4" {ffffff}gibiyse {f1c40f}"0, 1, 2, 3" {ffffff}olarak yeniden sýralar.
+.iys_icerik_2   = {e74c3c}Uyarý: {ffffff}Bu iþlem geri ve ileri alma verilerini silecektir. Bu iþlemi gerçekleþtirmek istiyor musunuz?
+.iys_buton_1    = Evet
+.iys_buton_2    = Hayýr
+.iys_bilgi      = Indexler yeniden sýralandý. Metin çizimlerinizi düzenlemek için bir textdraw seçin.
 
 [Proje]
 .proje_baslik   = Proje Menüsü
@@ -146,6 +154,7 @@
 .liste_header3  = Ýçerik
 .liste_header4  = Tür
 .liste_icerik   = Sayfaya git
+.liste_icerik2  = Indexleri yeniden sýrala
 .liste_btn1     = Seç
 .liste_btn2     = Kapat
 

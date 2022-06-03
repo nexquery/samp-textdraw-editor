@@ -29,6 +29,7 @@ Liste_Menu(playerid)
     format(buffer, sizeof(buffer), "%s>>\t\t\t\n", buffer);
     format(buffer, sizeof(buffer), "%s<<\t\t\t\n", buffer);
     format(buffer, sizeof(buffer), "%s%s\t\t\t\n", buffer, Dil_Mesaji[liste_icerik]);
+    format(buffer, sizeof(buffer), "%s%s\t\t\t\n", buffer, Dil_Mesaji[liste_icerik2]);
     format(buffer, sizeof(buffer), "%s\t\t\t\n",   buffer);
     
     // Sayfa içeriği
@@ -98,14 +99,19 @@ Dialog:LISTE_MENU(playerid, response, listitem, inputtext[])
                 Sayfa_Menu(playerid, SAYFA_HUD_LISTE);
             }
 
-            case 3:
+            case 3: // Indexleri yeniden sırala
+            {
+                Liste_IndexleriYenidenSirala(playerid);
+            }
+
+            case 4:
             {
                 Liste_Menu(playerid);
             }
 
             default:
             {
-                liste_Listitem = listitem - 4;
+                liste_Listitem = listitem - 5;
                 Liste_Islem(playerid);
             }
         }
@@ -113,6 +119,86 @@ Dialog:LISTE_MENU(playerid, response, listitem, inputtext[])
     return 1;
 }
 
+/***
+ *                                                                                                                                        
+ *    88                        88                              8b        d8      ad88888ba   88                          88              
+ *    88                        88                               Y8,    ,8P      d8"     "8b  ""                          88              
+ *    88                        88                                Y8,  ,8P       Y8,                                      88              
+ *    88  8b,dPPYba,    ,adPPYb,88   ,adPPYba,  8b,     ,d8        "8aa8"        `Y8aaaaa,    88  8b,dPPYba,  ,adPPYYba,  88  ,adPPYYba,  
+ *    88  88P'   `"8a  a8"    `Y88  a8P_____88   `Y8, ,8P'          `88'           `"""""8b,  88  88P'   "Y8  ""     `Y8  88  ""     `Y8  
+ *    88  88       88  8b       88  8PP"""""""     )888(             88                  `8b  88  88          ,adPPPPP88  88  ,adPPPPP88  
+ *    88  88       88  "8a,   ,d88  "8b,   ,aa   ,d8" "8b,           88  888     Y8a     a8P  88  88          88,    ,88  88  88,    ,88  
+ *    88  88       88   `"8bbdP"Y8   `"Ybbd8"'  8P'     `Y8          88  888      "Y88888P"   88  88          `"8bbdP"Y8  88  `"8bbdP"Y8  
+ *                                                                                                                                        
+ *                                                                                                                                        
+ */
+
+Liste_IndexleriYenidenSirala(playerid)
+{
+    Dialog_Show(playerid, LISTE_INDEX_SIRALA, DIALOG_STYLE_MSGBOX, Dil_Mesaji[iys_baslik], "%s\n%s", Dil_Mesaji[iys_buton_1], Dil_Mesaji[iys_buton_2], Dil_Mesaji[iys_icerik_1], Dil_Mesaji[iys_icerik_2]);
+    return 1;
+}
+
+Dialog:LISTE_INDEX_SIRALA(playerid, response, listitem, inputtext[])
+{
+    if(!response) return Liste_Menu(playerid);
+    if(response)
+    {
+        // Geçerli indexi sıfırla
+        gIndex = -1;
+
+        // ana veriyi sıfırlamak için
+        static const reset[textdraw_yapilandirmasi];
+
+        // Aktif olan textlerin kopyasını al ve textdrawları kaldır
+        new total_index = 0;
+        foreach(new id : Text_List)
+        {
+            if(Textler[id][text.id] != Text: -1)
+            {
+                TextDrawDestroy(Textler[id][text.id]);
+            }
+            TextRowShift[total_index] = Textler[id];
+            TextRowShift[total_index][text.id] = Text: -1;
+            total_index++;
+        }
+
+        // Textlerin bütün verilerini sıfırla
+        for(new i = 0; i < MAX_TEXT_LIMIT; i++)
+        {
+            Textler[i] = reset;
+            Textler[i][text.id] = Text: -1;
+        }
+
+        // Iteratoru temizle
+        Iter_Clear(Text_List);
+
+        // Kopyalanan verileri yeniden ekle
+        for(new i = 0; i < total_index; i++)
+        {
+            new id = Iter_Free(Text_List);
+            Textler[id] = TextRowShift[i];
+            Iter_Add(Text_List, id);
+        }
+
+        // Veritabanını sıfırla
+        db_free_result(db_query(proje_db, "DELETE FROM gerial"));
+        db_free_result(db_query(proje_db, "DELETE FROM textdrawlar"));
+
+        // Textdrawları yeniden göster ve veritabanına ekle
+        foreach(new id : Text_List)
+        {
+            Textdraw_Render(id, true), DB_Ekle(id);
+        }
+
+        // Alt hudu güncelle
+        Hud_Render(true), Hud_Goster(true), Mouse(playerid, true, TEXTMOD_NORMAL);
+
+        // Bilgi
+        Mesaj_Bilgi(playerid, Dil_Mesaji[iys_bilgi]);
+    }
+    return 1;
+}
 
 /***
  *    888      d8b          888                 8888888         888                        
@@ -265,7 +351,7 @@ Dialog:LISTE_ISLEM(playerid, response, listitem, inputtext[])
             {
                 // Indexi kaydet
                 textdraw_swap_index = liste_Sayfa_Arr[liste_Listitem];
-                textdraw_swap_index_tmp = liste_Sayfa_Arr[liste_Listitem];
+                textdraw_swap_index_tmp = liste_Sayfa_Arr[liste_Listitem];  
 
                 // Seçim işlemlerini aktif et
                 Textdraw_IndexDegistir(playerid);
@@ -310,6 +396,7 @@ Textdraw_IndexDegistir(playerid)
     TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
     TextDrawColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
     TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
+    SetTimerEx("Textdraw_Normal_Select", TEXT_SECILEN_TIMER, false, "d", textdraw_swap_index);
 
     // Index bilgisi
     BilgiText_Update();
@@ -347,10 +434,8 @@ public Timer_IndexDegistiriliyor(playerid)
         if(lr < -1)
         {
             tus = true;
-            TextDrawBoxColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.boxcolor]);
-            TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.bgcolor]);
-            TextDrawColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.color]);
-            TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
+
+            textdraw_swap_index_tmp = textdraw_swap_index;
             if(Iter_Count(Text_List) > 1)
             {
                 if(Iter_Contains(Text_List, textdraw_swap_index))
@@ -362,20 +447,39 @@ public Timer_IndexDegistiriliyor(playerid)
                     }
                 }
             }
-            TextDrawBoxColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-            TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-            TextDrawColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-            TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
+
+            if(textdraw_swap_index_tmp != -1)
+            {
+                new suan_secilen[textdraw_yapilandirmasi];
+                suan_secilen = Textler[textdraw_swap_index];
+                Textler[textdraw_swap_index] = Textler[textdraw_swap_index_tmp];
+                Textler[textdraw_swap_index_tmp] = suan_secilen;
+
+                TextDrawDestroy(Textler[textdraw_swap_index][text.id]);
+                Textler[textdraw_swap_index][text.id] = Text: -1;
+
+                TextDrawDestroy(Textler[textdraw_swap_index_tmp][text.id]);
+                Textler[textdraw_swap_index_tmp][text.id] = Text: -1;
+
+                if(textdraw_swap_index >= textdraw_swap_index_tmp)
+                {
+                    Textdraw_Render(textdraw_swap_index_tmp, true);
+                    Textdraw_Render(textdraw_swap_index, true);
+                }
+                else
+                {
+                    Textdraw_Render(textdraw_swap_index, true);
+                    Textdraw_Render(textdraw_swap_index_tmp, true);
+                }
+            }
         }
 
         // Sağ
         if(lr > 1) 
         {
             tus = true;
-            TextDrawBoxColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.boxcolor]);
-            TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.bgcolor]);
-            TextDrawColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.color]);
-            TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
+
+            textdraw_swap_index_tmp = textdraw_swap_index;
             if(Iter_Count(Text_List) > 1)
             {
                 if(Iter_Contains(Text_List, textdraw_swap_index))
@@ -387,10 +491,31 @@ public Timer_IndexDegistiriliyor(playerid)
                     }
                 }
             }
-            TextDrawBoxColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-            TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-            TextDrawColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-            TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
+
+            if(textdraw_swap_index_tmp != -1)
+            {
+                new suan_secilen[textdraw_yapilandirmasi];
+                suan_secilen = Textler[textdraw_swap_index];
+                Textler[textdraw_swap_index] = Textler[textdraw_swap_index_tmp];
+                Textler[textdraw_swap_index_tmp] = suan_secilen;
+
+                TextDrawDestroy(Textler[textdraw_swap_index][text.id]);
+                Textler[textdraw_swap_index][text.id] = Text: -1;
+
+                TextDrawDestroy(Textler[textdraw_swap_index_tmp][text.id]);
+                Textler[textdraw_swap_index_tmp][text.id] = Text: -1;
+
+                if(textdraw_swap_index >= textdraw_swap_index_tmp)
+                {
+                    Textdraw_Render(textdraw_swap_index_tmp, true);
+                    Textdraw_Render(textdraw_swap_index, true);
+                }
+                else
+                {
+                    Textdraw_Render(textdraw_swap_index, true);
+                    Textdraw_Render(textdraw_swap_index_tmp, true);
+                }
+            }
         }
 
         // Güncelle
@@ -417,35 +542,8 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
     {
         Bilgi_Text_Kaldir(), KillTimer(timer_IndexDegistir), timer_IndexDegistir = -1;
         
-        TextDrawBoxColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.boxcolor]);
-        TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.bgcolor]);
-        TextDrawColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.color]);
-        TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
-
-        if(textdraw_swap_index != textdraw_swap_index_tmp)
+        if(textdraw_swap_index != -1)
         {
-            new suan_secilen[textdraw_yapilandirmasi];
-            suan_secilen = Textler[textdraw_swap_index];
-            Textler[textdraw_swap_index] = Textler[textdraw_swap_index_tmp];
-            Textler[textdraw_swap_index_tmp] = suan_secilen;
-
-            TextDrawDestroy(Textler[textdraw_swap_index][text.id]);
-            Textler[textdraw_swap_index][text.id] = Text: -1;
-
-            TextDrawDestroy(Textler[textdraw_swap_index_tmp][text.id]);
-            Textler[textdraw_swap_index_tmp][text.id] = Text: -1;
-
-            if(textdraw_swap_index >= textdraw_swap_index_tmp)
-            {
-                Textdraw_Render(textdraw_swap_index_tmp, true);
-                Textdraw_Render(textdraw_swap_index, true);
-            }
-            else
-            {
-                Textdraw_Render(textdraw_swap_index, true);
-                Textdraw_Render(textdraw_swap_index_tmp, true);
-            }
-
             DB_Guncelle(textdraw_swap_index_tmp), DB_Guncelle(textdraw_swap_index);
 
             gIleri_Sil(textdraw_swap_index_tmp), gIleri_Sil(textdraw_swap_index);
@@ -484,17 +582,30 @@ Dialog:MANUEL_INDEX_SWAP(playerid, response, listitem, inputtext[])
             return Mesaj_Hata(playerid, Dil_Mesaji[idgstr_hata]), TIndex_Manuel(playerid);
         }
 
-        TextDrawBoxColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.boxcolor]);
-        TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.bgcolor]);
-        TextDrawColor(Textler[textdraw_swap_index][text.id], Textler[textdraw_swap_index][text.color]);
-        TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
-
+        textdraw_swap_index_tmp = textdraw_swap_index;
         textdraw_swap_index = deger;
 
-        TextDrawBoxColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-        TextDrawBackgroundColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-        TextDrawColor(Textler[textdraw_swap_index][text.id], RENK_SECILEN_TEXT);
-        TextDrawShowForAll(Textler[textdraw_swap_index][text.id]);
+        new suan_secilen[textdraw_yapilandirmasi];
+        suan_secilen = Textler[textdraw_swap_index];
+        Textler[textdraw_swap_index] = Textler[textdraw_swap_index_tmp];
+        Textler[textdraw_swap_index_tmp] = suan_secilen;
+
+        TextDrawDestroy(Textler[textdraw_swap_index][text.id]);
+        Textler[textdraw_swap_index][text.id] = Text: -1;
+
+        TextDrawDestroy(Textler[textdraw_swap_index_tmp][text.id]);
+        Textler[textdraw_swap_index_tmp][text.id] = Text: -1;
+
+        if(textdraw_swap_index >= textdraw_swap_index_tmp)
+        {
+            Textdraw_Render(textdraw_swap_index_tmp, true);
+            Textdraw_Render(textdraw_swap_index, true);
+        }
+        else
+        {
+            Textdraw_Render(textdraw_swap_index, true);
+            Textdraw_Render(textdraw_swap_index_tmp, true);
+        }
 
         BilgiText_Update();
         TextDrawSetString(Bilgi_Text, fex("~g~~h~Index: ~w~~h~%d / %d", textdraw_swap_index, Iter_Count(Text_List) - 1));
@@ -702,7 +813,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 forward Textdraw_Normal_Select(index);
 public Textdraw_Normal_Select(index)
 {
-    TextDrawBoxColor(Textler[gIndex][text.id], Textler[gIndex][text.boxcolor]);
+    TextDrawBoxColor(Textler[index][text.id], Textler[index][text.boxcolor]);
     TextDrawBackgroundColor(Textler[index][text.id], Textler[index][text.bgcolor]);
     TextDrawColor(Textler[index][text.id], Textler[index][text.color]);
     TextDrawShowForAll(Textler[index][text.id]);
