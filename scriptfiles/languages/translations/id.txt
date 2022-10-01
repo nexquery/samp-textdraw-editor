@@ -1,0 +1,476 @@
+###############################################
+#       Textdraw Editor - Language File
+#
+# Language: Indonesian
+# Author:   flamesidgs
+# Version:  1.5
+# Encoding: UTF-8
+###############################################
+
+[Dil Secimi]
+.editor_dil = Kamu mengubah bahasa menjadi Indonesia.
+
+[Kisayollar]
+.kisayollar = Pemakaian: [Tombol Panah], [Tombol Spasi], [Tombol N], [Tombol ENTER]
+
+[Calisma Ortami]
+.co_baslik = Apa yang Anda sukai?
+.co_icerik_1 = Latar belakang berwarna
+.co_icerik_2 = Memunculkan pemain
+.co_buton_1 = Pilih
+.co_mesaj_1 = Anda memilih latar belakang warna. Jika mouse Anda hilang gunakan perintah {45aaf2}/mouse
+.co_mesaj_2 = Anda memilih pemijahan. Jika mouse Anda hilang gunakan perintah {45aaf2}/mouse
+
+[Sayfaya Git]
+.sayfa_baslik = Buka halaman
+.sayfa_icerik = {FFFFFF}Nomor halaman harus antara {ff7979}1 {FFFFFF}dan {ff7979}#d
+.sayfa_btn1 = Selanjutnya
+.sayfa_btn2 = Kembali
+.sayfa_hata = Nomor halaman salah.
+
+[Indexleri Yeniden Sırala]
+.iys_baslik = Susun Ulang Indeks
+.iys_icerik_1 = {ffffff}Ini akan mengurutkan ulang indeks Anda menjadi {f1c40f}"0, 1, 2, 3" {ffffff}jika indeks Anda seperti {f1c40f}"0, 1, 2, 4"
+.iys_icerik_2 = {e74c3c}Peringatan: {ffffff}Ini akan menghapus data undo dan redo. Apakah Anda ingin melakukan operasi ini?
+.iys_buton_1 = Ya
+.iys_buton_2 = Tidak
+.iys_bilgi = Indeks telah disusun ulang. Pilih gambar teks untuk mengedit gambar teks Anda.
+
+[Proyek]
+.proje_baslik = Menu proyek
+.proje_icerik_1 = Proyek baru
+.proje_icerik_2 = Muat proyek
+.proje_icerik_3 = Impor textdraw
+.proje_icerik_4 = Ekspor textdraw
+.proje_icerik_5 = Tutup proyek
+.proje_buton_1 = Pilih
+.proje_buton_2 = Tutup
+
+[Proyek Olustur]
+.po_baslik = Proyek baru
+.po_metin = {ffffff}Masukkan nama proyek yang ingin Anda buat:
+.po_buton_1 = Buat
+.po_buton_2 = Kembali
+.po_hata_1 = Anda tidak menentukan nama proyek.
+.po_hata_2 = Nama proyek terlalu panjang.
+.po_hata_3 = Ada karakter yang tidak valid dalam nama proyek.
+.po_hata_4 = Sudah ada proyek dengan nama itu.
+.po_hata_5 = Untuk membuat proyek baru, tutup proyek yang ada.
+.po_bilgi_1 = Proyek "#s" {FFFFFF}dibuat.
+
+[Proyektor]
+.pler_baslik = Proyek [#d / #d]
+.pler_icerik_1 = Nama proyek
+.pler_icerik_2 = Tanggal pembuatan
+.pler_icerik_3 = Buka halaman
+.pler_buton_1 = Pilih
+.pler_buton_2 = Kembali
+.pler_hata = Tidak ada proyek yang ditemukan.
+
+[Proje Islam]
+.pi_baslik = Opsi
+.pi_icerik_1 = Muat proyek
+.pi_icerik_2 = Hapus proyek
+.pi_buton_1 = Pilih
+.pi_buton_2 = Kembali
+.pi_hata_1 = Proyek ini sudah dimuat.
+.pi_hata_2 = Untuk memuat proyek baru tutup proyek yang ada.
+.pi_hata_3 = Proyek tidak dapat dimuat karena file database belum ditemukan.
+.pi_bilgi = Proyek "#s" {FFFFFF}dimuat. [TD Global: #d, TD Pemain: #d, Total: #d]
+.pi_uyari_bslk = Hapus proyek
+.pi_uyari_icrk = {FFFFFF}Yakin ingin menghapus proyek?
+.pi_uyari_btn1 = Ya
+.pi_uyari_btn2 = Tidak
+.pi_uyari_bilgi = Proyek "#s" dihapus.
+.pi_uyari_hata = Anda harus menutup proyek terlebih dahulu.
+
+[Aktar Es]
+.ia_baslik = Impor
+.ia_icerik_1 = {FFFFFF}Masukkan nama file yang ingin Anda impor.
+.ia_icerik_2 = {badc58}Contoh: {FFFFFF}phone.txt
+.ia_btn1 = Impor
+.ia_btn2 = Kembali
+.ia_hata_1 = Anda perlu membuat proyek sebelum mengimpor gambar teks.
+.ia_hata_2 = Anda belum memasukkan nama file yang akan diimpor.
+.ia_hata_3 = Tidak ditemukan file dengan nama "#s".
+.ia_hata_4 = Impor terhenti karena batas textdraw tercapai.
+.ia_hata_5 = Tidak ditemukan gambar teks untuk ditambahkan.
+.ia_bilgi = Berkas "#s" diimpor. [TD Global: #d, TD Pemain: #d, Total: #d]
+
+[Disa Aktar]
+.da_baslik = Ekspor
+.da_icerik_1 = {FFFFFF}Masukkan nama file yang ingin Anda ekspor.
+.da_icerik_2 = Jika Anda tidak menentukan nama file, Anda akan mendapatkan output sebagai "#s.txt".
+.da_btn1 = Ekspor
+.da_btn2 = Kembali
+.da_hata = Anda tidak membuat gambar teks apa pun.
+.da_hata2 = Anda harus membuat atau memuat proyek untuk proses ekspor.
+.da_bilgi = Proyek "#s.txt" diekspor. [TD Global: #d, TD Pemain: #d, Total: #d]
+
+[Projeyi Tutup]
+.pk_hata = Untuk menutup proyek, Anda harus memuatnya.
+.pk_bilgi = Proyek #s telah berhasil ditutup.
+
+[Ayarlar]
+.ayar_baslik = Pengaturan
+.ayar_header_1 = #
+.ayar_header_2 = Nilai
+.ayar_icerik_1 = Jam
+.ayar_icerik_2 = Posisi HUD
+.ayar_icerik_3 = Nama default TD global
+.ayar_icerik_4 = Nama default TD pemain
+.ayar_buton1 = Pilih
+.ayar_buton2 = Tutup
+
+[Saat]
+.saat_baslik = Jam
+.saat_buton1 = Pilih
+.saat_buton2 = Kembali
+.saat_bilgi = Waktu dalam permainan diatur ke #02d:00.
+
+[Hud Konumu]
+.hkonum_bilgi = Posisi HUD berhasil diubah.
+
+[Degisken - Global | Pemain]
+.dg_baslik = Nama variabel default
+.dg_icerik_1 = {FFFFFF}Menentukan nama variabel dari output yang akan Anda terima saat mengekspor proyek Anda.
+.dg_icerik_2 = {FFFFFF}Biarkan layar kosong untuk menyetel nama variabel default.
+.dg_buton1 = Ubah
+.dg_buton2 = Kembali
+.dg_hata = Nama variabel terlalu panjang.
+.dg_bilgi = Nama variabel default diatur ke #s.
+
+[Yen]
+.yeni_baslik = Baru
+.yeni_icerik = Model Pratinjau (objek, kendaraan, kulit)
+.yeni_btn1 = Buat
+.yeni_btn2 = Tutup
+.yeni_textdraw = Gambar teks baru
+
+[Daftar]
+.liste_baslik = Daftar gambar teks [#d / #d]
+.liste_header1 = Indeks
+.liste_header2 = Nama variabel
+.liste_header3 = Nama
+.liste_header4 = Ketik
+.liste_icerik = Buka halaman
+.liste_icerik2 = Susun ulang indeks
+.liste_btn1 = Pilih
+.liste_btn2 = Tutup
+
+[Cantumkan Islam]
+.lislem_baslik = Opsi
+.lislem_icerik1 = Pilih gambar teks
+.lislem_icerik2 = Pilih textdraw (Tombol Panah)
+.lislem_icerik3 = Hapus gambar teks
+.lislem_icerik4 = Gambar teks tiruan
+.lislem_icerik5 = Klon gambar teks dan pilih
+.lislem_icerik6 = Ubah indeks gambar teks
+.lislem_icerik7 = Ubah nama variabel
+.lislem_btn1 = Pilih
+.lislem_btn2 = Kembali
+
+[Daftar Pulau Bilgi]
+.tdraw_sec = Gambar teks dipilih. Indeks: #d
+.tdraw_sil = Textdraw dihapus. Indeks: #d
+.tdraw_kopyala = Gambar teks disalin. Indeks: #d
+.tdraw_kopyala2 = Textdraw disalin dan dipilih. Indeks: #d
+
+[Indeks Degistir]
+.idgstr_bslk = Ubah Indeks
+.idgstr_icerik = {ffffff}Masukkan nomor indeks yang ingin Anda ubah. {3498db}(0, #d)
+.idgstr_btn1 = Ubah
+.idgstr_btn2 = Tutup
+.idgstr_hata = Nomor indeks salah.
+.idgstr_bilgi = Nomor indeks gambar teks telah diubah. Nomor indeks baru: #d
+
+[Degisken Adi]
+.degadi_bslk = Edit nama variabel
+.degadi_icrk_1 = {ff7979}Catatan: {FFFFFF}Biarkan kotak kosong untuk menghapus nama variabel.
+.degadi_icrk_2 = {ffffff}Masukkan nama variabel yang ingin Anda gunakan untuk gambar teks ini.
+.degadi_btn1 = Ubah
+.degadi_btn2 = Kembali
+.degadi_hata = Nama variabel terlalu panjang.
+.degadi_bilgi = Nama variabel disetel ke #s.
+.degadi_bilgi2 = Nama variabel telah dihapus.
+
+[Depo]
+.depo_baslik = Depo
+.depo_icerik_1 = Pengelompokan
+.depo_icerik_2 = Pulihkan gambar teks yang dihapus
+.depo_btn_1 = Pilih
+.depo_btn_2 = Tutup
+
+[Kopiala]
+.kopyala_bilgi = Gambar teks disalin dan dipilih. Indeks: #d
+
+[Sil]
+.sil_bilgi = Gambar teks dihapus. Indeks: #d
+
+[Bocah | Ukuran teks | ukuran huruf]
+.btl_baslik = Pengeditan manual
+.btl_icrk_1 = {FFFFFF}Masukkan nilai baru yang ingin Anda gunakan.
+.btl_icrk_2 = {70a1ff}Contoh:
+.btl_icrk_3 = {ffffff}10 20 atau 10,0 20,0
+.btl_icrk_4 = {70a1ff}Nilai saat ini:
+.btl_icrk_5 = {eccc68}X: {FFFFFF}#.2f
+.btl_icrk_6 = {eccc68}Y: {FFFFFF}#.2f
+.btl_icrk_7 = {70a1ff}Hanya untuk nilai X:
+.btl_icrk_8 = {ffffff}nilai 0
+.btl_icrk_9 = {70a1ff}Hanya untuk nilai y:
+.btl_icrk_10 = {ffffff}0 nilai
+.btl_icrk_11 = {FFFFFF}Masukkan {ff7f50}0 0 {FFFFFF} untuk menghapus fitur ukuran teks.
+.btl_buton_1 = Perbarui
+.btl_buton_2 = Tutup
+.btl_hata_1 = Anda memasukkan nilai yang salah.
+.btl_bilgi_1 = Nilai telah diperbarui.
+
+[Metin]
+.metin_baslik = Teks
+.metin_icerik = {f1c40f}Teks saat ini:
+.metin_icerik2 = {ffffff}Masukkan teks yang ingin Anda gunakan.
+.metin_buton1 = Ubah
+.metin_buton2 = Tutup
+.metin_hata = Anda harus menentukan teks.
+.metin_bilgi = Teks telah diubah.
+
+[Garis Besar | Bayangan]
+.os_baslik = Edit manual
+.os_icerik_1 = {f9ca24}Nilai saat ini: {FFFFFF}#d
+.os_icerik_2 = {FFFFFF}Masukkan nilai yang ingin Anda gunakan. Ketik {f9ca24}0 {FFFFFF} untuk menghapus.
+.os_buton_1 = Setel
+.os_buton_2 = Tutup
+.os_hata = Anda memasukkan nilai yang salah.
+.os_bilgi_1 = Nilai diperbarui.
+
+[Renk | BG | Kotak]
+.renk_baslik = Warna
+.renk_icerik = RGBA (menggunakan tombol arah)
+.renk_buton1 = Pilih
+.renk_buton2 = Tutup
+
+[Renk - Hex]
+.rhex_baslik = Warna: Hex
+.rhex_icerik_1 = {FFFFFF}Masukkan kode hex warna yang ingin Anda gunakan.
+.rhex_icerik_2 = {badc58}Contoh:
+.rhex_icerik_3 = {FFFFFF}FFBE76
+.rhex_icerik_4 = {FFFFFF}#FFBE76
+.rhex_icerik_5 = {FFFFFF}0xFFBE76
+.rhex_icerik_6 = {FFFFFF}0xFFBE76FF
+.rhex_buton_1 = Ubah
+.rhex_buton_2 = Kembali
+.rhex_hata = Kode hex yang Anda masukkan salah.
+
+[Renk - RGB]
+.rgb_baslik = Warna: RGB
+.rgb_icerik_1 = {FFFFFF}Masukkan kode RGB warna yang ingin Anda gunakan.
+.rgb_icerik_2 = {badc58}Contoh:
+.rgb_icerik_3 = {FFFFFF}66 135 245
+.rgb_icerik_4 = {FFFFFF}66, 135, 245
+.rgb_icerik_5 = {FFFFFF}rgb(66, 135, 245)
+.rgb_icerik_6 = {FFFFFF}rgb(66, 135, 245);
+.rgb_buton_1 = Ubah
+.rgb_buton_2 = Kembali
+.rgb_hata = Kode RGB yang Anda masukkan salah.
+
+[Renk - RGBA]
+.rgba_baslik = Warna: RGBA
+.rgba_icerik_1 = {FFFFFF}Masukkan kode RGBA warna yang ingin Anda gunakan.
+.rgba_icerik_2 = {badc58}Contoh:
+.rgba_icerik_3 = {FFFFFF}66 135 245 255
+.rgba_icerik_4 = {FFFFFF}66, 135, 245, 255
+.rgba_icerik_5 = {FFFFFF}rgba(66, 135, 245, 255)
+.rgba_icerik_6 = {FFFFFF}rgba(66, 135, 245, 255);
+.rgba_buton_1 = Ubah
+.rgba_buton_2 = Kembali
+.rgba_hata = Kode RGBA yang Anda masukkan salah.
+
+[Model Pratinjau]
+.pmdls_buton_1 = Pilih
+.pmdls_buton_2 = Tutup
+.pmdls_hata = Anda memasukkan nilai yang salah.
+.pmdls_bilgi_1 = Nilai telah diperbarui.
+
+[Pratinjau Model Manuel]
+.pmdls_mbaslik = Edit manual
+.pmdls_icerik_1 = {FFFFFF}Masukkan nilai yang ingin Anda gunakan.
+.pmdls_icerik_2 = {badc58}Nilai Anda saat ini adalah: {FFFFFF}#d
+.pmdls_icerik_3 = {badc58}Nilai Anda saat ini adalah: {FFFFFF}#.2f
+.pmdls_buton_3 = Perbarui
+.pmdls_buton_4 = Tutup
+
+[Kembali, Ileri Al]
+.gi_baslik = Urungkan dan Ulangi
+.gi_icerik_1 = Pilih indeks yang ingin Anda tampilkan. Indeks bisa dari {ff7979}1 {ffffff}sampai {ff7979}#%d
+.gi_buton_1 = Tampilkan
+.gi_buton_2 = Tutup
+.gi_hata = Anda memasukkan nilai yang salah.
+
+[Kembali, Ileri Al | Onay]
+.gio_baslik = Konfirmasi Perubahan
+.gio_icerik_1 = {FFFFFF}Anda yakin ingin mengonfirmasi perubahan?
+.gio_buton_1 = Ya
+.gio_buton_2 = Tidak
+.gio_bilgi_1 = Perubahan telah disimpan.
+.gio_bilgi_2 = Tidak ada perubahan yang dibuat.
+
+[Silinenler]
+.s_baslik = Gambar teks yang dihapus [#d / #d]
+.s_header1 = Nama
+.s_header2 = Ketik
+.s_header3 = Global / Pemain
+.s_header4 = Hapus tanggal
+.s_icerik1 = Buka halaman
+.s_icerik2 = Hapus semua data
+.s_icerik3 = Pulihkan semua data
+.s_buton1 = Pulihkan
+.s_buton2 = Kembali
+.s_hata = Tidak ditemukan gambar teks yang dihapus.
+.s_bilgi = Textdraw telah dipulihkan. Nomor indeks baru: #d
+
+[Silinenler - Temizle]
+.st_baslik = Hapus semua data
+.st_icerik1 = {ff7f50}Peringatan: {FFFFFF}Operasi ini akan menghapus data dari semua gambar teks yang telah Anda hapus.
+.st_icerik2 = {FFFFFF}Konfirmasi tindakan ini?
+.st_buton1 = Ya
+.st_buton2 = Tidak
+.st_bilgi = Menghapus semua data.
+
+[Silinenler - Tum Verileri Kembali Yukle]
+.stgy_baslik = Pulihkan semua data
+.stgy_icerik1 = {FFFFFF}Yakin ingin memulihkan semua data?
+.stgy_buton1 = Ya
+.stgy_buton2 = Tidak
+.stgy_bilgi = Semua data telah dipulihkan. Total data: #d
+
+[Gruplar]
+.grp_hata = Buat gambar teks untuk menggunakan fitur ini.
+.grp_baslik = Pengelompokan
+.grp_icerik1 = {badc58}Pengelompokan:
+.grp_icerik2 = Pilih gambar teks untuk dikelompokkan
+.grp_icerik3 = Kelompokkan semua gambar teks
+.grp_icerik4 = Setel ulang semua gambar teks yang dikelompokkan
+.grp_icerik5 = {badc58}Pengelompokan cepat:
+.grp_icerik6 = Gambar Teks Normal
+.grp_icerik7 = Sprite
+.grp_icerik8 = Model Pratinjau
+.grp_icerik9 = {badc58}Menyalin:
+.grp_icerik10 = Salin gambar teks yang dikelompokkan
+.grp_icerik11 = Salin gambar teks yang dikelompokkan dan pilih
+.grp_icerik12 = {badc58}Hapus:
+.grp_icerik13 = Hapus gambar teks yang dikelompokkan
+.grp_icerik14 = {badc58}Posisi:
+.grp_icerik15 = Ubah posisi gambar teks yang dikelompokkan
+.grp_icerik16 = {badc58}Ukuran:
+.grp_icerik17 = Ukuran Teks (Teks Gambar Normal)
+.grp_icerik18 = Ukuran teks (Sprite)
+.grp_icerik19 = Ukuran Teks (Model Pratinjau)
+.grp_icerik20 = Ukuran Teks (Sprite, Model Pratinjau)
+.grp_icerik21 = Ukuran Teks (Model Normal, Sprite, Pratinjau)
+.grp_icerik22 = Ukuran huruf (Textdraw Normal)
+.grp_icerik23 = {badc58}Teks:
+.grp_icerik24 = Ubah teks dari gambar teks yang dikelompokkan
+.grp_icerik25 = {badc58}Fon teks:
+.grp_icerik26 = Font 0
+.grp_icerik27 = Font 1
+.grp_icerik28 = Font 2
+.grp_icerik29 = Font 3
+.grp_icerik30 = {badc58}Perataan teks:
+.grp_icerik31 = Kiri
+.grp_icerik32 = Tengah
+.grp_icerik33 = Benar
+.grp_icerik34 = {badc58}Proporsi teks:
+.grp_icerik35 = Aktif
+.grp_icerik36 = Mati
+.grp_icerik37 = {badc58}Garis Besar & Bayangan:
+.grp_icerik38 = Garis Besar
+.grp_icerik39 = Bayangan
+.grp_icerik40 = {badc58}Warna:
+.grp_icerik41 = Hex
+.grp_icerik42 = RGB
+.grp_icerik43 = RGBA
+.grp_icerik44 = Warna siap pakai
+.grp_icerik45 = {badc58}Kotak:
+.grp_icerik46 = Aktif
+.grp_icerik47 = Mati
+.grp_icerik48 = {badc58}Dapat dipilih:
+.grp_icerik49 = Aktif
+.grp_icerik50 = Mati
+.grp_icerik51 = {badc58}Global / Pemain:
+.grp_icerik52 = Setel gambar teks yang dikelompokkan ke global
+.grp_icerik53 = Setel gambar teks yang dikelompokkan ke pemutar
+.grp_buton1 = Pilih
+.grp_buton2 = Kembali
+
+[Modu Renk]
+.renk_modu_1 = Warna teks
+.renk_modu_2 = Warna latar / batas
+.renk_modu_3 = Warna kotak
+
+[Gruplar Hata | bilgi]
+.grp_hata1 = Tidak ada textdraw yang dikelompokkan.
+.grp_hata2 = Tidak ada item teks yang ditemukan di antara grup.
+.grp_bilgi1 = Semua gambar teks telah dikelompokkan.
+.grp_bilgi2 = Semua gambar teks telah dihapus dari grup.
+.grp_bilgi3 = Gambar teks normal telah dikelompokkan.
+.grp_bilgi4 = Sprite textdraws telah dikelompokkan.
+.grp_bilgi5 = Gambar Model Pratinjau Textdraw telah dikelompokkan.
+.grp_bilgi6 = Gambar teks yang dikelompokkan telah disalin. Total gambar teks yang disalin: #d
+.grp_bilgi7 = Gambar teks yang dikelompokkan telah disalin dan dipilih. Total gambar teks yang disalin: #d
+.grp_bilgi8 = Semua gambar teks yang dikelompokkan telah dihapus. Total penarikan teks yang dihapus: #d
+.grp_bilgi9 = Posisi yang diperbarui dari semua gambar teks yang dikelompokkan.
+.grp_bilgi10 = Ukuran teks yang diperbarui dari semua gambar teks yang dikelompokkan.
+.grp_bilgi11 = Mengubah teks dari semua gambar teks yang dikelompokkan.
+.grp_bilgi12 = Mengubah font semua gambar teks yang dikelompokkan menjadi #d.
+.grp_bilgi13 = Mengubah perataan semua gambar teks yang dikelompokkan.
+.grp_bilgi14 = Mengubah proporsi semua gambar teks yang dikelompokkan.
+.grp_bilgi15 = Mengubah warna semua gambar teks yang dikelompokkan.
+.grp_bilgi16 = Mengubah nilai kotak dari semua gambar teks yang dikelompokkan.
+.grp_bilgi17 = Mengubah nilai yang dapat dipilih dari semua gambar teks yang dikelompokkan.
+.grp_bilgi18 = Mengubah nilai Global / Player dari semua textdraw yang dikelompokkan.
+
+[Gruplanacak Ogeler]
+.go_baslik = Pengelompokan [#d / #d]
+.go_header1 = ID
+.go_header2 = Nama variabel
+.go_header3 = Konten
+.go_header4 = Dikelompokkan?
+.go_header4_n = Tidak
+.go_header4_y = Ya
+.go_icerik1 = Buka halaman
+.go_icerik2 = Halaman grup
+.go_icerik3 = Pisahkan halaman grup
+.go_buton1 = Pilih
+.go_buton2 = Kembali
+
+[Gruplama: Metin Degistir]
+.gmd_baslik = Perubahan teks
+.gmd_icerik = {FFFFFF}Masukkan teks baru dari item yang dikelompokkan.
+.gmd_buton1 = Ubah
+.gmd_buton2 = Kembali
+.gmd_hata = Teks tidak boleh kosong.
+
+[Gruplama Garis Besar]
+.goline_baslik = Garis Besar
+.goline_icerik = {FFFFFF}Masukkan nilai outline yang ingin Anda gunakan.
+.goline_buton1 = Ubah
+.goline_buton2 = Kembali
+.goline_bilgi = Nilai garis besar dari gambar teks yang dikelompokkan diatur ke #d.
+.goline_hata = Anda memasukkan nilai yang salah.
+
+[Gruplama Bayangan]
+.gshdow_baslik = Bayangan
+.gshdow_icerik = {FFFFFF}Masukkan nilai bayangan yang ingin Anda gunakan.
+.gshdow_buton1 = Ubah
+.gshdow_buton2 = Kembali
+.gshdow_bilgi = Nilai bayangan dari gambar teks yang dikelompokkan diatur ke #d.
+.gshdow_hata = Anda memasukkan nilai yang salah.
+
+[Gruplama Offset Konum]
+.gko_baslik = Nilai Offset
+.gko_icrk_1 = {eccc68}offsetX: {FFFFFF}#.1f {eccc68}offsetY: {FFFFFF}#.1f
+.gko_icrk_2 = {70a1ff}Hanya untuk nilai offsetX: {ffffff}nilai 0
+.gko_icrk_3 = {70a1ff}Hanya untuk nilai offsetY: nilai {ffffff}0
+.gko_buton_1 = Perbarui
+.gko_buton_2 = Tutup
+.gko_hata_1 = Anda memasukkan nilai yang salah.
