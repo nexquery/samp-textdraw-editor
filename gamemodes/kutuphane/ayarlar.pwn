@@ -18,7 +18,7 @@ DEFINE_HOOK_REPLACEMENT__(Downloading, Dwn);
 
 // Sunucu ayarları
 #define     TDE_HOSTNAME        "Textdraw Editor"
-#define     TDE_VERSION         "1.5"
+#define     TDE_VERSION         "1.6"
 
 // Timestamp verileri hangi saat diliminde hesaplansın?
 #define     GMT_TIME            3

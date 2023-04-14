@@ -534,7 +534,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.alignment] = deger;
             }
 
-            if((pos = strfind(buffer, "TextDrawColor", true)) != -1)
+            if((pos = strfind(buffer, "TextDrawColor", true)) != -1 || (pos = strfind(buffer, "TextDrawColour", true)) != -1)
             {
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -562,7 +562,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.usebox] = deger;
             }
 
-            if((pos = strfind(buffer, "TextDrawBoxColor", true)) != -1)
+            if((pos = strfind(buffer, "TextDrawBoxColor", true)) != -1 || (pos = strfind(buffer, "TextDrawBoxColour", true)) != -1)
             {
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -600,7 +600,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.outline] = deger;
             }
 
-            if((pos = strfind(buffer, "TextDrawBackgroundColor", true)) != -1)
+            if((pos = strfind(buffer, "TextDrawBackgroundColor", true)) != -1 || (pos = strfind(buffer, "TextDrawBackgroundColour", true)) != -1)
             {
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -671,7 +671,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.preview_rot][3] = zoom;
             }
 
-            if((pos = strfind(buffer, "TextDrawSetPreviewVehCol", true)) != -1)
+            if((pos = strfind(buffer, "TextDrawSetPreviewVehCol", true)) != -1 || (pos = strfind(buffer, "TextDrawSetPreviewVehicleColours", true)) != -1)
             {
                 new r1, r2;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -722,7 +722,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.alignment] = deger;
             }
 
-            if((pos = strfind(buffer, "PlayerTextDrawColor", true)) != -1)
+            if((pos = strfind(buffer, "PlayerTextDrawColor", true)) != -1 || (pos = strfind(buffer, "PlayerTextDrawColour", true)) != -1)
             {
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -750,7 +750,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.usebox] = deger;
             }
 
-            if((pos = strfind(buffer, "PlayerTextDrawBoxColor", true)) != -1)
+            if((pos = strfind(buffer, "PlayerTextDrawBoxColor", true)) != -1 || (pos = strfind(buffer, "PlayerTextDrawBoxColour", true)) != -1)
             {
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -788,7 +788,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.outline] = deger;
             }
 
-            if((pos = strfind(buffer, "PlayerTextDrawBackgroundColor", true)) != -1)
+            if((pos = strfind(buffer, "PlayerTextDrawBackgroundColor", true)) != -1 || (pos = strfind(buffer, "PlayerTextDrawBackgroundColour", true)) != -1)
             {
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -859,7 +859,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 Textler[id][text.preview_rot][3] = zoom;
             }
 
-            if((pos = strfind(buffer, "PlayerTextDrawSetPreviewVehCol", true)) != -1)
+            if((pos = strfind(buffer, "PlayerTextDrawSetPreviewVehCol", true)) != -1 || (pos = strfind(buffer, "PlayerTextDrawSetPreviewVehicleColours", true)) != -1)
             {
                 new r1, r2;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
@@ -951,14 +951,28 @@ Dialog:DOSYA_DAKTAR(playerid, response, listitem, inputtext[])
 Disa_Aktar(playerid, const dosya_adi[])
 {
     new
-        File: dosya = fopen(fex(DOSYA_DISA_AKTAR, dosya_adi), io_write),
+        File: dosya,
         index,
         g   = Total_gPlayer(0),
         p   = Total_gPlayer(1),
         dg  = Total_Degisken_gPlayer(0),
         dp  = Total_Degisken_gPlayer(1),
-        sz[512]
+        sz[512],
+        open_mp_support = 0,
+        fName[256]
     ;
+
+    open_mp_converter:
+
+    if(open_mp_support == 0)
+    {
+        dosya = fopen(fex(DOSYA_DISA_AKTAR, dosya_adi), io_write);
+    }
+    else
+    {
+        format(fName, sizeof(fName), "%s-open.mp", dosya_adi);
+        dosya = fopen(fex(DOSYA_DISA_AKTAR, fName), io_write);
+    }
 
     // Global
     if(g)
@@ -988,7 +1002,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "TextDrawAlignment(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.alignment]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.color]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.color]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawColour(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.color]);
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
@@ -996,7 +1011,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "TextDrawUseBox(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.usebox]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "TextDrawBoxColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.boxcolor]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawBoxColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.boxcolor]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawBoxColour(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.boxcolor]);
                     fwrite(dosya, sz);
                 }
 
@@ -1006,7 +1022,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "TextDrawSetOutline(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.outline]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawBackgroundColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.bgcolor]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawBackgroundColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.bgcolor]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawBackgroundColour(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
                 format(sz, sizeof(sz), "TextDrawFont(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.font]);
@@ -1023,7 +1040,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "TextDrawSetPreviewRot(%s[%d], %.3f, %.3f, %.3f, %.3f);\r\n", Text_Global, index, Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "TextDrawSetPreviewVehCol(%s[%d], %d, %d);\r\n", Text_Global, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawSetPreviewVehCol(%s[%d], %d, %d);\r\n", Text_Global, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawSetPreviewVehicleColours(%s[%d], %d, %d);\r\n", Text_Global, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
                     fwrite(dosya, sz);
                 }
 
@@ -1069,7 +1087,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.alignment]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.color]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.color]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawColour(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.color]);
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
@@ -1077,7 +1096,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.usebox]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.boxcolor]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.boxcolor]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawBoxColour(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.boxcolor]);
                     fwrite(dosya, sz);
                 }
 
@@ -1087,7 +1107,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "PlayerTextDrawSetOutline(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.outline]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawBackgroundColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.bgcolor]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawBackgroundColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.bgcolor]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawBackgroundColour(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
                 format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.font]);
@@ -1104,7 +1125,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "PlayerTextDrawSetPreviewRot(playerid, %s[playerid][%d], %.3f, %.3f, %.3f, %.3f);\r\n", Text_Player, index, Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid][%d], %d, %d);\r\n", Text_Player, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid][%d], %d, %d);\r\n", Text_Player, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehicleColours(playerid, %s[playerid][%d], %d, %d);\r\n", Text_Player, index, Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
                     fwrite(dosya, sz);
                 }
 
@@ -1156,7 +1178,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "TextDrawAlignment(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawColour(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
@@ -1164,7 +1187,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "TextDrawUseBox(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "TextDrawBoxColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawBoxColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawBoxColour(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
                     fwrite(dosya, sz);
                 }
 
@@ -1174,7 +1198,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "TextDrawSetOutline(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.outline]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawBackgroundColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawBackgroundColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawBackgroundColour(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
                 format(sz, sizeof(sz), "TextDrawFont(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
@@ -1191,7 +1216,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "TextDrawSetPreviewRot(%s, %.3f, %.3f, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "TextDrawSetPreviewVehCol(%s, %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawSetPreviewVehCol(%s, %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawSetPreviewVehicleColours(%s, %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
                     fwrite(dosya, sz);
                 }
 
@@ -1241,7 +1267,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawColour(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.usebox] == 1)
@@ -1249,7 +1276,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawBoxColour(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
                     fwrite(dosya, sz);
                 }
 
@@ -1259,7 +1287,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                 format(sz, sizeof(sz), "PlayerTextDrawSetOutline(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.outline]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawBackgroundColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawBackgroundColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawBackgroundColour(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
                 format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
@@ -1276,7 +1305,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     format(sz, sizeof(sz), "PlayerTextDrawSetPreviewRot(playerid, %s[playerid], %.3f, %.3f, %.3f, %.3f);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_rot][0], Textler[id][text.preview_rot][1], Textler[id][text.preview_rot][2], Textler[id][text.preview_rot][3]);
                     fwrite(dosya, sz);
 
-                    format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid], %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehCol(playerid, %s[playerid], %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawSetPreviewVehicleColours(playerid, %s[playerid], %d, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.preview_vc][0], Textler[id][text.preview_vc][1]);
                     fwrite(dosya, sz);
                 }
 
@@ -1292,6 +1322,12 @@ Disa_Aktar(playerid, const dosya_adi[])
     }
 
     fclose(dosya);
+
+    if(open_mp_support == 0)
+    {
+        open_mp_support = 1;
+        goto open_mp_converter;
+    }
 
     Mesaj_Bilgi(playerid, fmt(Dil_Mesaji[da_bilgi]), dosya_adi, g, p, (g + p));
 

@@ -65,6 +65,9 @@
  *          Textdrawı seçince belirgin olmasını engelleyen bir hata düzeltildi.
  *          Textdraw indexlerini eşzamanlı değiştirebilir ve görebilirsiniz.
  *          Index kaydırma özelliği eklendi, artık 0, 1, 2, 4 gibi indexleriniz 0, 1, 2, 3 olarak sıralanabilir.
+ *
+ *      (14.04.2023) v1.6:
+ *          İçe ve dışa aktarmaya open.mp desteği eklendi.
  */
 
 // Kütüphaneler
