@@ -68,6 +68,8 @@
  *
  *      (14.04.2023) v1.6:
  *          İçe ve dışa aktarmaya open.mp desteği eklendi.
+ *              (18.04.2023) v1.6 Düzenlemesi:
+ *                  open.mp sürümü için etiket desteği eklendi. Artık TEXT_DRAW_FONT_0, TEXT_DRAW_ALIGN_LEFT, true, false gibi çıktı alınıyor.
  */
 
 // Kütüphaneler

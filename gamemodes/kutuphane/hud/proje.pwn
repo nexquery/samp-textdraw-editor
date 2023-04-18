@@ -526,12 +526,13 @@ Ice_Aktar(playerid, const dosya_adi[])
 
             if((pos = strfind(buffer, "TextDrawAlignment", true)) != -1)
             {
-                new deger;
+                new deger[32];
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                sscanf(buffer, "p<,>s[32]", deger);
 
-                Textler[id][text.alignment] = deger;
+                if(IsNumeric(deger)) Textler[id][text.alignment] = strval(deger);
+                if(!IsNumeric(deger)) Textler[id][text.alignment] = OpenMP_Alignment_INT(deger);
             }
 
             if((pos = strfind(buffer, "TextDrawColor", true)) != -1 || (pos = strfind(buffer, "TextDrawColour", true)) != -1)
@@ -620,12 +621,13 @@ Ice_Aktar(playerid, const dosya_adi[])
 
             if((pos = strfind(buffer, "TextDrawFont", true)) != -1)
             {
-                new deger;
+                new deger[32];
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                sscanf(buffer, "p<,>s[32]", deger);
 
-                Textler[id][text.font] = deger;
+                if(IsNumeric(deger)) Textler[id][text.font] = strval(deger);
+                if(!IsNumeric(deger)) Textler[id][text.font] = OpenMP_Font_INT(deger);
             }
 
             if((pos = strfind(buffer, "TextDrawSetProportional", true)) != -1)
@@ -633,7 +635,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false),  strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                sscanf(buffer, "p<,>l", deger);
 
                 Textler[id][text.proportional] = deger;
             }
@@ -714,12 +716,13 @@ Ice_Aktar(playerid, const dosya_adi[])
 
             if((pos = strfind(buffer, "PlayerTextDrawAlignment", true)) != -1)
             {
-                new deger;
+                new deger[32];
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                sscanf(buffer, "p<,>s[32]", deger);
 
-                Textler[id][text.alignment] = deger;
+                if(IsNumeric(deger)) Textler[id][text.alignment] = strval(deger);
+                if(!IsNumeric(deger)) Textler[id][text.alignment] = OpenMP_Alignment_INT(deger);
             }
 
             if((pos = strfind(buffer, "PlayerTextDrawColor", true)) != -1 || (pos = strfind(buffer, "PlayerTextDrawColour", true)) != -1)
@@ -808,12 +811,13 @@ Ice_Aktar(playerid, const dosya_adi[])
 
             if((pos = strfind(buffer, "PlayerTextDrawFont", true)) != -1)
             {
-                new deger;
+                new deger[32];
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                sscanf(buffer, "p<,>s[32]", deger);
 
-                Textler[id][text.font] = deger;
+                if(IsNumeric(deger)) Textler[id][text.font] = strval(deger);
+                if(!IsNumeric(deger)) Textler[id][text.font] = OpenMP_Font_INT(deger);
             }
 
             if((pos = strfind(buffer, "PlayerTextDrawSetProportional", true)) != -1)
@@ -821,7 +825,7 @@ Ice_Aktar(playerid, const dosya_adi[])
                 new deger;
                 pos = strfind(buffer, ",", false, 0), pos = strfind(buffer, ",", false, pos + 1), strdel(buffer, 0, pos + ((buffer[pos + 1] == ' ') ? (2) : (1)));
                 pos = strfind(buffer, ");", false), strdel(buffer, pos, strlen(buffer));
-                sscanf(buffer, "p<,>d", deger);
+                sscanf(buffer, "p<,>l", deger);
 
                 Textler[id][text.proportional] = deger;
             }
@@ -999,7 +1003,11 @@ Disa_Aktar(playerid, const dosya_adi[])
                     fwrite(dosya, sz);
                 }
 
-                format(sz, sizeof(sz), "TextDrawAlignment(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.alignment]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawAlignment(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.alignment]);
+                if(open_mp_support == 1)
+                {
+                    format(sz, sizeof(sz), "TextDrawAlignment(%s[%d], %s);\r\n", Text_Global, index, OpenMP_Alignment(id));
+                }
                 fwrite(dosya, sz);
 
                 if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.color]);
@@ -1008,7 +1016,11 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    format(sz, sizeof(sz), "TextDrawUseBox(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.usebox]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawUseBox(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.usebox]);
+                    if(open_mp_support == 1)
+                    {
+                        format(sz, sizeof(sz), "TextDrawUseBox(%s[%d], %s);\r\n", Text_Global, index, (Textler[id][text.usebox]) ? ("true") : ("false"));
+                    }
                     fwrite(dosya, sz);
 
                     if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawBoxColor(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.boxcolor]);
@@ -1026,10 +1038,12 @@ Disa_Aktar(playerid, const dosya_adi[])
                 if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawBackgroundColour(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawFont(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.font]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawFont(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.font]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawFont(%s[%d], %s);\r\n", Text_Global, index, OpenMP_Font(id));
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawSetProportional(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.proportional]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawSetProportional(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.proportional]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawSetProportional(%s[%d], %s);\r\n", Text_Global, index, (Textler[id][text.proportional]) ? ("true") : ("false"));
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
@@ -1047,7 +1061,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    format(sz, sizeof(sz), "TextDrawSetSelectable(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.selectable]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawSetSelectable(%s[%d], %d);\r\n", Text_Global, index, Textler[id][text.selectable]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawSetSelectable(%s[%d], %s);\r\n", Text_Global, index, (Textler[id][text.selectable]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
                 }
 
@@ -1084,7 +1099,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     fwrite(dosya, sz);
                 }
 
-                format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.alignment]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.alignment]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid][%d], %s);\r\n", Text_Player, index, OpenMP_Alignment(id));
                 fwrite(dosya, sz);
 
                 if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.color]);
@@ -1093,7 +1109,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.usebox]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.usebox]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid][%d], %s);\r\n", Text_Player, index, (Textler[id][text.usebox]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
 
                     if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.boxcolor]);
@@ -1111,10 +1128,12 @@ Disa_Aktar(playerid, const dosya_adi[])
                 if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawBackgroundColour(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.font]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.font]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid][%d], %s);\r\n", Text_Player, index, OpenMP_Font(id));
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.proportional]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.proportional]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid][%d], %s);\r\n", Text_Player, index, (Textler[id][text.proportional]) ? ("true") : ("false"));
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
@@ -1132,7 +1151,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.selectable]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid][%d], %d);\r\n", Text_Player, index, Textler[id][text.selectable]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid][%d], %s);\r\n", Text_Player, index, (Textler[id][text.selectable]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
                 }
 
@@ -1175,7 +1195,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     fwrite(dosya, sz);
                 }
 
-                format(sz, sizeof(sz), "TextDrawAlignment(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawAlignment(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawAlignment(%s, %s);\r\n", Textler[id][text.degiskenAdi], OpenMP_Alignment(id));
                 fwrite(dosya, sz);
 
                 if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
@@ -1184,7 +1205,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    format(sz, sizeof(sz), "TextDrawUseBox(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawUseBox(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawUseBox(%s, %s);\r\n", Textler[id][text.degiskenAdi], (Textler[id][text.usebox]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
 
                     if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawBoxColor(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
@@ -1202,10 +1224,12 @@ Disa_Aktar(playerid, const dosya_adi[])
                 if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawBackgroundColour(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawFont(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawFont(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawFont(%s, %s);\r\n", Textler[id][text.degiskenAdi], OpenMP_Font(id));
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "TextDrawSetProportional(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawSetProportional(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawSetProportional(%s, %s);\r\n", Textler[id][text.degiskenAdi], (Textler[id][text.proportional]) ? ("true") : ("false"));
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
@@ -1223,7 +1247,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    format(sz, sizeof(sz), "TextDrawSetSelectable(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "TextDrawSetSelectable(%s, %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "TextDrawSetSelectable(%s, %s);\r\n", Textler[id][text.degiskenAdi], (Textler[id][text.selectable]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
                 }
 
@@ -1264,7 +1289,8 @@ Disa_Aktar(playerid, const dosya_adi[])
                     fwrite(dosya, sz);
                 }
 
-                format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.alignment]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawAlignment(playerid, %s[playerid], %s);\r\n", Textler[id][text.degiskenAdi], OpenMP_Alignment(id));
                 fwrite(dosya, sz);
 
                 if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.color]);
@@ -1273,7 +1299,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.usebox] == 1)
                 {
-                    format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.usebox]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawUseBox(playerid, %s[playerid], %s);\r\n", Textler[id][text.degiskenAdi], (Textler[id][text.usebox]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
 
                     if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawBoxColor(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.boxcolor]);
@@ -1291,10 +1318,12 @@ Disa_Aktar(playerid, const dosya_adi[])
                 if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawBackgroundColour(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.bgcolor]);
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.font]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawFont(playerid, %s[playerid], %s);\r\n", Textler[id][text.degiskenAdi], OpenMP_Font(id));
                 fwrite(dosya, sz);
 
-                format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]);
+                if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.proportional]);
+                if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawSetProportional(playerid, %s[playerid], %s);\r\n", Textler[id][text.degiskenAdi], (Textler[id][text.proportional]) ? ("true") : ("false"));
                 fwrite(dosya, sz);
 
                 if(Textler[id][text.font] == TEXT_DRAW_FONT_MODEL_PREVIEW)
@@ -1312,7 +1341,8 @@ Disa_Aktar(playerid, const dosya_adi[])
 
                 if(Textler[id][text.selectable] == 1)
                 {
-                    format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]);
+                    if(open_mp_support == 0) format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid], %d);\r\n", Textler[id][text.degiskenAdi], Textler[id][text.selectable]);
+                    if(open_mp_support == 1) format(sz, sizeof(sz), "PlayerTextDrawSetSelectable(playerid, %s[playerid], %s);\r\n", Textler[id][text.degiskenAdi], (Textler[id][text.selectable]) ? ("true") : ("false"));
                     fwrite(dosya, sz);
                 }
 
@@ -1385,4 +1415,50 @@ Projeyi_Kapat(playerid)
 
     Proje_Menu(playerid);
     return 1;
+}
+
+OpenMP_Alignment(index)
+{
+    new buffer[32];
+    switch(Textler[index][text.alignment])
+    {
+        case 1: format(buffer, sizeof(buffer), "TEXT_DRAW_ALIGN_LEFT");
+        case 2: format(buffer, sizeof(buffer), "TEXT_DRAW_ALIGN_CENTER");
+        case 3: format(buffer, sizeof(buffer), "TEXT_DRAW_ALIGN_RIGHT");
+    }
+    return buffer;
+}
+
+OpenMP_Alignment_INT(const alignment[])
+{
+    if(!strcmp(alignment, "TEXT_DRAW_ALIGN_LEFT"))  return 1;
+    if(!strcmp(alignment, "TEXT_DRAW_ALIGN_CENTER"))  return 2;
+    if(!strcmp(alignment, "TEXT_DRAW_ALIGN_RIGHT"))  return 3;
+    return 1;
+}
+
+OpenMP_Font(index)
+{
+    new buffer[32];
+    switch(Textler[index][text.font])
+    {
+        case 0: format(buffer, sizeof(buffer), "TEXT_DRAW_FONT_0");
+        case 1: format(buffer, sizeof(buffer), "TEXT_DRAW_FONT_1");
+        case 2: format(buffer, sizeof(buffer), "TEXT_DRAW_FONT_2");
+        case 3: format(buffer, sizeof(buffer), "TEXT_DRAW_FONT_3");
+        case 4: format(buffer, sizeof(buffer), "TEXT_DRAW_FONT_SPRITE_DRAW");
+        case 5: format(buffer, sizeof(buffer), "TEXT_DRAW_FONT_MODEL_PREVIEW");
+    }
+    return buffer;
+}
+
+OpenMP_Font_INT(const font[])
+{
+    if(!strcmp(font, "TEXT_DRAW_FONT_0"))  return 0;
+    if(!strcmp(font, "TEXT_DRAW_FONT_1"))  return 1;
+    if(!strcmp(font, "TEXT_DRAW_FONT_2"))  return 2;
+    if(!strcmp(font, "TEXT_DRAW_FONT_3"))  return 3;
+    if(!strcmp(font, "TEXT_DRAW_FONT_SPRITE_DRAW"))  return 4;
+    if(!strcmp(font, "TEXT_DRAW_FONT_MODEL_PREVIEW"))  return 5;
+    return 0;
 }
