@@ -4,6 +4,11 @@ My purpose in making this textdraw editor was to add features that other editors
 
 ![Alt text](img/git/editor.png?raw=true)
 
+# Ensure Project Development
+You can buy a coffee to provide new features to the project. I really need this support.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/benburakya)
+
 # Contribute
 If you would like to contribute to the project, please translate the project into your language and submit a pull request.
 
