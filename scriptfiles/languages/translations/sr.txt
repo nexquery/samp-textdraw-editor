@@ -1,0 +1,476 @@
+###############################################
+#       Textdraw Editor - Language File
+#
+# Language: Serbian(Srpski)
+# Author:   Trysha-rbrn
+# Version:  1.5
+# Encoding: UTF-8
+###############################################
+
+[Dil Secimi]
+.editor_dil     = Vas jezik je postavljen na srpski..
+
+[Kisayollar]
+.kisayollar     = Upotreba:   [Strelice],   [SPACE taster],   [N taster],   [ENTER taster]
+
+[Calisma Ortami]
+.co_baslik      = sta preferiras?
+.co_icerik_1    = Pozadinska boja
+.co_icerik_2    = Ispoljavanje igraca
+.co_buton_1     = Izaberi
+.co_mesaj_1     = Izabrali ste pozadinsku boju. Ako vam mis nestane, koristite komandu {45aaf2}/mouse
+.co_mesaj_2     = Izabrali ste ispoljavanje. Ako vam mis nestane, koristite komandu {45aaf2}/mouse
+
+[Sayfaya Git]
+.sayfa_baslik   = Idi na stranicu
+.sayfa_icerik   = {FFFFFF}Broj stranice treba da bude izmedju {ff7979}1 {FFFFFF}i {ff7979}#d
+.sayfa_btn1     = Sledeca
+.sayfa_btn2     = Nazad
+.sayfa_hata     = Pogresan broj stranice.
+
+[Indexleri Yeniden Sırala]
+.iys_baslik     = Ponovno redosled indeksiranja
+.iys_icerik_1   = {ffffff}Ovo ce redosled vaseg indeksa postaviti na {f1c40f}"0, 1, 2, 3" {ffffff}ako je vas indeks poput {f1c40f}"0, 1, 2, 4"
+.iys_icerik_2   = {e74c3c}Upozorenje: {ffffff}Ovo ce obrisati podatke za ponistavanje i ponovno izvrsenje. Da li zelite da izvedete ovu operaciju?
+.iys_buton_1    = Da
+.iys_buton_2    = Ne
+.iys_bilgi      = Indeksi su ponovo poredjani. Izaberite textdraw za uredjivanje vasih textdraw-ova.
+
+[Proje]
+.proje_baslik   = Meni projekta
+.proje_icerik_1 = Novi projekat
+.proje_icerik_2 = Ucitaj projekat
+.proje_icerik_3 = Uvezi textdraw
+.proje_icerik_4 = Izvezi textdraw
+.proje_icerik_5 = Zatvori projekat
+.proje_buton_1  = Izaberi
+.proje_buton_2  = Zatvori
+
+[Proje Olustur]
+.po_baslik      = Novi projekat
+.po_metin       = {ffffff}Unesite naziv projekta koji zelite da kreirate:
+.po_buton_1     = Kreiraj
+.po_buton_2     = Nazad
+.po_hata_1      = Niste naveli naziv projekta.
+.po_hata_2      = Naziv projekta je predugacak.
+.po_hata_3      = U nazivu projekta postoje nevazeci karakteri.
+.po_hata_4      = Projekat sa tim imenom vec postoji.
+.po_hata_5      = Da biste kreirali novi projekat, zatvorite postojeci projekat.
+.po_bilgi_1     = Projekat "#s" {FFFFFF}je kreiran.
+
+[Projeler]
+.pler_baslik    = Projekti [#d / #d]
+.pler_icerik_1  = Naziv projekta
+.pler_icerik_2  = Datum kreiranja
+.pler_icerik_3  = Idi na stranicu
+.pler_buton_1   = Izaberi
+.pler_buton_2   = Nazad
+.pler_hata      = Nema pronadjenih projekata.
+
+[Proje Islemi]
+.pi_baslik      = Opcije
+.pi_icerik_1    = Ucitaj projekat
+.pi_icerik_2    = Obrisi projekat
+.pi_buton_1     = Izaberi
+.pi_buton_2     = Nazad
+.pi_hata_1      = Ovaj projekat je vec ucitan.
+.pi_hata_2      = Da biste ucitali novi projekat, zatvorite postojeci projekat.
+.pi_hata_3      = Projekat ne moze da se ucita jer fajl baze podataka nije pronadjen.
+.pi_bilgi       = Projekat "#s" {FFFFFF}je ucitan. [Globalni TD-ovi: #d, Igracki TD-ovi: #d, Ukupno: #d]
+.pi_uyari_bslk  = Obrisi projekat
+.pi_uyari_icrk  = {FFFFFF}Da li ste sigurni da zelite da obrisete projekat?
+.pi_uyari_btn1  = Da
+.pi_uyari_btn2  = Ne
+.pi_uyari_bilgi = Projekat "#s" je obrisan.
+.pi_uyari_hata  = Prvo morate zatvoriti projekat.
+
+[Ice Aktar]
+.ia_baslik      = Uvoz
+.ia_icerik_1    = {FFFFFF}Unesite naziv fajla koji zelite da uvezete.
+.ia_icerik_2    = {badc58}Primer: {FFFFFF}phone.txt
+.ia_btn1        = Uvezi
+.ia_btn2        = Nazad
+.ia_hata_1      = Morate kreirati projekat pre uvoza textdraw-a.
+.ia_hata_2      = Niste uneli naziv fajla za uvoz.
+.ia_hata_3      = Nije pronadjen nijedan fajl sa nazivom "#s".
+.ia_hata_4      = Uvoz je prekinut jer je dostignut limit za textdraw.
+.ia_hata_5      = Nije pronadjen nijedan textdraw za dodavanje.
+.ia_bilgi       = Fajl "#s" je uvezen. [Globalni TD-ovi: #d, Igracki TD-ovi: #d, Ukupno: #d]
+
+[Disa Aktar]
+.da_baslik      = Izvoz
+.da_icerik_1    = {FFFFFF}Unesite naziv fajla koji zelite da izvezete.
+.da_icerik_2    = Ako ne navedete naziv fajla, dobicete izlaz kao "#s.txt".
+.da_btn1        = Izvezi
+.da_btn2        = Nazad
+.da_hata        = Niste kreirali nijedan textdraw.
+.da_hata2       = Morate kreirati ili ucitati projekat za proces izvoza.
+.da_bilgi       = Projekat "#s.txt" je izvezen. [Globalni TD-ovi: #d, Igracki TD-ovi: #d, Ukupno: #d]
+
+[Projeyi Close]
+.pk_hata        = Da biste zatvorili projekat, morate imati jedan ucitan.
+.pk_bilgi       = Projekat #s je uspesno zatvoren.
+
+[Ayarlar]
+.ayar_baslik    = Podesavanja
+.ayar_header_1  = #
+.ayar_header_2  = Vrednost
+.ayar_icerik_1  = Sat
+.ayar_icerik_2  = Pozicija HUD-a
+.ayar_icerik_3  = Podrazumevano ime za Global TD
+.ayar_icerik_4  = Podrazumevano ime za Igracki TD
+.ayar_buton1    = Izaberi
+.ayar_buton2    = Zatvori
+
+[Saat]
+.saat_baslik    = Sat
+.saat_buton1    = Izaberi
+.saat_buton2    = Nazad
+.saat_bilgi     = Vreme u igri je postavljeno na #02d:00.
+
+[Hud Konumu]
+.hkonum_bilgi   = HUD pozicija je uspesno promenjena.
+
+[Degisken - Global | Player]
+.dg_baslik      = Podrazumevano ime promenljive
+.dg_icerik_1    = {FFFFFF}Odredjuje ime promenljive izlaznog fajla prilikom izvoza projekta.
+.dg_icerik_2    = {FFFFFF}Ostavite ekran prazan za postavljanje podrazumevanog imena promenljive.
+.dg_buton1      = Promeni
+.dg_buton2      = Nazad
+.dg_hata        = Ime promenljive je predugacko.
+.dg_bilgi       = Podrazumevano ime promenljive postavljeno na #s.
+
+[Yeni]
+.yeni_baslik    = Novi
+.yeni_icerik    = Pregled modela (objekat, vozilo, skin)
+.yeni_btn1      = Kreiraj
+.yeni_btn2      = Zatvori
+.yeni_textdraw  = Novi textdraw
+
+[Liste]
+.liste_baslik   = Lista textdraw-a [#d / #d]
+.liste_header1  = Indeks
+.liste_header2  = Ime promenljive
+.liste_header3  = Naziv
+.liste_header4  = Tip
+.liste_icerik   = Idi na stranicu
+.liste_icerik2  = Preuredi indekse
+.liste_btn1     = Izaberi
+.liste_btn2     = Zatvori
+
+[Liste Islem]
+.lislem_baslik  = Opcije
+.lislem_icerik1 = Izaberi textdraw
+.lislem_icerik2 = Izaberi textdraw (Strelice)
+.lislem_icerik3 = Obrisi textdraw
+.lislem_icerik4 = Kloniraj textdraw
+.lislem_icerik5 = Kloniraj textdraw i izaberi
+.lislem_icerik6 = Promeni indeks textdraw-a
+.lislem_icerik7 = Promeni ime promenljive
+.lislem_btn1    = Izaberi
+.lislem_btn2    = Nazad
+
+[Liste Islem Bilgi]
+.tdraw_sec      = Textdraw izabran. Indeks: #d
+.tdraw_sil      = Textdraw obrisan. Indeks: #d
+.tdraw_kopyala  = Textdraw kopiran. Indeks: #d
+.tdraw_kopyala2 = Textdraw kopiran i izabran. Indeks: #d
+
+[Index Degistir]
+.idgstr_bslk    = Promeni indeks
+.idgstr_icerik  = {ffffff}Unesite broj indeksa koji zelite da promenite. {3498db}(0, #d)
+.idgstr_btn1    = Promeni
+.idgstr_btn2    = Zatvori
+.idgstr_hata    = Broj indeksa je netacan.
+.idgstr_bilgi   = Broj indeksa textdraw-a je promenjen. Novi broj indeksa: #d
+
+[Degisken Adi]
+.degadi_bslk    = Izmeni ime promenljive
+.degadi_icrk_1  = {ff7979}Napomena: {FFFFFF}Ostavite polje prazno da uklonite ime promenljive.
+.degadi_icrk_2  = {ffffff}Unesite ime promenljive koje zelite da koristite za ovaj textdraw.
+.degadi_btn1    = Promeni
+.degadi_btn2    = Nazad
+.degadi_hata    = Ime promenljive je predugacko.
+.degadi_bilgi   = Ime promenljive postavljeno na #s.
+.degadi_bilgi2  = Ime promenljive je uklonjeno.
+
+[Depo]
+.depo_baslik    = Depo
+.depo_icerik_1  = Grupisanje
+.depo_icerik_2  = Vracanje obrisanih textdraw-a
+.depo_btn_1     = Izaberi
+.depo_btn_2     = Zatvori
+
+[Kopyala]
+.kopyala_bilgi  = Textdraw kopiran i izabran. Indeks: #d
+
+[Sil]
+.sil_bilgi      = Textdraw obrisan. Indeks: #d
+
+[[Boyut | Textsize | Lettersize]
+.btl_baslik     = Rucno uredjivanje
+.btl_icrk_1     = {FFFFFF}Unesite nove vrednosti koje zelite da koristite.
+.btl_icrk_2     = {70a1ff}Primer:
+.btl_icrk_3     = {ffffff}10 20  ili  10.0 20.0
+.btl_icrk_4     = {70a1ff}Trenutne vrednosti:
+.btl_icrk_5     = {eccc68}X: {FFFFFF}#.2f
+.btl_icrk_6     = {eccc68}Y: {FFFFFF}#.2f
+.btl_icrk_7     = {70a1ff}Za vrednost X samo:
+.btl_icrk_8     = {ffffff}vrednost 0
+.btl_icrk_9     = {70a1ff}Za vrednost Y samo:
+.btl_icrk_10    = {ffffff}vrednost 0
+.btl_icrk_11    = {FFFFFF}Unesite {ff7f50}0 0 {FFFFFF} za uklanjanje karakteristike textsize.
+.btl_buton_1    = Azuriraj
+.btl_buton_2    = Zatvori
+.btl_hata_1     = Uneli ste netacnu vrednost.
+.btl_bilgi_1    = Vrednosti su azurirane.
+
+[Metin]
+.metin_baslik   = Tekst
+.metin_icerik   = {f1c40f}Trenutni tekst:
+.metin_icerik2  = {ffffff}Unesite tekst koji zelite da koristite.
+.metin_buton1   = Promeni
+.metin_buton2   = Zatvori
+.metin_hata     = Morate navesti tekst.
+.metin_bilgi    = Tekst je promenjen.
+
+[Outline | Shadow]
+.os_baslik      = Rucno uredjivanje
+.os_icerik_1    = {f9ca24}Trenutna vrednost: {FFFFFF}#d
+.os_icerik_2    = {FFFFFF}Unesite vrednost koju zelite da koristite. Unesite {f9ca24}0 {FFFFFF} za uklanjanje.
+.os_buton_1     = Postavi
+.os_buton_2     = Zatvori
+.os_hata        = Uneli ste netacnu vrednost.
+.os_bilgi_1     = Vrednost je azurirana.
+
+[Renk | BG | Box]
+.renk_baslik    = Boje
+.renk_icerik    = RGBA (koristeci strelice)
+.renk_buton1    = Izaberi
+.renk_buton2    = Zatvori
+
+[Renk - Hex]
+.rhex_baslik    = Boja: Hex
+.rhex_icerik_1  = {FFFFFF}Unesite hex kod boje koju zelite da koristite.
+.rhex_icerik_2  = {badc58}Primer:
+.rhex_icerik_3  = {FFFFFF}FFBE76
+.rhex_icerik_4  = {FFFFFF}#FFBE76
+.rhex_icerik_5  = {FFFFFF}0xFFBE76
+.rhex_icerik_6  = {FFFFFF}0xFFBE76FF
+.rhex_buton_1   = Promeni
+.rhex_buton_2   = Nazad
+.rhex_hata      = Hex kod koji ste uneli je netacan.
+
+[Renk - RGB]
+.rgb_baslik     = Boja: RGB
+.rgb_icerik_1   = {FFFFFF}Unesite RGB kod boje koju zelite da koristite.
+.rgb_icerik_2   = {badc58}Primer:
+.rgb_icerik_3   = {FFFFFF}66 135 245
+.rgb_icerik_4   = {FFFFFF}66, 135, 245
+.rgb_icerik_5   = {FFFFFF}rgb(66, 135, 245)
+.rgb_icerik_6   = {FFFFFF}rgb(66, 135, 245);
+.rgb_buton_1    = Promeni
+.rgb_buton_2    = Nazad
+.rgb_hata       = RGB kod koji ste uneli je netacan.
+
+[Renk - RGBA]
+.rgba_baslik    = Boja: RGBA
+.rgba_icerik_1  = {FFFFFF}Unesite RGBA kod boje koju zelite da koristite.
+.rgba_icerik_2  = {badc58}Primer:
+.rgba_icerik_3  = {FFFFFF}66 135 245 255
+.rgba_icerik_4  = {FFFFFF}66, 135, 245, 255
+.rgba_icerik_5  = {FFFFFF}rgba(66, 135, 245, 255)
+.rgba_icerik_6  = {FFFFFF}rgba(66, 135, 245, 255);
+.rgba_buton_1   = Promeni
+.rgba_buton_2   = Nazad
+.rgba_hata      = RGBA kod koji ste uneli je netacan.
+
+[Preview Models]
+.pmdls_buton_1  = Izaberi
+.pmdls_buton_2  = Zatvori
+.pmdls_hata     = Uneli ste netacnu vrednost.
+.pmdls_bilgi_1  = Vrednosti su azurirane.
+
+[Preview Models Manuel]
+.pmdls_mbaslik  = Rucno uredjivanje
+.pmdls_icerik_1 = {FFFFFF}Unesite vrednost koju zelite da koristite.
+.pmdls_icerik_2 = {badc58}Vasa trenutna vrednost je: {FFFFFF}#d
+.pmdls_icerik_3 = {badc58}Vasa trenutna vrednost je: {FFFFFF}#.2f
+.pmdls_buton_3  = Azuriraj
+.pmdls_buton_4  = Zatvori
+
+[Back, Ileri Al]
+.gi_baslik      = Ponisti i Ponovi
+.gi_icerik_1    = Izaberite indeks koji zelite da prikazete. Indeks moze biti od {ff7979}1 {ffffff}do {ff7979}#%d
+.gi_buton_1     = Prikazi
+.gi_buton_2     = Zatvori
+.gi_hata        = Uneli ste netacnu vrednost.
+
+[Back, Ileri Al | Onay]
+.gio_baslik     = Potvrda promena
+.gio_icerik_1   = {FFFFFF}Da li ste sigurni da zelite da potvrdite promene?
+.gio_buton_1    = Da
+.gio_buton_2    = Ne
+.gio_bilgi_1    = Promene su sacuvane.
+.gio_bilgi_2    = Nisu napravljene promene.
+
+[Silinenler]
+.s_baslik       = Obrisani textdraw-ovi [#d / #d]
+.s_header1      = Naziv
+.s_header2      = Tip
+.s_header3      = Globalno / Igrac
+.s_header4      = Datum brisanja
+.s_icerik1      = Idi na stranicu
+.s_icerik2      = Obrisi sve podatke
+.s_icerik3      = Vrati sve podatke
+.s_buton1       = Vrati
+.s_buton2       = Nazad
+.s_hata         = Nisu pronadjeni obrisani textdraw-ovi.
+.s_bilgi        = Textdraw je vracen. Novi broj indeksa: #d
+
+[Silinenler - Temizle]
+.st_baslik      = Obrisi sve podatke
+.st_icerik1     = {ff7f50}Upozorenje: {FFFFFF}Ova operacija ce obrisati podatke svih textdraw-ova koje ste obrisali.
+.st_icerik2     = {FFFFFF}Potvrdjujete ovu akciju?
+.st_buton1      = Da
+.st_buton2      = Ne
+.st_bilgi       = Svi podaci su obrisani.
+
+[Silinenler - Tum Verileri Back Yukle]
+.stgy_baslik    = Vrati sve podatke
+.stgy_icerik1   = {FFFFFF}Da li ste sigurni da zelite da vratite sve podatke?
+.stgy_buton1    = Da
+.stgy_buton2    = Ne
+.stgy_bilgi     = Svi podaci su vraceni. Ukupan broj podataka: #d
+
+[Gruplar]
+.grp_hata       = Kreirajte textdraw da biste koristili ovu funkciju.
+.grp_baslik     = Grupisanje
+.grp_icerik1    = {badc58}Grupisanje:
+.grp_icerik2    = Izaberite textdraw-ove za grupisanje
+.grp_icerik3    = Grupisanje svih textdraw-ova
+.grp_icerik4    = Resetuj sve grupisane textdraw-ove
+.grp_icerik5    = {badc58}Brzo grupisanje:
+.grp_icerik6    = Normalan Textdraw
+.grp_icerik7    = Sprite
+.grp_icerik8    = Pregled modela
+.grp_icerik9    = {badc58}Kopiranje:
+.grp_icerik10   = Kopiraj grupisane textdraw-ove
+.grp_icerik11   = Kopiraj grupisane textdraw-ove i izaberi
+.grp_icerik12   = {badc58}Brisanje:
+.grp_icerik13   = Obrisi grupisane textdraw-ove
+.grp_icerik14   = {badc58}Pozicija:
+.grp_icerik15   = Promeni poziciju grupisanih textdraw-ova
+.grp_icerik16   = {badc58}Velicina:
+.grp_icerik17   = Velicina teksta (Normalan Textdraw)
+.grp_icerik18   = Velicina teksta (Sprite)
+.grp_icerik19   = Velicina teksta (Pregled modela)
+.grp_icerik20   = Velicina teksta (Sprite, Pregled modela)
+.grp_icerik21   = Velicina teksta (Normalan, Sprite, Pregled modela)
+.grp_icerik22   = Velicina slova (Normalan Textdraw)
+.grp_icerik23   = {badc58}Tekst:
+.grp_icerik24   = Promeni tekst grupisanih textdraw-ova
+.grp_icerik25   = {badc58}Font teksta:
+.grp_icerik26   = Font 0
+.grp_icerik27   = Font 1
+.grp_icerik28   = Font 2
+.grp_icerik29   = Font 3
+.grp_icerik30   = {badc58}Poravnanje teksta:
+.grp_icerik31   = Levo
+.grp_icerik32   = Centar
+.grp_icerik33   = Desno
+.grp_icerik34   = {badc58}Proporcija teksta:
+.grp_icerik35   = Ukljuceno
+.grp_icerik36   = Iskljuceno
+.grp_icerik37   = {badc58}Obris i Senka:
+.grp_icerik38   = Obris
+.grp_icerik39   = Senka
+.grp_icerik40   = {badc58}Boja:
+.grp_icerik41   = Hex
+.grp_icerik42   = RGB
+.grp_icerik43   = RGBA
+.grp_icerik44   = Unapred definisane boje
+.grp_icerik45   = {badc58}Box:
+.grp_icerik46   = Ukljuceno
+.grp_icerik47   = Iskljuceno
+.grp_icerik48   = {badc58}Selektabilno:
+.grp_icerik49   = Ukljuceno
+.grp_icerik50   = Iskljuceno
+.grp_icerik51   = {badc58}Globalno / Igrac:
+.grp_icerik52   = Postavi grupisane textdraw-ove kao globalne
+.grp_icerik53   = Postavi grupisane textdraw-ove kao za igraca
+.grp_buton1     = Izaberi
+.grp_buton2     = Nazad
+
+[Renk Modu]
+.renk_modu_1    = Boja teksta
+.renk_modu_2    = Boja pozadine / ivice
+.renk_modu_3    = Boja boxa
+
+[Gruplar Hata | Bilgi]
+.grp_hata1      = Nema grupisanih textdraw-ova.
+.grp_hata2      = Nema tekstualnog elementa izmedju grupa.
+.grp_bilgi1     = Svi textdraw-ovi su grupisani.
+.grp_bilgi2     = Svi textdraw-ovi su uklonjeni iz grupe.
+.grp_bilgi3     = Normalni textdraw-ovi su grupisani.
+.grp_bilgi4     = Sprite textdraw-ovi su grupisani.
+.grp_bilgi5     = Pregled modela textdraw-ovi su grupisani.
+.grp_bilgi6     = Grupisani textdraw-ovi su kopirani. Ukupan broj kopiranih textdraw-ova: #d
+.grp_bilgi7     = Grupisani textdraw-ovi su kopirani i izabrani. Ukupan broj kopiranih textdraw-ova: #d
+.grp_bilgi8     = Svi grupisani textdraw-ovi su obrisani. Ukupan broj obrisanih textdraw-ova: #d
+.grp_bilgi9     = Azurirana pozicija svih grupisanih textdraw-ova.
+.grp_bilgi10    = Azurirana velicina teksta svih grupisanih textdraw-ova.
+.grp_bilgi11    = Promenjen tekst svih grupisanih textdraw-ova.
+.grp_bilgi12    = Promenjen font svih grupisanih textdraw-ova na #d.
+.grp_bilgi13    = Promenjena poravnanje svih grupisanih textdraw-ova.
+.grp_bilgi14    = Promenjena proporcija svih grupisanih textdraw-ova.
+.grp_bilgi15    = Promenjena boja svih grupisanih textdraw-ova.
+.grp_bilgi16    = Promenjena vrednost boxova svih grupisanih textdraw-ova.
+.grp_bilgi17    = Promenjena vrednost selektabilnosti svih grupisanih textdraw-ova.
+.grp_bilgi18    = Promenjena vrednost Global / Igrac za sve grupisane textdraw-ove.
+
+[Gruplanacak Ogeler]
+.go_baslik      = Grupisanje [#d / #d]
+.go_header1     = ID
+.go_header2     = Naziv promenljive
+.go_header3     = Sadrzaj
+.go_header4     = Grupisano?
+.go_header4_n   = Ne
+.go_header4_y   = Da
+.go_icerik1     = Idi na stranicu
+.go_icerik2     = Grupisanje stranice
+.go_icerik3     = Razgrupisi stranicu
+.go_buton1      = Izaberi
+.go_buton2      = Nazad
+
+[Gruplama: Metin Degistir]
+.gmd_baslik     = Promena teksta
+.gmd_icerik     = {FFFFFF}Unesite novi tekst za grupisane elemente.
+.gmd_buton1     = Promeni
+.gmd_buton2     = Nazad
+.gmd_hata       = Tekst ne moze biti prazan.
+
+[Gruplama Outline]
+.goline_baslik  = Obris
+.goline_icerik  = {FFFFFF}Unesite vrednost za obris koji zelite da koristite.
+.goline_buton1  = Promeni
+.goline_buton2  = Nazad
+.goline_bilgi   = Vrednost obrisa za grupisane textdraw-ove je postavljena na #d.
+.goline_hata    = Uneli ste neispravnu vrednost.
+
+[Gruplama Shadow]
+.gshdow_baslik  = Senka
+.gshdow_icerik  = {FFFFFF}Unesite vrednost za senku koju zelite da koristite.
+.gshdow_buton1  = Promeni
+.gshdow_buton2  = Nazad
+.gshdow_bilgi   = Vrednost senke za grupisane textdraw-ove je postavljena na #d.
+.gshdow_hata    = Uneli ste neispravnu vrednost.
+
+[Gruplama Offset Konum]
+.gko_baslik     = Offset vrednost
+.gko_icrk_1     = {eccc68}offsetX: {FFFFFF}#.1f    {eccc68}offsetY: {FFFFFF}#.1f
+.gko_icrk_2     = {70a1ff}Samo za offsetX vrednost: {ffffff}vrednost 0
+.gko_icrk_3     = {70a1ff}Samo za offsetY vrednost: {ffffff}vrednost 0
+.gko_buton_1    = Azuriraj
+.gko_buton_2    = Zatvori
+.gko_hata_1     = Uneli ste neispravnu vrednost.
