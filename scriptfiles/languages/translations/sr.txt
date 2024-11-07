@@ -8,7 +8,7 @@
 ###############################################
 
 [Dil Secimi]
-.editor_dil     = Vas jezik je postavljen na srpski..
+.editor_dil     = Vas jezik je postavljen na srpski.
 
 [Kisayollar]
 .kisayollar     = Upotreba:   [Strelice],   [SPACE taster],   [N taster],   [ENTER taster]
