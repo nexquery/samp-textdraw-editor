@@ -4,3 +4,4 @@ ro.txt = Romanian
 id.txt = Indonesian
 vn.txt = Vietnamese
 pt-br.txt = Português
+sr.txt = Serbian
