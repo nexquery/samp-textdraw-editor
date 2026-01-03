@@ -1,0 +1,476 @@
+###############################################
+#       Textdraw Editor - Language File
+#
+# Language: Spanish
+# Author:   root
+# Version:  1.5
+# Encoding: UTF-8
+###############################################
+
+[Dil Secimi]
+.editor_dil     = Tu idioma está configurado en Español.
+
+[Kisayollar]
+.kisayollar     = Uso:   [Teclas de dirección],   [Tecla ESPACIO],   [Tecla N],   [Tecla ENTER]
+
+[Calisma Ortami]
+.co_baslik      = ¿Qué prefieres?
+.co_icerik_1    = Fondo de color
+.co_icerik_2    = Spawnear jugador
+.co_buton_1     = Elegir
+.co_mesaj_1     = Elegiste fondo de color. Si tu mouse desaparece usa el comando {45aaf2}/mouse
+.co_mesaj_2     = Elegiste spawneo. Si tu mouse desaparece usa el comando {45aaf2}/mouse
+
+[Sayfaya Git]
+.sayfa_baslik   = Ir a página
+.sayfa_icerik   = {FFFFFF}El número de página debe estar entre {ff7979}1 {FFFFFF}y {ff7979}#d
+.sayfa_btn1     = Siguiente
+.sayfa_btn2     = Atrás
+.sayfa_hata     = Número de página incorrecto.
+
+[Indexleri Yeniden Sırala]
+.iys_baslik     = Reordenar Índices
+.iys_icerik_1   = {ffffff}Esto reordenará tu índice a {f1c40f}"0, 1, 2, 3" {ffffff}si tu índice es algo como {f1c40f}"0, 1, 2, 4"
+.iys_icerik_2   = {e74c3c}Advertencia: {ffffff}Esto eliminará los datos de deshacer y rehacer. ¿Deseas realizar esta operación?
+.iys_buton_1    = Sí
+.iys_buton_2    = No
+.iys_bilgi      = Los índices han sido reordenados. Selecciona un textdraw para editar tus textdraws.
+
+[Proje]
+.proje_baslik   = Menú de proyecto
+.proje_icerik_1 = Nuevo proyecto
+.proje_icerik_2 = Cargar proyecto
+.proje_icerik_3 = Importar textdraw
+.proje_icerik_4 = Exportar textdraw
+.proje_icerik_5 = Cerrar proyecto
+.proje_buton_1  = Elegir
+.proje_buton_2  = Cerrar
+
+[Proje Olustur]
+.po_baslik      = Nuevo proyecto
+.po_metin       = {ffffff}Ingresa el nombre del proyecto que deseas crear:
+.po_buton_1     = Crear
+.po_buton_2     = Atrás
+.po_hata_1      = No especificaste el nombre del proyecto.
+.po_hata_2      = El nombre del proyecto es demasiado largo.
+.po_hata_3      = Hay caracteres inválidos en el nombre del proyecto.
+.po_hata_4      = Ya existe un proyecto con ese nombre.
+.po_hata_5      = Para crear un nuevo proyecto, cierra el proyecto existente.
+.po_bilgi_1     = Proyecto "#s" {FFFFFF}creado.
+
+[Projeler]
+.pler_baslik    = Proyectos [#d / #d]
+.pler_icerik_1  = Nombre del proyecto
+.pler_icerik_2  = Fecha de creación
+.pler_icerik_3  = Ir a página
+.pler_buton_1   = Elegir
+.pler_buton_2   = Atrás
+.pler_hata      = No se encontraron proyectos.
+
+[Proje Islemi]
+.pi_baslik      = Opciones
+.pi_icerik_1    = Cargar proyecto
+.pi_icerik_2    = Eliminar proyecto
+.pi_buton_1     = Elegir
+.pi_buton_2     = Atrás
+.pi_hata_1      = Este proyecto ya está cargado.
+.pi_hata_2      = Para cargar un nuevo proyecto cierra el proyecto existente.
+.pi_hata_3      = El proyecto no puede ser cargado porque el archivo de base de datos no se ha encontrado.
+.pi_bilgi       = Proyecto "#s" {FFFFFF}cargado. [TDs Globales: #d, TDs de Jugador: #d, Total: #d]
+.pi_uyari_bslk  = Eliminar proyecto
+.pi_uyari_icrk  = {FFFFFF}¿Estás seguro de que deseas eliminar el proyecto?
+.pi_uyari_btn1  = Sí
+.pi_uyari_btn2  = No
+.pi_uyari_bilgi = Proyecto "#s" eliminado.
+.pi_uyari_hata  = Necesitas cerrar el proyecto primero.
+
+[Ice Aktar]
+.ia_baslik      = Importar
+.ia_icerik_1    = {FFFFFF}Ingresa el nombre del archivo que deseas importar.
+.ia_icerik_2    = {badc58}Ejemplo: {FFFFFF}telefono.txt
+.ia_btn1        = Importar
+.ia_btn2        = Atrás
+.ia_hata_1      = Necesitas crear un proyecto antes de importar un textdraw.
+.ia_hata_2      = No has ingresado el nombre del archivo a importar.
+.ia_hata_3      = No se encontró ningún archivo con el nombre "#s".
+.ia_hata_4      = La importación fue interrumpida porque se alcanzó el límite de textdraws.
+.ia_hata_5      = No se encontraron textdraws para agregar.
+.ia_bilgi       = Archivo "#s" importado. [TDs Globales: #d, TDs de Jugador: #d, Total: #d]
+
+[Disa Aktar]
+.da_baslik      = Exportar
+.da_icerik_1    = {FFFFFF}Ingresa el nombre del archivo que deseas exportar.
+.da_icerik_2    = Si no especificas un nombre de archivo, obtendrás la salida como "#s.txt".
+.da_btn1        = Exportar
+.da_btn2        = Atrás
+.da_hata        = No creaste ningún textdraw.
+.da_hata2       = Debes crear o cargar un proyecto para el proceso de exportación.
+.da_bilgi       = Proyecto "#s.txt" exportado. [TDs Globales: #d, TDs de Jugador: #d, Total: #d]
+
+[Projeyi Close]
+.pk_hata        = Para cerrar un proyecto debes tener uno cargado.
+.pk_bilgi       = El proyecto #s ha sido cerrado exitosamente.
+
+[Ayarlar]
+.ayar_baslik    = Configuración
+.ayar_header_1  = #
+.ayar_header_2  = Valor
+.ayar_icerik_1  = Hora
+.ayar_icerik_2  = Posición del HUD
+.ayar_icerik_3  = Nombre predeterminado TD Global
+.ayar_icerik_4  = Nombre predeterminado TD Jugador
+.ayar_buton1    = Elegir
+.ayar_buton2    = Cerrar
+
+[Saat]
+.saat_baslik    = Hora
+.saat_buton1    = Elegir
+.saat_buton2    = Atrás
+.saat_bilgi     = Hora del juego establecida en #02d:00.
+
+[Hud Konumu]
+.hkonum_bilgi   = Posición del HUD cambiada exitosamente.
+
+[Degisken - Global | Player]
+.dg_baslik      = Nombre de variable predeterminado
+.dg_icerik_1    = {FFFFFF}Especifica el nombre de variable de la salida que recibirás al exportar tu proyecto.
+.dg_icerik_2    = {FFFFFF}Deja la pantalla en blanco para establecer el nombre de variable predeterminado.
+.dg_buton1      = Cambiar
+.dg_buton2      = Atrás
+.dg_hata        = El nombre de variable es demasiado largo.
+.dg_bilgi       = El nombre de variable predeterminado está establecido en #s.
+
+[Yeni]
+.yeni_baslik    = Nuevo
+.yeni_icerik    = Modelos de Vista Previa (objeto, vehículo, skin)
+.yeni_btn1      = Crear
+.yeni_btn2      = Cerrar
+.yeni_textdraw  = Nuevo textdraw
+
+[Liste]
+.liste_baslik   = Lista de textdraws [#d / #d]
+.liste_header1  = Índice
+.liste_header2  = Nombre de variable
+.liste_header3  = Nombre
+.liste_header4  = Tipo
+.liste_icerik   = Ir a página
+.liste_icerik2  = Reordenar índices
+.liste_btn1     = Elegir
+.liste_btn2     = Cerrar
+
+[Liste Islem]
+.lislem_baslik  = Opciones
+.lislem_icerik1 = Elegir textdraw
+.lislem_icerik2 = Elegir textdraw (Teclas de dirección)
+.lislem_icerik3 = Eliminar textdraw
+.lislem_icerik4 = Clonar textdraw
+.lislem_icerik5 = Clonar textdraw y seleccionar
+.lislem_icerik6 = Cambiar índice del textdraw
+.lislem_icerik7 = Cambiar nombre de variable
+.lislem_btn1    = Elegir
+.lislem_btn2    = Atrás
+
+[Liste Islem Bilgi]
+.tdraw_sec      = Textdraw seleccionado. Índice: #d
+.tdraw_sil      = Textdraw eliminado. Índice: #d
+.tdraw_kopyala  = Textdraw copiado. Índice: #d
+.tdraw_kopyala2 = Textdraw copiado y elegido. Índice: #d
+
+[Index Degistir]
+.idgstr_bslk    = Cambiar Índice
+.idgstr_icerik  = {ffffff}Ingresa el número de índice que deseas cambiar. {3498db}(0, #d)
+.idgstr_btn1    = Cambiar
+.idgstr_btn2    = Cerrar
+.idgstr_hata    = El número de índice es incorrecto.
+.idgstr_bilgi   = El número de índice del textdraw ha sido cambiado. Nuevo número de índice: #d
+
+[Degisken Adi]
+.degadi_bslk    = Editar nombre de variable
+.degadi_icrk_1  = {ff7979}Nota: {FFFFFF}Deja el cuadro en blanco para eliminar el nombre de variable.
+.degadi_icrk_2  = {ffffff}Ingresa el nombre de variable que deseas usar para este textdraw.
+.degadi_btn1    = Cambiar
+.degadi_btn2    = Atrás
+.degadi_hata    = El nombre de variable es demasiado largo.
+.degadi_bilgi   = El nombre de variable está establecido en #s.
+.degadi_bilgi2  = El nombre de variable ha sido eliminado.
+
+[Depo]
+.depo_baslik    = Depósito
+.depo_icerik_1  = Agrupación
+.depo_icerik_2  = Restaurar textdraws eliminados
+.depo_btn_1     = Elegir
+.depo_btn_2     = Cerrar
+
+[Kopyala]
+.kopyala_bilgi  = Textdraw copiado y seleccionado. Índice: #d
+
+[Sil]
+.sil_bilgi      = Textdraw eliminado. Índice: #d
+
+[Boyut | Textsize | Lettersize]
+.btl_baslik     = Edición manual
+.btl_icrk_1     = {FFFFFF}Ingresa los nuevos valores que deseas usar.
+.btl_icrk_2     = {70a1ff}Ejemplo:
+.btl_icrk_3     = {ffffff}10 20  o  10.0 20.0
+.btl_icrk_4     = {70a1ff}Valores actuales:
+.btl_icrk_5     = {eccc68}X: {FFFFFF}#.2f
+.btl_icrk_6     = {eccc68}Y: {FFFFFF}#.2f
+.btl_icrk_7     = {70a1ff}Solo para valor X:
+.btl_icrk_8     = {ffffff}valor 0
+.btl_icrk_9     = {70a1ff}Solo para valor Y:
+.btl_icrk_10    = {ffffff}0 valor
+.btl_icrk_11    = {FFFFFF}Ingresa {ff7f50}0 0 {FFFFFF} para eliminar la característica de tamaño de texto.
+.btl_buton_1    = Actualizar
+.btl_buton_2    = Cerrar
+.btl_hata_1     = Ingresaste un valor incorrecto.
+.btl_bilgi_1    = Los valores han sido actualizados.
+
+[Metin]
+.metin_baslik   = Texto
+.metin_icerik   = {f1c40f}Texto actual:
+.metin_icerik2  = {ffffff}Ingresa el texto que deseas usar.
+.metin_buton1   = Cambiar
+.metin_buton2   = Cerrar
+.metin_hata     = Debes especificar un texto.
+.metin_bilgi    = El texto ha sido cambiado.
+
+[Outline | Shadow]
+.os_baslik      = Edición manual
+.os_icerik_1    = {f9ca24}Valor actual: {FFFFFF}#d
+.os_icerik_2    = {FFFFFF}Ingresa el valor que deseas usar. Escribe {f9ca24}0 {FFFFFF} para eliminar.
+.os_buton_1     = Establecer
+.os_buton_2     = Cerrar
+.os_hata        = Ingresaste un valor incorrecto.
+.os_bilgi_1     = Valor actualizado.
+
+[Renk | BG | Box]
+.renk_baslik    = Colores
+.renk_icerik    = RGBA (usando teclas de dirección)
+.renk_buton1    = Elegir
+.renk_buton2    = Cerrar
+
+[Renk - Hex]
+.rhex_baslik    = Color: Hex
+.rhex_icerik_1  = {FFFFFF}Ingresa el código hexadecimal del color que deseas usar.
+.rhex_icerik_2  = {badc58}Ejemplo:
+.rhex_icerik_3  = {FFFFFF}FFBE76
+.rhex_icerik_4  = {FFFFFF}#FFBE76
+.rhex_icerik_5  = {FFFFFF}0xFFBE76
+.rhex_icerik_6  = {FFFFFF}0xFFBE76FF
+.rhex_buton_1   = Cambiar
+.rhex_buton_2   = Atrás
+.rhex_hata      = El código hexadecimal que ingresaste es incorrecto.
+
+[Renk - RGB]
+.rgb_baslik     = Color: RGB
+.rgb_icerik_1   = {FFFFFF}Ingresa el código RGB del color que deseas usar.
+.rgb_icerik_2   = {badc58}Ejemplo:
+.rgb_icerik_3   = {FFFFFF}66 135 245
+.rgb_icerik_4   = {FFFFFF}66, 135, 245
+.rgb_icerik_5   = {FFFFFF}rgb(66, 135, 245)
+.rgb_icerik_6   = {FFFFFF}rgb(66, 135, 245);
+.rgb_buton_1    = Cambiar
+.rgb_buton_2    = Atrás
+.rgb_hata       = El código RGB que ingresaste es incorrecto.
+
+[Renk - RGBA]
+.rgba_baslik    = Color: RGBA
+.rgba_icerik_1  = {FFFFFF}Ingresa el código RGBA del color que deseas usar.
+.rgba_icerik_2  = {badc58}Ejemplo:
+.rgba_icerik_3  = {FFFFFF}66 135 245 255
+.rgba_icerik_4  = {FFFFFF}66, 135, 245, 255
+.rgba_icerik_5  = {FFFFFF}rgba(66, 135, 245, 255)
+.rgba_icerik_6  = {FFFFFF}rgba(66, 135, 245, 255);
+.rgba_buton_1   = Cambiar
+.rgba_buton_2   = Atrás
+.rgba_hata      = El código RGBA que ingresaste es incorrecto.
+
+[Preview Models]
+.pmdls_buton_1  = Elegir
+.pmdls_buton_2  = Cerrar
+.pmdls_hata     = Ingresaste un valor incorrecto.
+.pmdls_bilgi_1  = Los valores han sido actualizados.
+
+[Preview Models Manuel]
+.pmdls_mbaslik  = Edición manual
+.pmdls_icerik_1 = {FFFFFF}Ingresa el valor que deseas usar.
+.pmdls_icerik_2 = {badc58}Tu valor actual es: {FFFFFF}#d
+.pmdls_icerik_3 = {badc58}Tu valor actual es: {FFFFFF}#.2f
+.pmdls_buton_3  = Actualizar
+.pmdls_buton_4  = Cerrar
+
+[Geri, Ileri Al]
+.gi_baslik      = Deshacer y Rehacer
+.gi_icerik_1    = Elige el índice que deseas mostrar. El índice puede ser desde {ff7979}1 {ffffff}hasta {ff7979}#%d
+.gi_buton_1     = Mostrar
+.gi_buton_2     = Cerrar
+.gi_hata        = Ingresaste un valor incorrecto.
+
+[Geri, Ileri Al | Onay]
+.gio_baslik     = Confirmar Cambios
+.gio_icerik_1   = {FFFFFF}¿Estás seguro de que deseas confirmar los cambios?
+.gio_buton_1    = Sí
+.gio_buton_2    = No
+.gio_bilgi_1    = Los cambios han sido guardados.
+.gio_bilgi_2    = No se realizaron cambios.
+
+[Silinenler]
+.s_baslik       = Textdraws eliminados [#d / #d]
+.s_header1      = Nombre
+.s_header2      = Tipo
+.s_header3      = Global / Jugador
+.s_header4      = Fecha de eliminación
+.s_icerik1      = Ir a página
+.s_icerik2      = Borrar todos los datos
+.s_icerik3      = Restaurar todos los datos
+.s_buton1       = Restaurar
+.s_buton2       = Atrás
+.s_hata         = No se encontraron textdraws eliminados.
+.s_bilgi        = El textdraw ha sido restaurado. Nuevo número de índice: #d
+
+[Silinenler - Temizle]
+.st_baslik      = Borrar todos los datos
+.st_icerik1     = {ff7f50}Advertencia: {FFFFFF}Esta operación eliminará los datos de todos los textdraws que has eliminado.
+.st_icerik2     = {FFFFFF}¿Confirmar esta acción?
+.st_buton1      = Sí
+.st_buton2      = No
+.st_bilgi       = Se borraron todos los datos.
+
+[Silinenler - Tum Verileri Geri Yukle]
+.stgy_baslik    = Restaurar todos los datos
+.stgy_icerik1   = {FFFFFF}¿Estás seguro de que deseas restaurar todos los datos?
+.stgy_buton1    = Sí
+.stgy_buton2    = No
+.stgy_bilgi     = Todos los datos han sido restaurados. Datos totales: #d
+
+[Gruplar]
+.grp_hata       = Crea un textdraw para usar esta característica.
+.grp_baslik     = Agrupación
+.grp_icerik1    = {badc58}Agrupación:
+.grp_icerik2    = Elegir textdraws para agrupar
+.grp_icerik3    = Agrupar todos los textdraws
+.grp_icerik4    = Resetear todos los textdraws agrupados
+.grp_icerik5    = {badc58}Agrupación rápida:
+.grp_icerik6    = Textdraw Normal
+.grp_icerik7    = Sprite
+.grp_icerik8    = Modelos de Vista Previa
+.grp_icerik9    = {badc58}Copia:
+.grp_icerik10   = Copiar textdraws agrupados
+.grp_icerik11   = Copiar textdraws agrupados y elegir
+.grp_icerik12   = {badc58}Eliminar:
+.grp_icerik13   = Eliminar textdraws agrupados
+.grp_icerik14   = {badc58}Posición:
+.grp_icerik15   = Cambiar posición de textdraws agrupados
+.grp_icerik16   = {badc58}Tamaño:
+.grp_icerik17   = Tamaño de texto (Textdraw Normal)
+.grp_icerik18   = Tamaño de texto (Sprite)
+.grp_icerik19   = Tamaño de texto (Modelos de Vista Previa)
+.grp_icerik20   = Tamaño de texto (Sprite, Modelos de Vista Previa)
+.grp_icerik21   = Tamaño de texto (Normal, Sprite, Modelos de Vista Previa)
+.grp_icerik22   = Tamaño de letra (Textdraw Normal)
+.grp_icerik23   = {badc58}Texto:
+.grp_icerik24   = Cambiar texto de textdraws agrupados
+.grp_icerik25   = {badc58}Fuente de texto:
+.grp_icerik26   = Fuente 0
+.grp_icerik27   = Fuente 1
+.grp_icerik28   = Fuente 2
+.grp_icerik29   = Fuente 3
+.grp_icerik30   = {badc58}Alineación de texto:
+.grp_icerik31   = Izquierda
+.grp_icerik32   = Centro
+.grp_icerik33   = Derecha
+.grp_icerik34   = {badc58}Proporción de texto:
+.grp_icerik35   = Activado
+.grp_icerik36   = Desactivado
+.grp_icerik37   = {badc58}Contorno y Sombra:
+.grp_icerik38   = Contorno
+.grp_icerik39   = Sombra
+.grp_icerik40   = {badc58}Color:
+.grp_icerik41   = Hex
+.grp_icerik42   = RGB
+.grp_icerik43   = RGBA
+.grp_icerik44   = Colores predefinidos
+.grp_icerik45   = {badc58}Caja:
+.grp_icerik46   = Activado
+.grp_icerik47   = Desactivado
+.grp_icerik48   = {badc58}Seleccionable:
+.grp_icerik49   = Activado
+.grp_icerik50   = Desactivado
+.grp_icerik51   = {badc58}Global / Jugador:
+.grp_icerik52   = Establecer textdraws agrupados como globales
+.grp_icerik53   = Establecer textdraws agrupados como de jugador
+.grp_buton1     = Elegir
+.grp_buton2     = Atrás
+
+[Renk Modu]
+.renk_modu_1    = Color de texto
+.renk_modu_2    = Color de fondo / borde
+.renk_modu_3    = Color de caja
+
+[Gruplar Hata | Bilgi]
+.grp_hata1      = No hay textdraws agrupados.
+.grp_hata2      = No se encontró ningún elemento de texto entre los grupos.
+.grp_bilgi1     = Todos los textdraws han sido agrupados.
+.grp_bilgi2     = Todos los textdraws han sido removidos del grupo.
+.grp_bilgi3     = Los textdraws normales han sido agrupados.
+.grp_bilgi4     = Los textdraws sprite han sido agrupados.
+.grp_bilgi5     = Los textdraws de Modelo de Vista Previa han sido agrupados.
+.grp_bilgi6     = Los textdraws agrupados fueron copiados. Total de textdraws copiados: #d
+.grp_bilgi7     = Los textdraws agrupados han sido copiados y seleccionados. Total de textdraws copiados: #d
+.grp_bilgi8     = Todos los textdraws agrupados han sido eliminados. Total de textdraws eliminados: #d
+.grp_bilgi9     = Se actualizó la posición de todos los textdraws agrupados.
+.grp_bilgi10    = Se actualizó el tamaño de texto de todos los textdraws agrupados.
+.grp_bilgi11    = Se cambió el texto de todos los textdraws agrupados.
+.grp_bilgi12    = Se cambió la fuente de todos los textdraws agrupados a #d.
+.grp_bilgi13    = Se cambió la alineación de todos los textdraws agrupados.
+.grp_bilgi14    = Se cambió la proporción de todos los textdraws agrupados.
+.grp_bilgi15    = Se cambió el color de todos los textdraws agrupados.
+.grp_bilgi16    = Se cambió el valor de caja de todos los textdraws agrupados.
+.grp_bilgi17    = Se cambió el valor seleccionable de todos los textdraws agrupados.
+.grp_bilgi18    = Se cambió el valor Global / Jugador de todos los textdraws agrupados.
+
+[Gruplanacak Ogeler]
+.go_baslik      = Agrupación [#d / #d]
+.go_header1     = ID
+.go_header2     = Nombre de variable
+.go_header3     = Contenido
+.go_header4     = ¿Agrupado?
+.go_header4_n   = No
+.go_header4_y   = Sí
+.go_icerik1     = Ir a página
+.go_icerik2     = Agrupar página
+.go_icerik3     = Desagrupar página
+.go_buton1      = Elegir
+.go_buton2      = Atrás
+
+[Gruplama: Metin Degistir]
+.gmd_baslik     = Cambio de texto
+.gmd_icerik     = {FFFFFF}Ingresa el nuevo texto de los elementos agrupados.
+.gmd_buton1     = Cambiar
+.gmd_buton2     = Atrás
+.gmd_hata       = El texto no puede estar vacío.
+
+[Gruplama Outline]
+.goline_baslik  = Contorno
+.goline_icerik  = {FFFFFF}Ingresa el valor de contorno que deseas usar.
+.goline_buton1  = Cambiar
+.goline_buton2  = Atrás
+.goline_bilgi   = El valor de contorno de los textdraws agrupados está establecido en #d.
+.goline_hata    = Ingresaste un valor incorrecto.
+
+[Gruplama Shadow]
+.gshdow_baslik  = Sombra
+.gshdow_icerik  = {FFFFFF}Ingresa el valor de sombra que deseas usar.
+.gshdow_buton1  = Cambiar
+.gshdow_buton2  = Atrás
+.gshdow_bilgi   = El valor de sombra de los textdraws agrupados está establecido en #d.
+.gshdow_hata    = Ingresaste un valor incorrecto.
+
+[Gruplama Offset Konum]
+.gko_baslik     = Valor de Desplazamiento
+.gko_icrk_1     = {eccc68}desplazamientoX: {FFFFFF}#.1f    {eccc68}desplazamientoY: {FFFFFF}#.1f
+.gko_icrk_2     = {70a1ff}Solo para valor desplazamientoX: {ffffff}valor 0
+.gko_icrk_3     = {70a1ff}Solo para valor desplazamientoY: {ffffff}0 valor
+.gko_buton_1    = Actualizar
+.gko_buton_2    = Cerrar
+.gko_hata_1     = Ingresaste un valor incorrecto.
