@@ -1,4 +1,3 @@
-es.txt = Español
 tr.txt = Turkish
 en.txt = English
 ro.txt = Romanian
@@ -6,3 +5,4 @@ id.txt = Indonesian
 vn.txt = Vietnamese
 pt-br.txt = Português
 sr.txt = Serbian
+es.txt = Español
